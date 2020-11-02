@@ -1,10 +1,10 @@
-<h1>Persons#profile</h1>
-<p>Find me in app/views/persons/profile.html.erb</p>
+<h1><%= t 'persons.persons_profile' %></h1>
+<p><%= t 'persons.find_me' %></p>
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <%# if user_signed_in? %>
-<!--  <span>Здравствуйте, <%#= current_user.email %></span>-->
-  <%#= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+<!--  <span><%= t 'persons.hello' %>, <%#= current_user.email %></span>-->
+  <%#= link_to "#{translate('persons.exit')}", destroy_user_session_path, :method => :delete %>
 <%# else %>
-<!--  <%#= link_to 'Войти', new_user_session_path %> или <%#= link_to 'Зарегистрироваться', new_user_registration_path %>-->
+<!--  <%#= link_to "#{translate('persons.sign_in')}", new_user_session_path %> или <%#= link_to #{translate('profile.sign_up')}, new_user_registration_path %>-->
 <%# end %>

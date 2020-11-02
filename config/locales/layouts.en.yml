@@ -1,0 +1,9 @@
+# Additional translations at https://github.com/heartcombo/devise/wiki/I18n
+
+en:
+  layouts:
+    exit: "Exit"
+    sign_up: "Sign up"
+    log_in: "Log in"
+    or: "or"
+

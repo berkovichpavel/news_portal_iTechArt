@@ -1,0 +1,10 @@
+# Additional translations at https://github.com/heartcombo/devise/wiki/I18n
+
+en:
+  persons:
+    persons_profile: "Persons#profile"
+    hello: "Hello"
+    exit: "Exit"
+    sign_in: "Sign in"
+    sign_up: "Sign up"
+    find_me: "Find me in app/views/persons/profile.html.erb"
