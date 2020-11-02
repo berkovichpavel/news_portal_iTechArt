@@ -8,3 +8,4 @@ en:
     sign_in: "Sign in"
     sign_up: "Sign up"
     find_me: "Find me in app/views/persons/profile.html.erb"
+    or: "or"

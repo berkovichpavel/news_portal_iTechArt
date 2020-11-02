@@ -2,6 +2,8 @@
 
 en:
   layouts:
+    news_portal: "NewsPortal"
+    hello: "Hello"
     exit: "Exit"
     sign_up: "Sign up"
     log_in: "Log in"
