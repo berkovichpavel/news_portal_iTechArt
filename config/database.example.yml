@@ -26,10 +26,10 @@ development:
   encoding: unicode
   database: news_portal_development
   pool: 5
-  username: news_portal
-  password: password1
+  username: my_username
+  password: my_password
   #<<: *default
-  
+
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
@@ -65,8 +65,8 @@ test:
   encoding: unicode
   database: news_portal_test
   pool: 5
-  username: news_portal
-  password: password1
+  username: my_username
+  password: my_password
   #<<: *default
 
 # As with config/credentials.yml, you never want to store sensitive information,
