@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'items/index'
   root to: 'items#index'
+  get 'items/:id', to: 'items#show'
   devise_for :users
   get 'persons/profile'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

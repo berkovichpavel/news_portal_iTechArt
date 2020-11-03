@@ -2,6 +2,10 @@
 
 en:
   layouts:
+    all_news: "All news"
+    create_news: "Creagte news"
+    profile: "Profile"
+    site_name: "Berdacha"
     news_portal: "NewsPortal"
     hello: "Hello"
     exit: "Exit"
