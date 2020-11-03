@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>NewsPortal</title>
+    <title><%= t 'layouts.news_portal' %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,14 @@
   </head>
 
   <body>
+    <% if user_signed_in? %>
+      <span><%= t 'layouts.hello' %>, <%= current_user.email %></span>
+      <%= link_to translate('layouts.exit'), destroy_user_session_path, :method => :delete %>
+    <% else %>
+      <%= link_to translate('layouts.log_in'), new_user_session_path %> <%= translate('layouts.or') %> <%= link_to translate('layouts.sign_up'), new_user_registration_path %>
+    <% end %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
