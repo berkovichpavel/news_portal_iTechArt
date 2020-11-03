@@ -1,0 +1,11 @@
+# Additional translations at https://github.com/heartcombo/devise/wiki/I18n
+
+en:
+  layouts:
+    news_portal: "NewsPortal"
+    hello: "Hello"
+    exit: "Exit"
+    sign_up: "Sign up"
+    log_in: "Log in"
+    or: "or"
+
