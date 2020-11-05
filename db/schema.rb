@@ -10,25 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_02_200738) do
+ActiveRecord::Schema.define(version: 2020_11_05_081155) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "categories", force: :cascade do |t|
+    t.string "alias"
+    t.string "title"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["alias"], name: "index_categories_on_alias", unique: true
+  end
+
   create_table "items", force: :cascade do |t|
     t.string "title", null: false
     t.string "short_description", null: false
-    t.text "full_text", null: false
+    t.text "full_text"
     t.integer "category", null: false
-    t.integer "mask", null: false
+    t.integer "mask"
     t.string "main_img_href"
     t.string "region"
     t.datetime "last_editing"
     t.integer "status"
-    t.boolean "flag", default: false, null: false
-    t.float "rating", default: 0.0, null: false
-    t.string "redactor", null: false
-    t.float "average_rating", default: 0.0, null: false
+    t.boolean "flag", default: false
+    t.float "rating", default: 0.0
+    t.string "redactor"
+    t.float "average_rating", default: 0.0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

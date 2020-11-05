@@ -1,58 +1,31 @@
-<!-- Blog Entries Column -->
-
-  <h1 class="my-4">All news
-    <small>Secondary Text</small>
-  </h1>
-
-  <!-- News -->
-  <div class="card mb-4">
+<h1 class="my-4">
+  <% if @category == nil %>
+    <%= t 'items.all_news' %>
+  <% else %>
+    <%= @category.title %>
+  <% end %>
+</h1>
+<h1><small><%= t 'items.designed_by' %></small></h1>
+<%= @items.each do |item| %>
+<div class="card mb-4">
     <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
-    <div class="card-body">
-      <h2 class="card-title">News Title</h2>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-      <a href="#" class="btn btn-primary">Read More &rarr;</a>
-    </div>
-    <div class="card-footer text-muted">
-      Posted on January 1, 2017 by
-      <a href="#">Start Bootstrap</a>
-    </div>
+  <div class="card-body">
+    <h2 class="card-title"><%= item.title %></h2>
+    <p class="card-text"><%= item.short_description.length <= 2000 ? item.short_description : item.short_description[0..2000] %></p>
+    <a href="/items/<%= item.id %>" class="btn btn-primary"><%= t 'items.read_more' %> &rarr;</a>
   </div>
-
-  <!-- News -->
-  <div class="card mb-4">
-    <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
-    <div class="card-body">
-      <h2 class="card-title">News Title</h2>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-      <a href="#" class="btn btn-primary">Read More &rarr;</a>
-    </div>
-    <div class="card-footer text-muted">
-      Posted on January 1, 2017 by
-      <a href="#">Start Bootstrap</a>
-    </div>
+  <div class="card-footer text-muted">
+    <%= item.created_at %>
   </div>
+</div>
+<% end %>
 
-  <!-- News -->
-  <div class="card mb-4">
-    <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
-    <div class="card-body">
-      <h2 class="card-title">News Title</h2>
-      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-      <a href="#" class="btn btn-primary">Read More &rarr;</a>
-    </div>
-    <div class="card-footer text-muted">
-      Posted on January 1, 2017 by
-      <a href="#">Start Bootstrap</a>
-    </div>
-  </div>
-
-  <!-- Pagination -->
-  <ul class="pagination justify-content-center mb-4">
-    <li class="page-item">
-      <a class="page-link" href="#">&larr; Older</a>
-    </li>
-    <li class="page-item disabled">
-      <a class="page-link" href="#">Newer &rarr;</a>
-    </li>
-  </ul>
-
+<!-- Pagination -->
+<ul class="pagination justify-content-center mb-4">
+  <li class="page-item">
+    <a class="page-link" href="#">&larr; Older</a>
+  </li>
+  <li class="page-item disabled">
+    <a class="page-link" href="#">Newer &rarr;</a>
+  </li>
+</ul>

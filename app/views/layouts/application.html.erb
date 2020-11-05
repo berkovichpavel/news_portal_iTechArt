@@ -23,11 +23,30 @@
           <li class="nav-item active">
             <a class="nav-link" href="/"><%= t 'layouts.all_news' %></a>
           </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/items/news">News</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/items/finance">Finance</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/items/sport">Auto</a>
+          </li>
+<!--          <li class="nav-item dropdown">-->
+<!--            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+              <%#= t 'items.categories' %>
+<!--            </a>-->
+<!--            <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+<!--              <a class="dropdown-item" href="/items/heals">Health</a>-->
+<!--              <a class="dropdown-item" href="/items/sport">Sport</a>-->
+<!--              <a class="dropdown-item" href="/items/auto">Auto</a>-->
+<!--            </div>-->
+<!--          </li>-->
           <li class="nav-item">
-            <a class="nav-link"><%= t 'layouts.create_news' %></a>
+            <a class="nav-link" href="/items/new"><%= t 'layouts.create_news' %></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" ><%= t 'layouts.profile' %></a>
+            <a class="nav-link" href="/persons/profile" ><%= t 'layouts.profile' %></a>
           </li>
         </ul>
         <div>
