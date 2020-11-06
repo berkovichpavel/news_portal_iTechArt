@@ -1,6 +1,11 @@
 class ItemsController < ApplicationController
   def index
-    @items = Item.all
+    @items =
+      if params[:category]
+        Item.where(category: params[:category])
+      else
+        Item.all
+      end
   end
 
   def show
@@ -8,17 +13,18 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @categories = Category.all
+    @categories = Item.categories.keys
     @item = Item.find(params[:id])
   end
 
   def new
-    @categories = Category.all
+    @categories = Item.categories.keys
   end
 
   def create
     @item = Item.new(item_params)
     @item.save
+
     redirect_to '/items/' + @item.id.to_s
   end
 
@@ -27,12 +33,6 @@ class ItemsController < ApplicationController
     @item.update(item_params)
 
     redirect_to '/items/' + @item.id.to_s
-  end
-
-  def category
-    @category = Category.find_by(alias: params[:category])
-    @items = @category.items
-    render 'index'
   end
 
   private

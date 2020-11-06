@@ -1,8 +1,8 @@
 <h1 class="my-4">
-  <% if @category == nil %>
+  <% if params[:category] == nil %>
     <%= t 'items.all_news' %>
   <% else %>
-    <%= @category.title %>
+    <%= params[:category].capitalize %>
   <% end %>
 </h1>
 <h1><small><%= t 'items.designed_by' %></small></h1>

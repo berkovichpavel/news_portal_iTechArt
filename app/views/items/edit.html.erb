@@ -1,4 +1,5 @@
-<form action="/items/update/<%= @item.id %>" method="POST">
+<form action="<%= item_path(@item) %>" method="POST">
+  <input type="hidden" name="_method" value="PATCH" />
   <div class="form-group">
     <label for="title"><%= t 'items.title' %></label>
     <input type="text" name="item[title]" value="<%= @item.title %>" class="form-control">
@@ -7,7 +8,7 @@
     <label for="exampleFormControlSelect1"><%= t 'items.choose_category' %></label>
     <select class="form-control" name="item[category]">
       <% @categories.each do |category| %>
-        <option value="<%= category.id %>" <% if @item.category == category.id %>selected=selected<% end %>><%= category.title %></option>
+        <option value="<%= category %>" <% if @item.category == category %>selected=selected<% end %>><%= category %></option>
       <% end %>
     </select>
   </div>

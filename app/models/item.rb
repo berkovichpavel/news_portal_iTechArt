@@ -1,3 +1,3 @@
 class Item < ApplicationRecord
-  belongs_to :category
+  enum categories: %w[news health finance auto]
 end

@@ -24,13 +24,13 @@
             <a class="nav-link" href="/"><%= t 'layouts.all_news' %></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/items/news">News</a>
+            <%= link_to 'News', items_path(category: 'news'), class: 'nav-link' %>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/items/finance">Finance</a>
+            <%= link_to 'Finance', items_path(category: 'finance'), class: 'nav-link' %>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/items/sport">Auto</a>
+            <%= link_to 'Auto', items_path(category: 'auto'), class: 'nav-link' %>
           </li>
 <!--          <li class="nav-item dropdown">-->
 <!--            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
