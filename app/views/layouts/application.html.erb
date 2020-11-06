@@ -23,6 +23,11 @@
           <li class="nav-item active">
             <a class="nav-link" href="/"><%= t 'layouts.all_news' %></a>
           </li>
+          <%#= Item.categories.keys.each do |category| %>
+<!--            <li class="nav-item active">-->
+              <%#= link_to "#{category.capitalize}", items_path(category: "#{category}"), class: 'nav-link' %>
+<!--            </li>-->
+          <%# end %>
           <li class="nav-item active">
             <%= link_to 'News', items_path(category: 'news'), class: 'nav-link' %>
           </li>
@@ -31,6 +36,9 @@
           </li>
           <li class="nav-item active">
             <%= link_to 'Auto', items_path(category: 'auto'), class: 'nav-link' %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to 'Health', items_path(category: 'health'), class: 'nav-link' %>
           </li>
 <!--          <li class="nav-item dropdown">-->
 <!--            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
@@ -43,10 +51,10 @@
 <!--            </div>-->
 <!--          </li>-->
           <li class="nav-item">
-            <a class="nav-link" href="/items/new"><%= t 'layouts.create_news' %></a>
+            <%= link_to  "#{t 'layouts.create_news'}", new_item_path, class: 'nav-link' %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/persons/profile" ><%= t 'layouts.profile' %></a>
+            <%= link_to  "#{t 'layouts.profile'}", persons_profile_path, class: 'nav-link' %>
           </li>
         </ul>
         <div>
