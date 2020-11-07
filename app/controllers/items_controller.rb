@@ -18,6 +18,7 @@ class ItemsController < ApplicationController
   end
 
   def new
+    @item = Item.new
     @categories = Item.categories.keys
   end
 
@@ -38,6 +39,6 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:title, :category, :short_description)
+    params.require(:item).permit(:title, :category, :short_description, :full_text)
   end
 end

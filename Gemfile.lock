@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/galetahub/ckeditor.git
+  revision: f9e48420ccb6dc99f4453397554a6ae60bc2274b
+  specs:
+    ckeditor (5.1.0)
+      orm_adapter (~> 0.5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -103,6 +110,7 @@ GEM
       mimemagic (~> 0.3.2)
     method_source (1.0.0)
     mimemagic (0.3.5)
+    mini_magick (4.10.1)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.2)
@@ -193,6 +201,9 @@ GEM
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
+    simple_form (5.0.3)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -242,9 +253,11 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
+  ckeditor!
   devise
   jbuilder (~> 2.7)
   listen (~> 3.2)
+  mini_magick
   pg (>= 0.18, < 2.0)
   pry-rails
   puma (~> 4.1)
@@ -253,6 +266,7 @@ DEPENDENCIES
   rubocop
   sass-rails (>= 6)
   selenium-webdriver
+  simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
