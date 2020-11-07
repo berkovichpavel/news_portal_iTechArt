@@ -58,5 +58,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'ckeditor', github: 'galetahub/ckeditor'
-gem "mini_magick"
 gem 'simple_form'
+gem 'image_processing', '~> 1.2'
