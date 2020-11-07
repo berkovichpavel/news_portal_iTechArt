@@ -1,9 +1,1 @@
-<%= javascript_include_tag Ckeditor.cdn_url %>
-
-<%= simple_form_for @item do |f| %>
-  <%= f.input :title %>
-  <%= f.input :full_text, as: :ckeditor, input_html: { ckeditor: { toolbar: 'full' } } %>
-  <%= f.input :category, :collection => @categories, :class => 'form-group' %>
-  <%= f.input :short_description %>
-  <%= f.button :submit %>
-<% end %>
+<%= render 'form' %>

@@ -16,8 +16,10 @@
 <!-- News Content -->
 <%= @item.short_description %>
 <hr>
+<div class="full_text">
+  <%= @item.full_text.html_safe %>
 
-<%= @item.full_text.html_safe %>
+</div>
 <hr>
 
 <!-- Comments Form -->
