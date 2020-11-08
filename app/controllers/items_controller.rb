@@ -13,13 +13,15 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @categories = Item.categories.keys
     @item = Item.find(params[:id])
+    @categories = Item.categories.keys
+    @access_mask = Item.access_masks.keys
   end
 
   def new
     @item = Item.new
     @categories = Item.categories.keys
+    @access_mask = Item.access_masks.keys
   end
 
   def create
@@ -39,6 +41,6 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:title, :category, :short_description, :full_text)
+    params.require(:item).permit(:title, :category, :short_description, :full_text, :mask, :region, :mask, :main_img_href, :flag)
   end
 end
