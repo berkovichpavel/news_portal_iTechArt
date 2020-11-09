@@ -58,5 +58,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'ckeditor'
-gem "mini_magick"
+gem 'mini_magick'
 gem 'simple_form'
+gem 'carrierwave'

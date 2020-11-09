@@ -9,7 +9,13 @@
 <hr>
 
 <!-- Date/Time -->
-<p><%= @item.created_at %></p>
+<p><%= @item.updated_at %></p>
+
+<hr>
+<p><%= @item.region %></p>
+
+<hr>
+<p>Important: <%= @item.flag %></p>
 
 <hr>
 
@@ -18,7 +24,6 @@
 <hr>
 <div class="full_text">
   <%= @item.full_text.html_safe %>
-
 </div>
 <hr>
 

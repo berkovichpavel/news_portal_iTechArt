@@ -5,10 +5,9 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.string :short_description, null: false
       t.text :full_text
       t.string :category, null: false
-      t.integer :mask
-      t.string :main_img_href
+      t.string :mask
       t.string :region
-      t.datetime :last_editing
+      t.datetime :last_editing # delete
       t.integer :status
       t.boolean :flag, default: false
       t.float :rating, default: 0
