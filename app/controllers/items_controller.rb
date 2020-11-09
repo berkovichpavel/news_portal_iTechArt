@@ -28,14 +28,14 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @item.save
 
-    redirect_to '/items/' + @item.id.to_s
+    redirect_to item_path(@item.id)
   end
 
   def update
     @item = Item.find(params[:id])
     @item.update(item_params)
 
-    redirect_to '/items/' + @item.id.to_s
+    redirect_to item_path(params[:id])
   end
 
   private
