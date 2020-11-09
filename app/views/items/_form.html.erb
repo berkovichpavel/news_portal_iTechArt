@@ -8,7 +8,8 @@
   <%= f.label :main_img %>
   <%= f.file_field :main_img_href %>
   <%= f.input :flag,  as: :radio_buttons, label: translate('simple_form.important')%>
-
+  <%= f.label "Tags:" %>
+  <%= f.input :tag_list %>
   <%= f.input :full_text, as: :ckeditor %>
   <%= f.button :submit, class: 'btn btn-success' %>
 <% end %>

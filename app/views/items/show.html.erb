@@ -18,6 +18,10 @@
 <p>Important: <%= @item.flag %></p>
 
 <hr>
+<hr>
+<p>Tags: <%==  @item.tags.map{ |t| link_to t.name, items_path(tag: t.name)}.join(', ')%></p>
+
+<hr>
 
 <!-- News Content -->
 <%= @item.short_description %>
