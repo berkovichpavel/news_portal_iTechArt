@@ -5,5 +5,4 @@ class PersonsControllerTest < ActionDispatch::IntegrationTest
     get persons_profile_url
     assert_response :success
   end
-
 end

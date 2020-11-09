@@ -1,0 +1,39 @@
+<h1 class="my-4">
+  <% if params[:category] == nil %>
+    <%= t 'items.all_news' %>
+  <% else %>
+    <%= params[:category].capitalize %>
+  <% end %>
+</h1>
+<h1><small><%= t 'items.designed_by' %></small></h1>
+<% @items.each do |item| %>
+<div class="card mb-4">
+  <% if item.main_img_href.attached?%>
+    <div style="width: 928px; height: 500px">
+      <%= image_tag(item.main_img_href, style: 'width: 100%; height: 100%')%>
+    </div>
+    <% else %>
+    <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+  <% end %>
+
+
+  <div class="card-body">
+    <h2 class="card-title"><%= item.title %></h2>
+    <p class="card-text"><%= item.short_description.length <= 2000 ? item.short_description : item.short_description[0..2000] %></p>
+    <a href="/items/<%= item.id %>" class="btn btn-primary"><%= t 'items.read_more' %> &rarr;</a>
+  </div>
+  <div class="card-footer text-muted">
+    <%= item.created_at %>
+  </div>
+</div>
+<% end %>
+
+<!-- Pagination -->
+<ul class="pagination justify-content-center mb-4">
+  <li class="page-item">
+    <a class="page-link" href="#">&larr; Older</a>
+  </li>
+  <li class="page-item disabled">
+    <a class="page-link" href="#">Newer &rarr;</a>
+  </li>
+</ul>

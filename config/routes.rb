@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
+  resources :items
+
   devise_for :users
   get 'persons/profile'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  # root 'home#index'
+  #root 'home#index'
   get 'persons/profile', as: 'user_root'
+  root to: 'items#index'
 end

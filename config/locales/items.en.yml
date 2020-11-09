@@ -1,0 +1,14 @@
+# Additional translations at https://github.com/heartcombo/devise/wiki/I18n
+
+en:
+  items:
+    all_news: "All news"
+    categories: "Categories"
+    designed_by: "Designed by Berkovich Pavel"
+    title: "Title"
+    choose_category: "Choose category"
+    short_description: "Short description"
+    create: "Create"
+    read_more: "Read More"
+    edit: "Edit"
+

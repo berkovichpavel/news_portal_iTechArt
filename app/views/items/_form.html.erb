@@ -1,0 +1,16 @@
+<%= javascript_include_tag Ckeditor.cdn_url %>
+<%= simple_form_for @item do |f| %>
+  <%= f.input :title %>
+  <%= f.input :short_description %>
+  <%= f.input :category, :collection => @categories %>
+  <%= f.input :mask, :collection => @access_mask %>
+  <%= f.input :region %>
+  <%= f.label :main_img %>
+  <%= f.file_field :main_img_href %>
+  <%= f.input :flag,  as: :radio_buttons, label: translate('simple_form.important')%>
+
+  <%= f.input :full_text, as: :ckeditor %>
+  <%= f.button :submit, class: 'btn btn-success' %>
+<% end %>
+
+
