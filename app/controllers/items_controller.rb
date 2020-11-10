@@ -5,9 +5,9 @@ class ItemsController < ApplicationController
   def index
     @items =
       if params[:category]
-        Item.where(category: params[:category])
+        @items.where(category: params[:category])
       else
-        Item.all
+        @items
       end
   end
 

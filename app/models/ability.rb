@@ -8,12 +8,17 @@ class Ability
       if user.admin?
         can :manage, :all
       elsif user.correspondent?
-        can :new, Item
+        can :create, Item
         can :update, Item, user_id: user.id
         can :read, :all
+      else
+        can :read, :all
       end
+      can :read_annotation, Item
     else
-      can :read, :all
+      can :read, Item, mask: ['visible to everyone', 'title and annotation are visible', 'only visible header']
+      can :read_annotation, Item, mask: ['visible to everyone', 'title and annotation are visible']
+      can  :read_full_text, Item, mask: ['visible to everyone']
     end
 
     # The first argument to `can` is the action you are giving the user

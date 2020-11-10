@@ -22,19 +22,24 @@
 
 <hr>
 
-<!-- News Content -->
-<%= @item.short_description %>
-<hr>
-<div class="full_text">
+<% if can?(:read_annotation, @item) %>
+  <%= @item.short_description %>
+  <hr>
+<% end %>
+<% if can?(:read_full_text, @item) %>
+  <div class="full_text">
   <%= @item.full_text.html_safe %>
-</div>
-<hr>
-<% if can? :update, @item %>
+  </div>
+  <hr>
+<% end %>
+
+<% if can?(:update, @item) %>
   <%= link_to 'Edit', edit_item_path(@item), class: "btn btn-primary" %>
 <% end %>
-<% if can? :destroy, @item %>
+<% if can?(:destroy, @item) %>
   <%= link_to "#{translate('items.destroy')}", @item, method: :delete, class: "btn btn-primary" %>
 <% end %>
+
 
 <!-- Comments Form -->
 <div class="card my-4">
