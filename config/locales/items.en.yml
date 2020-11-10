@@ -11,4 +11,6 @@ en:
     create: "Create"
     read_more: "Read More"
     edit: "Edit"
+    destroy: "Destroy"
+    are_you_sure: "Are you sure?"
 

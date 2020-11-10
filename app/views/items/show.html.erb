@@ -18,6 +18,9 @@
 <p>Important: <%= @item.flag %></p>
 
 <hr>
+<p>Redactor: <%= @redactor%></p>
+
+<hr>
 
 <!-- News Content -->
 <%= @item.short_description %>
@@ -26,6 +29,12 @@
   <%= @item.full_text.html_safe %>
 </div>
 <hr>
+<% if can? :update, @item %>
+  <%= link_to 'Edit', edit_item_path(@item), class: "btn btn-primary" %>
+<% end %>
+<% if can? :destroy, @item %>
+  <%= link_to "#{translate('items.destroy')}", @item, method: :delete, class: "btn btn-primary" %>
+<% end %>
 
 <!-- Comments Form -->
 <div class="card my-4">

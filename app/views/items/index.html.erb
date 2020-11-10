@@ -20,7 +20,13 @@
   <div class="card-body">
     <h2 class="card-title"><%= item.title %></h2>
     <p class="card-text"><%= item.short_description.length <= 2000 ? item.short_description : item.short_description[0..2000] %></p>
-    <a href="/items/<%= item.id %>" class="btn btn-primary"><%= t 'items.read_more' %> &rarr;</a>
+    <%= link_to "#{translate('items.read_more')}", item, class: "btn btn-primary" %>
+    <% if can? :update, item %>
+      <%= link_to "#{translate('items.edit')}", edit_item_path(item), class: "btn btn-primary" %>
+    <% end %>
+    <% if can? :destroy, item %>
+      <%= link_to "#{translate('items.destroy')}", item, method: :delete, class: "btn btn-primary" %>
+    <% end %>
   </div>
   <div class="card-footer text-muted">
     <%= item.created_at %>

@@ -1,4 +1,7 @@
 class ItemsController < ApplicationController
+  load_and_authorize_resource
+  before_action :authenticate_user!, except: [:show, :index]
+
   def index
     @items =
       if params[:category]
@@ -10,6 +13,7 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
+    @redactor = User.find(@item.user_id).email
   end
 
   def edit
@@ -26,8 +30,8 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
+    @item.user_id = current_user.id
     @item.save
-
     redirect_to item_path(@item.id)
   end
 
@@ -36,6 +40,14 @@ class ItemsController < ApplicationController
     @item.update(item_params)
 
     redirect_to item_path(params[:id])
+  end
+
+  def destroy
+    @item = Item.find(params[:id])
+    @item.destroy
+    respond_to do |format|
+      format.html { redirect_to items_path }
+    end
   end
 
   private

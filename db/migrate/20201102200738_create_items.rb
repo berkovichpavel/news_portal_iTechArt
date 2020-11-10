@@ -7,11 +7,10 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.string :category, null: false
       t.string :mask
       t.string :region
-      t.datetime :last_editing # delete
       t.integer :status
       t.boolean :flag, default: false
+      t.integer :user_id
       t.float :rating, default: 0
-      t.string :redactor
       t.float :average_rating, default: 0
 
       t.timestamps
