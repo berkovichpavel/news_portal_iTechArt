@@ -7,6 +7,7 @@
 </h1>
 <h1><small><%= t 'items.designed_by' %></small></h1>
 
+
 <!--#1-->
 <%# @items.each do |item| %>
 <!--<div class="card mb-4">-->
@@ -72,6 +73,12 @@
         <% end %>
       </div>
     </div>
+
+  <div class="card-body">
+    <h2 class="card-title"><%= item.title %></h2>
+    <p class="card-text"><%= item.short_description.length <= 2000 ? item.short_description : item.short_description[0..2000] %></p>
+    <a href="/items/<%= item.id %>" class="btn btn-primary"><%= t 'items.read_more' %> &rarr;</a>
+  </div>
   </div>
 </main>
 
@@ -112,6 +119,8 @@
   </div>
 
 </div>
+
+
 
 <!-- Pagination -->
 <ul class="pagination justify-content-center ">

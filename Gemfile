@@ -61,4 +61,8 @@ gem 'ckeditor'
 gem 'mini_magick'
 gem 'simple_form'
 gem 'carrierwave'
+<<<<<<< HEAD
 gem 'cancancan'
+=======
+gem 'acts-as-taggable-on', '~> 6.0'
+>>>>>>> master
