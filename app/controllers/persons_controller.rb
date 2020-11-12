@@ -12,7 +12,7 @@ class PersonsController < ApplicationController
   def edit
     respond_to do |format|
       if current_user.update(user_params)
-        format.html { redirect_to current_user, notice: 'Ok'}
+        format.html { redirect_to current_user, notice: 'Ok' }
       else
         format.html { render :edit }
       end
@@ -23,10 +23,10 @@ class PersonsController < ApplicationController
 
   def user_params
     params.require(:user).permit(
-        :bio,
-        :first_name,
-        :last_name,
-        :photo
+      :bio,
+      :first_name,
+      :last_name,
+      :photo
     )
   end
 end

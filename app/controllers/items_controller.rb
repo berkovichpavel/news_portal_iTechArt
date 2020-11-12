@@ -12,12 +12,10 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
     @redactor = User.find(@item.user_id).email
   end
 
   def edit
-    @item = Item.find(params[:id])
     @categories = Item.categories.keys
     @access_mask = Item.access_masks.keys
   end
@@ -36,9 +34,7 @@ class ItemsController < ApplicationController
   end
 
   def update
-    @item = Item.find(params[:id])
     @item.update(item_params)
-
     redirect_to item_path(params[:id])
   end
 

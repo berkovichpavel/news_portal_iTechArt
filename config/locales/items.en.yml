@@ -9,8 +9,11 @@ en:
     choose_category: "Choose category"
     short_description: "Short description"
     create: "Create"
-    read_more: "Read More"
+    read_more: "More"
     edit: "Edit"
     destroy: "Destroy"
     are_you_sure: "Are you sure?"
+    important_news: "Important news"
+    other_news: "Other news"
+    image: "Image"
 

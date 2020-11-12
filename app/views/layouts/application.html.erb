@@ -43,7 +43,7 @@
           <% if user_signed_in? %>
             <span><%= t 'layouts.hello' %>, <%= current_user.email %></span>
             <button type="button" class="btn btn-dark">
-              <%= link_to translate('layouts.exit'), destroy_user_session_path, :method => :delete %>
+              <%= link_to translate('layouts.exit'), destroy_user_session_path, method: :delete %>
             </button>
           <% else %>
             <button type="button" class="btn btn-dark">
@@ -57,7 +57,7 @@
       </div>
     </nav>
     <div class="row">
-      <div class="col-lg-8">
+      <div class="col-lg-9">
       <%= yield %>
       </div>
       <div class="col-md-3">
