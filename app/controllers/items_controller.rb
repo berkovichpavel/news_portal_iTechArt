@@ -1,8 +1,12 @@
 class ItemsController < ApplicationController
+  before_action :tag_cloud
+
   def index
     @items =
       if params[:category]
         Item.where(category: params[:category])
+      elsif params[:tag].present?
+        Item.all.tagged_with(params[:tag])
       else
         Item.all
       end
@@ -38,9 +42,13 @@ class ItemsController < ApplicationController
     redirect_to item_path(params[:id])
   end
 
+  def tag_cloud
+    @tags = Item.tag_counts_on(:tags)
+  end
+
   private
 
   def item_params
-    params.require(:item).permit(:title, :category, :short_description, :full_text, :mask, :region, :mask, :main_img_href, :flag)
+    params.require(:item).permit(:title, :category, :short_description, :full_text, :mask, :region, :mask, :main_img_href, :flag, :tag_list)
   end
 end

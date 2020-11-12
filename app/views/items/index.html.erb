@@ -16,7 +16,6 @@
     <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
   <% end %>
 
-
   <div class="card-body">
     <h2 class="card-title"><%= item.title %></h2>
     <p class="card-text"><%= item.short_description.length <= 2000 ? item.short_description : item.short_description[0..2000] %></p>
@@ -27,6 +26,8 @@
   </div>
 </div>
 <% end %>
+
+
 
 <!-- Pagination -->
 <ul class="pagination justify-content-center mb-4">
