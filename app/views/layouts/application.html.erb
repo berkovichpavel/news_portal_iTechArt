@@ -117,7 +117,7 @@
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
 
-                  <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
+                  <% tag_cloud(@tags.sort_by { |a| a.name }, %w(css1 css2 css3 css4)) do |tag, css_class| %>
                     <li class="breadcrumb-item">
                     <%= link_to tag.name, items_path(tag: tag.name), :class => css_class %>
                     </li>

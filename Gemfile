@@ -63,4 +63,5 @@ gem 'simple_form'
 gem 'carrierwave'
 gem 'cancancan'
 gem 'acts-as-taggable-on', '~> 6.0'
-
+gem 'kaminari'
+gem 'bootstrap4-kaminari-views'

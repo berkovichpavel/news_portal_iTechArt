@@ -1,24 +1,17 @@
 class ItemsController < ApplicationController
-<<<<<<< HEAD
   load_and_authorize_resource
   before_action :authenticate_user!, except: [:show, :index]
-=======
   before_action :tag_cloud
->>>>>>> master
 
   def index
     @items =
       if params[:category]
-<<<<<<< HEAD
         @items.where(category: params[:category])
-=======
-        Item.where(category: params[:category])
       elsif params[:tag].present?
-        Item.all.tagged_with(params[:tag])
->>>>>>> master
+        @items.all.tagged_with(params[:tag])
       else
         @items
-      end
+      end.order(created_at: :desc).page(params[:page]).per(20)
   end
 
   def show
@@ -49,17 +42,16 @@ class ItemsController < ApplicationController
     redirect_to item_path(params[:id])
   end
 
-<<<<<<< HEAD
   def destroy
     @item = Item.find(params[:id])
     @item.destroy
     respond_to do |format|
       format.html { redirect_to items_path }
     end
-=======
+  end
+
   def tag_cloud
     @tags = Item.tag_counts_on(:tags)
->>>>>>> master
   end
 
   private

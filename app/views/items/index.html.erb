@@ -73,12 +73,6 @@
         <% end %>
       </div>
     </div>
-
-  <div class="card-body">
-    <h2 class="card-title"><%= item.title %></h2>
-    <p class="card-text"><%= item.short_description.length <= 2000 ? item.short_description : item.short_description[0..2000] %></p>
-    <a href="/items/<%= item.id %>" class="btn btn-primary"><%= t 'items.read_more' %> &rarr;</a>
-  </div>
   </div>
 </main>
 
@@ -122,14 +116,11 @@
 
 
 
+
+
 <!-- Pagination -->
 <ul class="pagination justify-content-center ">
-  <li class="page-item">
-    <a class="page-link" href="#">&larr; Older</a>
-  </li>
-  <li class="page-item disabled">
-    <a class="page-link" href="#">Newer &rarr;</a>
-  </li>
+  <%= paginate @items, theme: 'twitter-bootstrap-4' %>
 </ul>
 
 
