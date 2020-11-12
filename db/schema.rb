@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_09_110733) do
+ActiveRecord::Schema.define(version: 2020_11_10_171529) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,11 +54,10 @@ ActiveRecord::Schema.define(version: 2020_11_09_110733) do
     t.string "category", null: false
     t.string "mask"
     t.string "region"
-    t.datetime "last_editing"
     t.integer "status"
     t.boolean "flag", default: false
+    t.integer "user_id"
     t.float "rating", default: 0.0
-    t.string "redactor"
     t.float "average_rating", default: 0.0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -104,6 +103,12 @@ ActiveRecord::Schema.define(version: 2020_11_09_110733) do
     t.inet "last_sign_in_ip"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "admin", default: false
+    t.text "bio"
+    t.string "first_name"
+    t.string "last_name"
+    t.boolean "redactor", default: false
+    t.boolean "correspondent", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
