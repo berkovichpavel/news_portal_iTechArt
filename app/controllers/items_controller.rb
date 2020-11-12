@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
+  before_action :tag_cloud
+
   def index
-    tag_cloud
     @items =
       if params[:category]
         Item.where(category: params[:category])

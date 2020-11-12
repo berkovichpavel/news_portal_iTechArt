@@ -27,7 +27,7 @@
               <%= t 'items.categories' %>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <% Item.categories.keys.each do |category| %>
+              <% @categories.each do |category| %>
                 <%= link_to "#{category.capitalize}", items_path(category: "#{category}"), class: "dropdown-item" %>
               <% end %>
             </div>
@@ -110,20 +110,23 @@
           </div>
         </div>
         <!-- Tag cloud -->
+        <% if @tags %>
         <div class="card my-4">
           <h5 class="card-header">Tag cloud</h5>
           <div class="card-body">
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
-                <% tag_cloud(Item.tag_counts_on(:tags).sort_by(&:name), %w(css1 css2 css3 css4)) do |tag, css_class| %>
-                  <li class="breadcrumb-item">
-                  <%= link_to tag.name, items_path(tag: tag.name), :class => css_class %>
-                  </li>
-                <% end %>
+
+                  <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
+                    <li class="breadcrumb-item">
+                    <%= link_to tag.name, items_path(tag: tag.name), :class => css_class %>
+                    </li>
+                  <% end %>
               </ol>
             </nav>
           </div>
         </div>
+        <% end %>
         <!-- Side Widget -->
         <div class="card my-4">
           <h5 class="card-header">Side Widget</h5>
