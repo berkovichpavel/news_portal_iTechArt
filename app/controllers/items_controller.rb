@@ -25,21 +25,29 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    @categories = Item.categories.keys
-    @access_mask = Item.access_masks.keys
+    @categories = Item.categories.keys # почему не надо дуюлировать
+    @access_mask = Item.access_masks.keys # почему надо
   end
 
   def create
     @item = current_user.items.create(item_params)
-    # @item = Item.new(item_params)
-    # @item.user_id = current_user.id
-    # @item.save
-    redirect_to item_path(@item.id)
+    if @item.save
+      redirect_to item_path(@item.id)
+    else
+      @access_mask = Item.access_masks.keys
+      render new_item_path
+    end
   end
 
   def update
-    @item.update(item_params)
-    redirect_to item_path(params[:id])
+    if @item.update(item_params)
+      redirect_to item_path(params[:id])
+    else
+      @access_mask = Item.access_masks.keys
+      # render edit_item_path
+      render 'edit'
+    end
+
   end
 
   def destroy

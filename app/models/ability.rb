@@ -15,10 +15,11 @@ class Ability
         can :read, :all
       end
       can :read_annotation, Item
+      can :update, User
     else
       can :read, Item, mask: ['visible to everyone', 'title and annotation are visible', 'only visible header']
       can :read_annotation, Item, mask: ['visible to everyone', 'title and annotation are visible']
-      can  :read_full_text, Item, mask: ['visible to everyone']
+      can :read_full_text, Item, mask: ['visible to everyone']
     end
 
     # The first argument to `can` is the action you are giving the user

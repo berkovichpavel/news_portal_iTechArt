@@ -1,0 +1,37 @@
+<h1 class="my-4">
+  All users
+</h1>
+<ul class="list-group">
+  <% @users.each_with_index do |user, index|  %>
+    <% if user.admin? %>
+      <li class="list-group-item list-group-item-primary">
+        <%= user.email %>
+        <%= link_to "#{translate('items.edit')}", edit_user_path(user), class: "btn btn-sm btn-outline-secondary justify-content-end" %>
+      </li>
+    <% elsif user.redactor? %>
+      <li class="list-group-item list-group-item-secondary">
+        <%= user.email %>
+        <%= link_to "#{translate('items.edit')}", edit_user_path(user), class: "btn btn-sm btn-outline-secondary justify-content-end" %>
+      </li>
+    <% elsif user.correspondent? %>
+      <li class="list-group-item list-group-item-success">
+        <%= user.email %>
+        <%= link_to "#{translate('items.edit')}", edit_user_path(user), class: "btn btn-sm btn-outline-secondary justify-content-end" %>
+      </li>
+    <% elsif user.correspondent? %>
+      <li class="list-group-item list-group-item-success">
+        <%= user.email %>
+        <%= link_to "#{translate('items.edit')}", edit_user_path(user), class: "btn btn-sm btn-outline-secondary justify-content-end" %>
+      </li>
+    <% else %>
+      <li class="list-group-item list-group-item-info">
+        <%= user.email %>
+        <%= link_to "#{translate('items.edit')}", edit_user_path(user), class: "btn btn-sm btn-outline-secondary justify-content-end" %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+
+
+
+

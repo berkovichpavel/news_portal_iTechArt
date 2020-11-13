@@ -1,5 +1,12 @@
 <%= javascript_include_tag Ckeditor.cdn_url %>
 <%= simple_form_for @item do |f| %>
+  <% if @item.errors.any? %>
+    <% @item.errors.each do |attr, msg| %>
+      <div class="alert alert-danger", role="alert">
+        <%= attr %> <%= msg %>
+      </div>
+    <% end %>
+  <% end %>
   <%= f.input :title %>
   <%= f.input :short_description %>
   <%= f.input :category, :collection => @categories %>

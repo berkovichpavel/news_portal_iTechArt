@@ -1,0 +1,8 @@
+<%= simple_form_for @user do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :bio %>
+  <%= f.label :photo %>
+  <%= f.file_field :photo %>
+  <%= f.button :submit, class: 'btn btn-success' %>
+<% end %>
