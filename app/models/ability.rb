@@ -10,12 +10,13 @@ class Ability
       elsif user.correspondent?
         can :create, Item
         can :update, Item, user_id: user.id
-        can :read, :all
-      else
-        can :read, :all
+      elsif user.redactor?
+
       end
+      can :read, Item
       can :read_annotation, Item
-      can :update, User
+      can :read, User, id: user.id
+      can :update, User, id: user.id
     else
       can :read, Item, mask: ['visible to everyone', 'title and annotation are visible', 'only visible header']
       can :read_annotation, Item, mask: ['visible to everyone', 'title and annotation are visible']

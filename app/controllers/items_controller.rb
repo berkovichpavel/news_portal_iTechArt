@@ -25,17 +25,18 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
-    @categories = Item.categories.keys # почему не надо дуюлировать
-    @access_mask = Item.access_masks.keys # почему надо
+    @categories = Item.categories.keys
+    @access_mask = Item.access_masks.keys
   end
 
   def create
-    @item = current_user.items.create(item_params)
+    @item = current_user.items.build(item_params)
     if @item.save
       redirect_to item_path(@item.id)
     else
+      binding.pry
       @access_mask = Item.access_masks.keys
-      render new_item_path
+      render 'new'
     end
   end
 
@@ -44,7 +45,6 @@ class ItemsController < ApplicationController
       redirect_to item_path(params[:id])
     else
       @access_mask = Item.access_masks.keys
-      # render edit_item_path
       render 'edit'
     end
 

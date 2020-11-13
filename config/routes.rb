@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
+  root to: 'items#index'
   resources :items
 
 
   devise_for :users
-  # resources :users
-  get 'users/profile'
-  get 'users/profile', as: 'user_root'
+  # get 'users/profile'
+  # get 'users/profile', as: 'user_root'
+  resources :users
 
-  root to: 'items#index'
   namespace :admin do
 
   end

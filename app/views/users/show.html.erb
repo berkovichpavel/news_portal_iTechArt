@@ -11,6 +11,8 @@
       <% if can? :update, @user %>
         <%= link_to "#{translate('items.edit')}", edit_user_path, class: "btn btn-sm btn-outline-secondary" %>
       <% end %>
+      <%= link_to "#{translate('items.edit')}", edit_user_registration_path, class: "btn btn-sm btn-outline-secondary" %>
+
   </div>
 </div>
 

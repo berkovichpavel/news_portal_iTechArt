@@ -4,5 +4,8 @@
   <%= f.input :bio %>
   <%= f.label :photo %>
   <%= f.file_field :photo %>
+  <% if can?(:manage, User) %>
+    <%= f.input :role, collection: User.roles %>
+  <%end %>
   <%= f.button :submit, class: 'btn btn-success' %>
 <% end %>
