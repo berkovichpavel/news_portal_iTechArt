@@ -67,7 +67,11 @@
 <%# end %>
 
 <h2>Comments</h2>
-<% rander partial: 'comments/form', locals: {commentable: @item} %>
+<%= render partial: 'comments/form', locals: {commentable: @item} %>
+
+<% if @item.comments.any? %>
+  <%= render @item.comments %>
+<% end %>
 
 
 <%#= render 'disqus' %>

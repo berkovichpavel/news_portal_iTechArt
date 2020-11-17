@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   end
 
   resources :items do
-    resources :comments
+    resources :comments, module: :items
   end
 end
 

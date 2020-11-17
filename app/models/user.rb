@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   has_many :items
   has_one_attached :photo
+
   enum role: { admin: 'admin', redactor: 'redactor', correspondent: 'correspondent', user: 'user' }
   devise :database_authenticatable,
          :registerable,

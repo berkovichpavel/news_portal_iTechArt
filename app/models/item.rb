@@ -3,7 +3,7 @@ class Item < ApplicationRecord
 
   acts_as_taggable
 
-  has_many :comments, as: commentable
+  has_many :comments, as: :commentable
   has_one_attached :main_img_href
 
   enum categories: %w[news health finance auto people technology realty]

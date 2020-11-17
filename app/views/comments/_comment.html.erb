@@ -1,0 +1,6 @@
+<div class="border-left pl-4 mt-4">
+  <strong><%= comment.user.email %></strong> posted
+  <%= simple_format comment.body %>
+  <%= link_to 'Reply', '#we' %>
+  <%= render partial: 'comments/form', locals: {commentable: @item, parent_id: comment.id, class: 'd-none'} %>
+</div>
