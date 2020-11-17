@@ -34,7 +34,6 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to item_path(@item.id)
     else
-      binding.pry
       @access_mask = Item.access_masks.keys
       render 'new'
     end
