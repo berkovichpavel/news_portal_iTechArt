@@ -44,28 +44,30 @@
 <% end %>
 
 
-<div class="card my-4">
-  <h5 class="card-header">Leave a Comment:</h5>
-  <div class="card-body">
-    <%= form_with model: [ @item, @item.comments.build ], local: true do |f| %>
-        <%= f.text_area :body, class: 'form-control', rows: 3 %>
-        <%= f.button :submit, class: 'btn btn-primary' %>
-    <% end %>
-  </div>
-</div>
+<!--<div class="card my-4">-->
+<!--  <h5 class="card-header">Leave a Comment:</h5>-->
+<!--  <div class="card-body">-->
+    <%#= form_with model: [ @item, @item.comments.build ], local: true do |f| %>
+        <%#= f.text_area :body, class: 'form-control', rows: 3 %>
+        <%#= f.button :submit, class: 'btn btn-primary' %>
+    <%# end %>
+<!--  </div>-->
+<!--</div>-->
 
-<% if @item.comments.any? %>
-  <% @item.comments.order(created_at: :desc).each do |comment| %>
-    <div class="media mb-4">
-      <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50">
-      <div class="media-body">
-        <h5 class="mt-0"><%= comment.commenter %></h5>
-        <%= comment.body %>
-      </div>
-    </div>
-  <% end %>
-<% end %>
+<%# if @item.comments.any? %>
+  <%# @item.comments.order(created_at: :desc).each do |comment| %>
+<!--    <div class="media mb-4">-->
+<!--      <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50">-->
+<!--      <div class="media-body">-->
+<!--        <h5 class="mt-0"><%#= comment.commenter %></h5>-->
+        <%#= comment.body %>
+<!--      </div>-->
+<!--    </div>-->
+  <%# end %>
+<%# end %>
 
+<h2>Comments</h2>
+<% rander partial: 'comments/form', locals: {commentable: @item} %>
 
 
 <%#= render 'disqus' %>
