@@ -10,6 +10,8 @@ en:
     short_description: "Short description"
     create: "Create"
     read_more: "More"
+    edit_password: "Edit password"
+    edit_profile: "Edit profile"
     edit: "Edit"
     destroy: "Destroy"
     are_you_sure: "Are you sure?"

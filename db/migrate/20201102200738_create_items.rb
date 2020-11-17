@@ -7,7 +7,6 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.string :category, null: false
       t.string :mask
       t.string :region
-      t.integer :status
       t.boolean :flag, default: false
       t.integer :user_id
       t.float :rating, default: 0

@@ -35,6 +35,16 @@
           <li class="nav-item">
             <% if can? :new, Item %><%= link_to t('layouts.create_news'), new_item_path, class: 'nav-link' %><% end %>
           </li>
+          <li class="nav-item">
+            <% if can?(:read_verification, Item) %>
+              <%= link_to t('layouts.verification'), items_path(status: 'check'), class: 'nav-link' %>
+            <% end %>
+          </li>
+          <li class="nav-item">
+            <% if can?(:read_revision, Item) %>
+              <%= link_to t('layouts.revision'), items_path(status: 'revision'), class: 'nav-link' %>
+            <% end %>
+          </li>
           <% if current_user %>
             <li class="nav-item">
               <%= link_to t('layouts.profile'), user_path(current_user), class: 'nav-link' %>

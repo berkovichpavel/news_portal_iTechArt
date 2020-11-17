@@ -7,17 +7,26 @@
       </div>
     <% end %>
   <% end %>
-  <%= f.input :title %>
-  <%= f.input :short_description %>
-  <%= f.input :category, :collection => @categories %>
-  <%= f.input :mask, :collection => @access_mask %>
-  <%= f.input :region %>
-  <%= f.label :main_img %>
-  <%= f.file_field :main_img_href %>
-  <%= f.input :flag,  as: :radio_buttons, label: translate('simple_form.important')%>
-  <%= f.label "Tags:" %>
-  <%= f.input :tag_list %>
-  <%= f.input :full_text, as: :ckeditor %>
+  <% if can?(:change_item, Item) %>
+    <%= f.input :title %>
+    <%= f.input :short_description %>
+    <%= f.input :category, collection: @categories %>
+    <%= f.input :mask, collection: @access_mask %>
+    <%= f.input :region %>
+    <%= f.label :main_img %>
+    <%= f.file_field :main_img_href %>
+    <%= f.input :flag,  as: :radio_buttons, label: translate('simple_form.important')%>
+    <%= f.label "Tags:" %>
+    <%= f.input :tag_list %>
+    <%= f.input :full_text, as: :ckeditor %>
+  <% end %>
+  <% if can?(:change_status, Item) %>
+    <% if can?(:approve, Item) %>
+      <%= f.input :status, collection: @statuses %>
+    <% else %>
+      <%= f.input :status, collection: @statuses_correspondent %>
+    <% end %>
+  <% end %>
   <%= f.button :submit, class: 'btn btn-success' %>
 <% end %>
 

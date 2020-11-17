@@ -9,15 +9,31 @@ class Ability
         can :manage, :all
       elsif user.correspondent?
         can :create, Item
+        can :read, Item
         can :update, Item, user_id: user.id
-      elsif user.redactor?
 
+        can :change_item, Item
+
+        can :change_status, Item, user_id: user.id, status: [:revision]
+
+        can :read_revision, Item, status: ['revision'], user_id: user.id
+        can :read_verification, Item, status: ['check'], user_id: user.id
+
+      elsif user.redactor?
+        can :update, Item, status: ['check']
+        can :read, Item
+
+        can :read_verification, Item, status: ['check']
+        # can :read, Item, status: ['check', 'revision'], user_id: user.id
+        can :approve, Item
+        can :change_status, Item, status: ['check']
       end
-      can :read, Item
       can :read_annotation, Item
       can :read, User, id: user.id
       can :update, User, id: user.id
+      can :read, Item, status: ['approved']
     else
+      can :read, Item, status: ['approved']
       can :read, Item, mask: ['visible to everyone', 'title and annotation are visible', 'only visible header']
       can :read_annotation, Item, mask: ['visible to everyone', 'title and annotation are visible']
       can :read_full_text, Item, mask: ['visible to everyone']

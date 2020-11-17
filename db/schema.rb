@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_13_200530) do
+ActiveRecord::Schema.define(version: 2020_11_16_082304) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 2020_11_13_200530) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.string "commenter"
+    t.integer "user_id"
     t.text "body"
     t.bigint "item_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -63,14 +63,13 @@ ActiveRecord::Schema.define(version: 2020_11_13_200530) do
     t.string "category", null: false
     t.string "mask"
     t.string "region"
-    t.integer "status"
     t.boolean "flag", default: false
     t.integer "user_id"
     t.float "rating", default: 0.0
     t.float "average_rating", default: 0.0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "reviewed", default: false
+    t.string "status", default: "check"
   end
 
   create_table "taggings", id: :serial, force: :cascade do |t|

@@ -9,6 +9,12 @@ class ItemsController < ApplicationController
         @items.where(category: params[:category])
       elsif params[:tag].present?
         @items.all.tagged_with(params[:tag])
+      elsif params[:status]
+        if current_user.redactor? || current_user.admin?
+          @items.where(status: params[:status])
+        else
+          @items.where(status: params[:status], user_id: current_user.id)
+        end
       else
         @items
       end.order(created_at: :desc).page(params[:page]).per(20)
@@ -19,14 +25,18 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    @statuses = Item.statuses
     @categories = Item.categories.keys
     @access_mask = Item.access_masks.keys
+    @statuses_correspondent = { revision: 'revision', check: 'check' }
   end
 
   def new
     @item = Item.new
     @categories = Item.categories.keys
     @access_mask = Item.access_masks.keys
+    @statuses = Item.statuses
+    @statuses_correspondent = { revision: 'revision', check: 'check' }
   end
 
   def create
@@ -34,7 +44,6 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to item_path(@item.id)
     else
-      binding.pry
       @access_mask = Item.access_masks.keys
       render 'new'
     end
@@ -52,6 +61,7 @@ class ItemsController < ApplicationController
 
   def destroy
     @item = Item.find(params[:id])
+    @item.comments.destroy
     @item.destroy
     respond_to do |format|
       format.html { redirect_to items_path }
@@ -65,6 +75,19 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:title, :category, :short_description, :full_text, :mask, :region, :mask, :main_img_href, :flag, :tag_list)
+    permitted =
+      [:title,
+       :category,
+       :short_description,
+       :full_text,
+       :mask,
+       :region,
+       :main_img_href,
+       :flag,
+       :tag_list]
+    if can?(:change_status, Item)
+      permitted << :status
+    end
+    params.require(:item).permit(*permitted)
   end
 end
