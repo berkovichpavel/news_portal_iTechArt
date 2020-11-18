@@ -20,13 +20,3 @@ import '../stylesheets/application.scss'
 // const imagePath = (name) => images(name, true)
 //= require jquery
 //= require jquery_ujs
-
-
-console.log("zopa")
-require("channels/jquery.raty")
-
-
-
-
-
-
