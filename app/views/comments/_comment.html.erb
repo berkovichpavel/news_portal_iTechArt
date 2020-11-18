@@ -1,5 +1,5 @@
 <% nesting = local_assigns.fetch(:nesting, 1) %>
-<% max_nesting = local_assigns[:max_nesting]%>
+<% max_nesting = local_assigns[:max_nesting] %>
 
 <div class="border-left pl-4 mt-4">
   <% if comment.deleted? %>
@@ -24,7 +24,7 @@
 
   <%= tag.div id: "#{dom_id(comment)}_comments" do%>
     <% if comment.comments.any? %>
-      <%= render comment.comments, nesting: nesting + 1, max_nesting: local_assigns[:max_nesting] %>
+      <%= render comment.comments, nesting: nesting + 1, max_nesting: max_nesting %>
     <% end %>
   <% end %>
 </div>
