@@ -20,6 +20,12 @@ class CommentsController < ApplicationController
     redirect_to @commentable
   end
 
+  def update
+    @comment = @commentable.comments.find(params[:id])
+    @comment.update(comment_params)
+    redirect_to @commentable
+  end
+
   private
 
   def comment_params
