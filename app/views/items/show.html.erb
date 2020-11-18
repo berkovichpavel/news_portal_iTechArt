@@ -43,6 +43,14 @@
   <%= link_to "#{translate('items.destroy')}", @item, method: :delete, class: "btn btn-primary" %>
 <% end %>
 
+<div>
+  <H1> All reviews </H1>
+  <%= render @item.reviews %>
+  <div>
+    <%= link_to 'New review', new_item_review_path(@item) %>
+  </div>
+</div>
+
 
 <div class="card my-4">
   <h5 class="card-header">Leave a Comment:</h5>
@@ -69,3 +77,12 @@
 
 
 <%#= render 'disqus' %>
+<!--<script>-->
+<!--  $('.review-rating').raty({-->
+<!--      readOnly: true,-->
+<!--      score: function (){-->
+<!--          return $(this).attr('data-score');-->
+<!--      },-->
+<!--      path: '/assets/'-->
+<!--      });-->
+<!--</script>-->
