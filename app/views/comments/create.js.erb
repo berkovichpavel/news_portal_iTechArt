@@ -3,13 +3,11 @@
 <% else %>
   var comments = document.querySelector("#comments")
 <% end %>
-
+debugger
 comments.insertAdjacentHTML('beforeend', '<%=j render partial: "comments/comment", locals: { comment: @comment }, format: :html %>')
 
 var form = comments.parentElement.querySelector("form")
 form.reset()
 
-<% if @comment.parent_id? %>
-form.classList.add("d-none")
-<% end %>
+
 

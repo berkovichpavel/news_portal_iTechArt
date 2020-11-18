@@ -11,13 +11,13 @@
   <% end %>
   <div data-controller="reply">
     <small>
-      <%= link_to 'Reply', '#', data: { action: 'click->reply#toggle' }  if nesting < max_nesting %>
+      <%#= link_to 'Reply', '#', data: { action: 'click->reply#toggle' }  %>
       <%= link_to 'Delete', [comment.commentable, comment], method: :delete, data: {confirm: "Are you sure?"} if comment.user == current_user %>
     </small>
     <%= render partial: 'comments/form', locals: {
         commentable: comment.commentable,
         parent_id: reply_to_comment_id(comment, nesting, max_nesting),
-        class: 'mt-4 d-none',
+        class: 'mt-4',
         target: "reply.form"
     } %>
   </div>
