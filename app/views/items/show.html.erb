@@ -1,6 +1,10 @@
 <!-- Title -->
 <h1 class="mt-4"><%= @item.title %></h1>
 
+<h2>Average rating</h2>
+<div class="average-review-rating" data-score=<%= @average_review %>></div>
+<span> Based on <%= @item.reviews.count %> reviews</span>
+
 <!-- Author -->
 <p class="lead">
 
@@ -77,11 +81,8 @@
 
 
 <%#= render 'disqus' %>
-<div id='slovo'>
-</div>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function(event) {
       $('.review-rating').raty({
           readOnly: true,
           path: '/assets/',
@@ -89,6 +90,17 @@
               return $(this).attr('data-score')
           }
       });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        $('.average-review-rating').raty({
+            readOnly: true,
+            path: '/assets/',
+            score: function() {
+                return $(this).attr('data-score')
+            }
+        });
     });
 </script>
 
