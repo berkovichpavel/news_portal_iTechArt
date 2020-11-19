@@ -25,7 +25,7 @@ class ItemsController < ApplicationController
     @average_review = if @item.reviews.blank?
                         0
                       else
-                        @item.reviews.average(:rating).round(2)
+                        @item.reviews.average(:rating)
                       end
   end
 
