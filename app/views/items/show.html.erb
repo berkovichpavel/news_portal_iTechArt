@@ -48,10 +48,15 @@
 <% end %>
 
 <div>
-  <H1> All reviews </H1>
-  <%= render @item.reviews %>
+  <h1> Last 5 reviews </h1>
+  <%= render @item.reviews.limit(5) %>
+  <h2> Your review </h2>
+  <%= render current_user.reviews.where(item_id: @item.id) %>
   <div>
-    <%= link_to 'New review', new_item_review_path(@item) %>
+    <% if @can_review %>
+    <%# if can?(:review, @can_review) %>
+      <%= link_to 'New review', new_item_review_path(@item) %>
+    <% end %>
   </div>
 </div>
 

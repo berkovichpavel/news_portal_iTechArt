@@ -27,6 +27,7 @@ class ItemsController < ApplicationController
                       else
                         @item.reviews.average(:rating)
                       end
+    @can_review = current_user.reviews.where(item_id: @item.id).count < 1
   end
 
   def edit
