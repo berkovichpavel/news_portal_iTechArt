@@ -22,6 +22,12 @@ class ItemsController < ApplicationController
 
   def show
     @redactor = User.find(@item.user_id).email
+    @average_review = if @item.reviews.blank?
+                        0
+                      else
+                        @item.reviews.average(:rating)
+                      end
+    @can_review = current_user.reviews.where(item_id: @item.id).count < 1
   end
 
   def edit

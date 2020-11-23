@@ -1,6 +1,10 @@
 <!-- Title -->
 <h1 class="mt-4"><%= @item.title %></h1>
 
+<h2>Average rating</h2>
+<div class="average-review-rating" data-score=<%= @average_review %>></div>
+<span> Based on <%= @item.reviews.count %> reviews</span>
+
 <!-- Author -->
 <p class="lead">
 
@@ -43,6 +47,19 @@
   <%= link_to "#{translate('items.destroy')}", @item, method: :delete, class: "btn btn-primary" %>
 <% end %>
 
+<div>
+  <h1> Last 5 reviews </h1>
+  <%= render @item.reviews.limit(5) %>
+  <h2> Your review </h2>
+  <%= render current_user.reviews.where(item_id: @item.id) %>
+  <div>
+    <% if @can_review %>
+    <%# if can?(:review, @can_review) %>
+      <%= link_to 'New review', new_item_review_path(@item) %>
+    <% end %>
+  </div>
+</div>
+
 
 <div class="card my-4">
   <h5 class="card-header">Leave a Comment:</h5>
@@ -69,3 +86,25 @@
 
 
 <%#= render 'disqus' %>
+
+<script>
+      $('.review-rating').raty({
+          readOnly: true,
+          path: '/assets/',
+          score: function() {
+              return $(this).attr('data-score')
+          }
+      });
+</script>
+
+<script>
+    $('.average-review-rating').raty({
+        readOnly: true,
+        path: '/assets/',
+        score: function() {
+            return $(this).attr('data-score')
+        }
+        });
+</script>
+
+

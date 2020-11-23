@@ -37,6 +37,9 @@
                       <% end %>
                     </div>
                     </br><small class="text-muted"><%= item.created_at %></small>
+                    <% unless item.reviews.blank? %>
+                      <br/><span class="item-average-review-rating" data-score=<%= item.reviews.average(:rating).round(2) %>></span>
+                     <% end %>
                 </div>
               </div>
             </div>
@@ -75,6 +78,9 @@
                 <% end %>
               </div>
               <small class="text-muted"><%= item.created_at %></small>
+              <% unless item.reviews.blank? %>
+                <br/><span class="item-average-review-rating" data-score=<%= item.reviews.average(:rating).round(2) %>></span>
+              <% end %>
             </div>
           </div>
         </div>
@@ -96,6 +102,15 @@
 
 
 
+<script>
+  $('.item-average-review-rating').raty({
+      readOnly: true,
+      path: '/assets/',
+      score: function() {
+          return $(this).attr('data-score')
+      }
+  });
+</script>
 
 
 
