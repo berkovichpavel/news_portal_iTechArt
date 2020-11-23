@@ -93,15 +93,13 @@
 </script>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function(event) {
-        $('.average-review-rating').raty({
-            readOnly: true,
-            path: '/assets/',
-            score: function() {
-                return $(this).attr('data-score')
-            }
+    $('.average-review-rating').raty({
+        readOnly: true,
+        path: '/assets/',
+        score: function() {
+            return $(this).attr('data-score')
+        }
         });
-    });
 </script>
 
 
