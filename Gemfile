@@ -65,4 +65,5 @@ gem 'cancancan'
 gem 'acts-as-taggable-on', '~> 6.0'
 gem 'kaminari'
 gem 'bootstrap4-kaminari-views'
-
+gem 'sidekiq'
+gem 'sinatra', github: 'sinatra/sinatra'

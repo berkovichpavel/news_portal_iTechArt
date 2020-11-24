@@ -78,6 +78,11 @@ class ItemsController < ApplicationController
     @tags = Item.tag_counts_on(:tags)
   end
 
+  def read_rss
+    RssParserWorker.perform_async('Pavel', 20)
+    redirect_to items_path
+  end
+
   private
 
   def item_params

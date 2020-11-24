@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
+
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
+
   root to: 'items#index'
+  get '/items//read_rss' => 'items#read_rss', as: 'items_rss'
   resources :items
 
 
@@ -8,10 +13,6 @@ Rails.application.routes.draw do
   # get 'users/profile'
   # get 'users/profile', as: 'user_root'
   resources :users
-
-  namespace :admin do
-
-  end
 
   resources :items do
     resources :comments
