@@ -6,8 +6,17 @@
     <strong>[deleted]</strong> posted
     <p>[deleted]</p>
   <% else %>
-    <strong><%= comment.user.email %></strong> posted
-    <%= simple_format comment.body %>
+    <div class="media mb-4">
+      <% if comment.user.photo.attached? %>
+        <%= image_tag(comment.user.photo, class: "img_comment d-flex mr-3 rounded-circle") %>
+      <% else %>
+        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="img_comment d-flex mr-3 rounded-circle">
+      <% end %>
+      <div class="media-body">
+        <small class="text-muted"><%= comment.user.email %></small>
+        <%= simple_format comment.body %>
+      </div>
+    </div>
   <% end %>
   <div data-controller="reply">
     <small>

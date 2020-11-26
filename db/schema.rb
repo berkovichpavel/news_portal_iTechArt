@@ -10,8 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-
 ActiveRecord::Schema.define(version: 2020_11_18_095355) do
 
   # These are extensions that must be enabled in order to support this database
@@ -50,7 +48,6 @@ ActiveRecord::Schema.define(version: 2020_11_18_095355) do
   end
 
   create_table "comments", force: :cascade do |t|
-
     t.bigint "user_id"
     t.bigint "commentable_id"
     t.string "commentable_type"
@@ -59,18 +56,6 @@ ActiveRecord::Schema.define(version: 2020_11_18_095355) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type"
-
-    t.integer "parent_id"
-    t.text "body"
-    t.bigint "item_id", null: false
-    t.bigint "user_id"
-    t.string "commentable_type"
-    t.bigint "commentable_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["commentable_type", "commentable_id"], name: "index_comments_on_commentable_type_and_commentable_id"
-    t.index ["item_id"], name: "index_comments_on_item_id"
-
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
@@ -89,7 +74,7 @@ ActiveRecord::Schema.define(version: 2020_11_18_095355) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "rating"
+    t.integer "rating", default: 0
     t.text "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -146,10 +131,6 @@ ActiveRecord::Schema.define(version: 2020_11_18_095355) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-
-
-  add_foreign_key "comments", "items"
-
   add_foreign_key "comments", "users"
   add_foreign_key "taggings", "tags"
 end

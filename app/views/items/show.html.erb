@@ -121,58 +121,34 @@
           <% end %>
         </div>
       </div>
-
-
-      <script src="https://yastatic.net/share2/share.js"></script>
-      <div class="ya-share2" data-curtain data-shape="round" data-lang="en" data-color-scheme="blackwhite" data-limit="0" data-more-button-type="short" data-services="vkontakte,facebook,odnoklassniki,telegram,twitter,viber,skype"></div>
-
-      <div class="card my-4">
-        <h5 class="card-header">Leave a Comment:</h5>
-        <div class="card-body">
-          <%= form_with model: [ @item, @item.comments.build ], local: true do |f| %>
-            <%= f.text_area :body, class: 'form-control', rows: 3 %>
-            <%= f.button :submit, class: 'btn btn-primary' %>
-          <% end %>
-        </div>
-      </div>
-
-      <% if @item.comments.any? %>
-        <% @item.comments.order(created_at: :desc).each do |comment| %>
-          <div class="media mb-4">
-            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50">
-            <div class="media-body">
-              <small class="text-muted"><%= comment.user_id %></small>
-              <%= comment.body %>
+      <% if can?(:comment_item, @item) %>
+        <div class="card my-4">
+          <h5 class="card-header"><%= translate('items.leave_a_coment') %></h5>
+          <div class="card-body">
+            <div id='comments'>
+              <%= render partial: 'comments/form', locals: {commentable: @item} %>
+              <% if @item.comments.any? %>
+                <%= render @item.comments.order(created_at: :desc).where(parent_id: nil), max_nesting: 5 %>
+              <% end %>
             </div>
-          </div>
-        <% end %>
+        </div>
+        </div>
       <% end %>
     </div>
   </div>
-
-<!--  <hr>-->
-<%# end %>
-
-<%# if can?(:update, @item) %>
-  <%#= link_to 'Edit', edit_item_path(@item), class: "btn btn-primary" %>
-<%# end %>
-<%# if can?(:destroy, @item) %>
-  <%#= link_to "#{translate('items.destroy')}", @item, method: :delete, class: "btn btn-primary" %>
-<%# end %>
-
-
-  <h2>Comments</h2>
-  <div id='comments'>
-    <%= render partial: 'comments/form', locals: {commentable: @item} %>
-
-    <% if @item.comments.any? %>
-      <%= render @item.comments.where(parent_id: nil), max_nesting: 5 %>
-    <% end %>
-  </div>
-
-
-
 </div>
+      <%# if @item.comments.any? %>
+        <%# @item.comments.order(created_at: :desc).each do |comment| %>
+<!--          <div class="media mb-4">-->
+<!--            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50">-->
+<!--            <div class="media-body">-->
+<!--              <small class="text-muted"><%#= comment.user_id %></small>-->
+              <%#= comment.body %>
+<!--            </div>-->
+<!--          </div>-->
+        <%# end %>
+      <%# end %>
+
 
 
 <%#= render 'disqus' %>
