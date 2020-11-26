@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/"><%= t 'layouts.site_name' %></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/"><%= t 'layouts.all_news' %></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= t 'items.categories' %>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <% @categories.keys.each do |category| %>
+            <%= link_to "#{category.capitalize}", items_path(category: "#{category}"), class: "dropdown-item" %>
+          <% end %>
+        </div>
+      </li>
+      <li class="nav-item">
+        <% if can? :new, Item %><%= link_to t('layouts.create_news'), new_item_path, class: 'nav-link' %><% end %>
+      </li>
+      <li class="nav-item">
+        <% if can?(:read_verification, Item) %>
+          <%= link_to t('layouts.verification'), items_path(status: 'check'), class: 'nav-link' %>
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <% if can?(:read_revision, Item) %>
+          <%= link_to t('layouts.revision'), items_path(status: 'revision'), class: 'nav-link' %>
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <% if can?(:check_archive, Item) %>
+          <%= link_to t('layouts.archive'), items_path(status: 'archive'), class: 'nav-link' %>
+        <% end %>
+      </li>
+      <% if current_user %>
+        <li class="nav-item">
+          <%= link_to t('layouts.profile'), user_path(current_user), class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <% if can?(:manage, User) %>
+            <%= link_to t('layouts.all_profiles'), users_path, class: 'nav-link' %>
+          <% end %>
+        </li>
+      <% end %>
+
+    </ul>
+    <div>
+      <% if user_signed_in? %>
+        <span><%= t 'layouts.hello' %>, <%= current_user.email %></span>
+        <button type="button" class="btn btn-dark">
+          <%= link_to translate('layouts.exit'), destroy_user_session_path, method: :delete %>
+        </button>
+      <% else %>
+        <button type="button" class="btn btn-dark">
+          <%= link_to translate('layouts.log_in'), new_user_session_path %>
+        </button>
+        <button type="button" class="btn btn-dark">
+          <%= link_to translate('layouts.sign_up'), new_user_registration_path %>
+        </button>
+      <% end %>
+    </div>
+  </div>
+</nav>

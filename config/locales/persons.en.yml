@@ -9,3 +9,7 @@ en:
     sign_up: "Sign up"
     find_me: "Find me in app/views/users/profile.html.erb"
     or: "or"
+    all_users: "All users"
+    full_name: "Full name"
+    email: "Email"
+    bio: "Biography"

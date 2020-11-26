@@ -1,12 +1,14 @@
 class ItemsController < ApplicationController
   load_and_authorize_resource
   before_action :authenticate_user!, except: [:show, :index]
-  before_action :tag_cloud
+  before_action :tag_cloud, only: [:index, :show]
 
   def index
     @items =
       if params[:category]
         @items.where(category: params[:category])
+      elsif params[:region]
+        @items.where(region: params[:region])
       elsif params[:tag].present?
         @items.all.tagged_with(params[:tag])
       elsif params[:status]
@@ -17,40 +19,49 @@ class ItemsController < ApplicationController
         end
       else
         @items
-      end.order(created_at: :desc).page(params[:page]).per(20)
+      end
+    @important_items = @items.where(flag: true)
+    @other_items = @items.where(flag: false).order(created_at: :desc).page(params[:page]).per(12)
   end
 
   def show
     @redactor = User.find(@item.user_id).email
+    @user_review = current_user.reviews.where(item_id: @item.id).first if current_user
     @average_review = if @item.reviews.blank?
-                        0
+                        @has_review = false
                       else
+                        @has_review = true
                         @item.reviews.average(:rating)
                       end
-    @can_review = current_user.reviews.where(item_id: @item.id).count < 1
+    @can_review = if current_user
+                    current_user.reviews.where(item_id: @item.id).count < 1
+                  else
+                    false
+                  end
+
   end
 
   def edit
     @statuses = Item.statuses
-    @categories = Item.categories.keys
-    @access_mask = Item.access_masks.keys
+    @categories = Item.categories
+    @access_masks = Item.masks
     @statuses_correspondent = { revision: 'revision', check: 'check' }
   end
 
   def new
     @item = Item.new
-    @categories = Item.categories.keys
-    @access_mask = Item.access_masks.keys
+    @categories = Item.categories
+    @access_masks = Item.masks
     @statuses = Item.statuses
     @statuses_correspondent = { revision: 'revision', check: 'check' }
   end
 
   def create
-    @item = current_user.items.build(item_params)
+    @item = current_user.items.new(item_params)
     if @item.save
       redirect_to item_path(@item.id)
     else
-      @access_mask = Item.access_masks.keys
+      @access_mask = Item.masks.keys
       render 'new'
     end
   end
@@ -59,7 +70,7 @@ class ItemsController < ApplicationController
     if @item.update(item_params)
       redirect_to item_path(params[:id])
     else
-      @access_mask = Item.access_masks.keys
+      @access_mask = Item.masks.keys
       render 'edit'
     end
 

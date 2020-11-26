@@ -65,13 +65,11 @@ ActiveRecord::Schema.define(version: 2020_11_18_095355) do
     t.string "title", null: false
     t.string "short_description", null: false
     t.text "full_text"
-    t.string "category", null: false
-    t.string "mask"
+    t.string "category", default: "news", null: false
+    t.string "mask", default: "visible", null: false
     t.string "region"
     t.boolean "flag", default: false
     t.integer "user_id"
-    t.float "rating", default: 0.0
-    t.float "average_rating", default: 0.0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "status", default: "check"

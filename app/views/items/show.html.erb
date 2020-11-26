@@ -1,89 +1,155 @@
-<!-- Title -->
-<h1 class="mt-4"><%= @item.title %></h1>
 
-<h2>Average rating</h2>
-<div class="average-review-rating" data-score=<%= @average_review %>></div>
-<span> Based on <%= @item.reviews.count %> reviews</span>
+<!--<div class="card my-4">-->
+<!--  <h5 class="card-header">Leave a Comment:</h5>-->
+<!--  <div class="card-body">-->
+<%#= form_with model: [ @item, @item.comments.build ], local: true do |f| %>
+<%#= f.text_area :body, class: 'form-control', rows: 3 %>
+<%#= f.button :submit, class: 'btn btn-primary' %>
+<%# end %>
+<!--  </div>-->
+<!--</div>-->
 
-<!-- Author -->
-<p class="lead">
-
-</p>
-
-<hr>
-
-<!-- Date/Time -->
-<p><%= @item.updated_at %></p>
-
-<hr>
-<p><%= @item.region %></p>
-
-<hr>
-<p>Important: <%= @item.flag %></p>
-
-<hr>
-<p>Redactor: <%= @redactor%></p>
-
-<hr>
-<p>Tags: <%==  @item.tags.map{ |t| link_to t.name, items_path(tag: t.name)}.join(', ')%></p>
-
-<hr>
-
-<% if can?(:read_annotation, @item) %>
-  <%= @item.short_description %>
-  <hr>
-<% end %>
-<% if can?(:read_full_text, @item) %>
-  <div class="full_text">
-  <%= @item.full_text.html_safe %>
-  </div>
-  <hr>
-<% end %>
-
-<% if can?(:update, @item) %>
-  <%= link_to 'Edit', edit_item_path(@item), class: "btn btn-primary" %>
-<% end %>
-<% if can?(:destroy, @item) %>
-  <%= link_to "#{translate('items.destroy')}", @item, method: :delete, class: "btn btn-primary" %>
-<% end %>
-
-<div>
-  <h1> Last 5 reviews </h1>
-  <%= render @item.reviews.limit(5) %>
-  <h2> Your review </h2>
-  <%= render current_user.reviews.where(item_id: @item.id) %>
-  <div>
-    <% if @can_review %>
-    <%# if can?(:review, @can_review) %>
-      <%= link_to 'New review', new_item_review_path(@item) %>
-    <% end %>
-  </div>
-</div>
+<%# if @item.comments.any? %>
+<%# @item.comments.order(created_at: :desc).each do |comment| %>
+<!--    <div class="media mb-4">-->
+<!--      <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50">-->
+<!--      <div class="media-body">-->
+<!--        <h5 class="mt-0"><%#= comment.user_id %></h5>-->
+<%#= comment.body %>
+<!--      </div>-->
+<!--    </div>-->
+<%# end %>
+<%# end %>
 
 
-<div class="card my-4">
-  <h5 class="card-header">Leave a Comment:</h5>
-  <div class="card-body">
-    <%= form_with model: [ @item, @item.comments.build ], local: true do |f| %>
-        <%= f.text_area :body, class: 'form-control', rows: 3 %>
-        <%= f.button :submit, class: 'btn btn-primary' %>
-    <% end %>
-  </div>
-</div>
 
-<% if @item.comments.any? %>
-  <% @item.comments.order(created_at: :desc).each do |comment| %>
-    <div class="media mb-4">
-      <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50">
-      <div class="media-body">
-        <h5 class="mt-0"><%= comment.user_id %></h5>
-        <%= comment.body %>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-lg-3">
+      <div class="card my-4">
+        <h5 class="card-header"><%= translate('items.tag_cloud') %></h5>
+        <div class="card-body">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <% tag_cloud(@tags.sort_by { |a| a.name }, %w(css1 css2 css3 css4)) do |tag, css_class| %>
+                <li class="breadcrumb-item">
+                  <%= link_to tag.name, items_path(tag: tag.name), :class => css_class %>
+                </li>
+              <% end %>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+      <div class="card my-4">
+        <h5 class="card-header"><%= translate('items.last_reviews') %></h5>
+        <div class="card-body">
+          <div>
+            <%= render @item.reviews.limit(5) %>
+          </div>
+          <hr/>
+          <div>
+            <strong><%= translate('items.my_review') %>:</strong>
+            <% if current_user %>
+              <% if @user_review %>
+                <div class="review-rating" data-score="<%= @user_review.rating %>"></div>
+                <p><%= @user_review.comment %></p>
+                <%= link_to translate('items.edit'), edit_item_review_path(@user_review.item, @user_review) %>
+                <%= link_to translate('items.delete'), item_review_path(@user_review.item, @user_review), method: :delete, data: { confirm: "Are you sure?"} %>
+              <% end %>
+            <% end %>
+            <% if @can_review %>
+              <%# if can?(:review, @can_review) %>
+              <%= link_to translate('items.new_review'), new_item_review_path(@item) %>
+              <%# end %>
+            <% end %>
+          </div>
+
+        </div>
       </div>
     </div>
-  <% end %>
-<% end %>
+
+    <div class="col-lg-9">
+
+      <div class="card mt-4">
+        <% if @item.main_img_href.attached? %>
+          <%= image_tag(@item.main_img_href, class: "my_news_main_img card-img-top") %>
+        <% else %>
+          <img class="" src="http://placehold.it/900x400" alt="">
+        <% end %>
+
+        <div class="card-body">
+          <h3 class="card-title"><%= @item.title %></h3>
+          <span class="text-warning average-review-rating", data-score=<%= @average_review %>>Average rating: </span>
+          <span> <%= translate('items.based_on') %> <%= @item.reviews.count %> <%= translate('items.reviews') %></span>
+          <p class="card-text">
+            <strong><%= translate('items.redactor') %>: </strong> <%= @redactor%> /
+            <strong><%= translate('items.updated_at') %>: </strong> <%= @item.updated_at %> /
+            <strong><%= translate('items.category') %>: </strong><%= link_to @item.category, items_path(category: @item.category) %> /
+            <strong><%= translate('items.region') %>: </strong><%= link_to @item.region, items_path(region: @item.region) %> /
+            <strong><%= translate('items.tags') %>: </strong><%==  @item.tags.map{ |t| link_to t.name, items_path(tag: t.name)}.join(', ')%>
+          </p>
+          <% if can?(:update, @item) %>
+            <%= link_to translate('items.edit'), edit_item_path(@item), class: "btn btn-primary" %>
+          <% end %>
+          <% if can?(:destroy, @item) %>
+            <%= link_to translate('items.destroy'), @item, method: :delete, class: "btn btn-primary" %>
+          <% end %>
+          <hr/>
+          <% unless current_user %>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <strong>Do you want to read the news without limits?</strong>
+              <%= link_to translate('items.register_here') + '!', new_user_registration_path %>
+              <%= translate('items.or') %>
+              <%= link_to translate('items.sign_in') + '!', new_user_session_path %>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          <% end %>
+          <% if can?(:read_full_text, @item) || can?(:read_annotation, @item) %>
+            <div class="card-body">
+              <% if can?(:read_annotation, @item) %>
+                <p><strong><%= translate('items.text_annotation')%></strong>: <%= @item.short_description %></p>
+              <% end %>
+              <% if can?(:read_full_text, @item) %>
+                <p><strong><%= translate('items.full_text')%></strong>: <%= @item.full_text.html_safe %>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
 
 
+      <script src="https://yastatic.net/share2/share.js"></script>
+      <div class="ya-share2" data-curtain data-shape="round" data-lang="en" data-color-scheme="blackwhite" data-limit="0" data-more-button-type="short" data-services="vkontakte,facebook,odnoklassniki,telegram,twitter,viber,skype"></div>
+
+      <div class="card my-4">
+        <h5 class="card-header">Leave a Comment:</h5>
+        <div class="card-body">
+          <%= form_with model: [ @item, @item.comments.build ], local: true do |f| %>
+            <%= f.text_area :body, class: 'form-control', rows: 3 %>
+            <%= f.button :submit, class: 'btn btn-primary' %>
+          <% end %>
+        </div>
+      </div>
+
+      <% if @item.comments.any? %>
+        <% @item.comments.order(created_at: :desc).each do |comment| %>
+          <div class="media mb-4">
+            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50">
+            <div class="media-body">
+              <small class="text-muted"><%= comment.user_id %></small>
+              <%= comment.body %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  </div>
 
 <%#= render 'disqus' %>
 
@@ -106,5 +172,3 @@
         }
         });
 </script>
-
-

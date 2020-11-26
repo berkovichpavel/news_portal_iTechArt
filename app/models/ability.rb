@@ -24,20 +24,22 @@ class Ability
         can :read, Item
 
         can :read_verification, Item, status: ['check']
-        # can :read, Item, status: ['check', 'revision'], user_id: user.id
         can :approve, Item
-        can :change_status, Item, status: ['check']
+        can :change_status, Item, status: %w[check approved archive]
+        can :check_archive, Item
       end
       can :read_annotation, Item
+      can :read_full_text, Item
       can :read, User, id: user.id
       can :update, User, id: user.id
       can :read, Item, status: ['approved']
     else
-      can :read, Item, status: ['approved']
-      can :read, Item, mask: ['visible to everyone', 'title and annotation are visible', 'only visible header']
-      can :read_annotation, Item, mask: ['visible to everyone', 'title and annotation are visible']
-      can :read_full_text, Item, mask: ['visible to everyone']
+      can :read, Item, status: ['approved'], mask: %w[visible title_annotation only_header]
+      can :read_annotation, Item, mask: %w[visible title_annotation]
+      can :read_full_text, Item, mask: %w[visible]
     end
+
+
 
     # The first argument to `can` is the action you are giving the user
     # permission to do.
