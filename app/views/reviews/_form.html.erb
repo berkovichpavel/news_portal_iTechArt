@@ -1,0 +1,18 @@
+<div class="block">
+  <h1><%= review_form_header(@review) %></h1>
+  <%= simple_form_for ([@item, @review]) do |f| %>
+    <div class="rating-form">
+      <label>Rating</label>
+    </div>
+    <%= f.input :comment %>
+    <%= f.button :submit, class: 'btn btn-primary btn-xs btn-block'%>
+  <% end %>
+</div>
+
+
+<script>
+  $('.rating-form').raty({
+      path: '/assets/',
+      scoreName: 'review[rating]'
+  });
+</script>

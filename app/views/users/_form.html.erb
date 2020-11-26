@@ -1,11 +1,15 @@
-<%= simple_form_for @user do |f| %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :bio %>
-  <%= f.label :photo %>
-  <%= f.file_field :photo %>
-  <% if can?(:manage, User) %>
-    <%= f.input :role, collection: User.roles %>
-  <%end %>
-  <%= f.button :submit, class: 'btn btn-success' %>
-<% end %>
+<div class="block">
+  <h3>Edit profile</h3>
+    <%= simple_form_for @user do |f| %>
+      <%= f.input :first_name %>
+      <%= f.input :last_name %>
+      <%= f.input :bio %>
+      <%= f.label :photo %>
+      <%= f.file_field :photo %>
+      <% if can?(:manage, User) %>
+        <%= f.input :role, collection: User.roles %>
+      <%end %>
+      <%= f.button :submit, class: 'btn btn-success btn-xs btn-block' %>
+    <% end %>
+</div>
+

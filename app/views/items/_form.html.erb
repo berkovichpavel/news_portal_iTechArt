@@ -1,24 +1,35 @@
-<%= javascript_include_tag Ckeditor.cdn_url %>
-<%= simple_form_for @item do |f| %>
-  <% if @item.errors.any? %>
-    <% @item.errors.each do |attr, msg| %>
-      <div class="alert alert-danger", role="alert">
-        <%= attr %> <%= msg %>
-      </div>
+<div class="col-lg-12 d-flex justify-content-center">
+  <%= javascript_include_tag Ckeditor.cdn_url %>
+  <%= simple_form_for @item do |f| %>
+    <% if @item.errors.any? %>
+      <% @item.errors.each do |attr, msg| %>
+        <div class="alert alert-danger", role="alert">
+          <%= attr %> <%= msg %>
+        </div>
+      <% end %>
     <% end %>
+    <% if can?(:change_item, Item) %>
+      <%= f.input :title %>
+      <%= f.input :short_description %>
+      <%= f.input :category, collection: @categories %>
+      <%= f.input :mask, collection: @access_masks %>
+      <%= f.input :region %>
+      <%= f.label :main_img %>
+      <%= f.file_field :main_img_href %>
+      <%= f.input :flag,  as: :radio_buttons, label: translate('simple_form.important')%>
+      <%= f.input :tag_list, label: translate('items.tags') %>
+      <%= f.input :full_text, as: :ckeditor %>
+    <% end %>
+    <% if can?(:change_status, Item) %>
+      <% if can?(:approve, Item) %>
+        <%= f.input :status, collection: @statuses %>
+      <% else %>
+        <%= f.input :status, collection: @statuses_correspondent %>
+      <% end %>
+    <% end %>
+    <div class="d-flex justify-content-center">
+      <%= f.button :submit, class: 'btn btn-success btn-xs btn-block' %>
+    </div>
   <% end %>
-  <%= f.input :title %>
-  <%= f.input :short_description %>
-  <%= f.input :category, :collection => @categories %>
-  <%= f.input :mask, :collection => @access_mask %>
-  <%= f.input :region %>
-  <%= f.label :main_img %>
-  <%= f.file_field :main_img_href %>
-  <%= f.input :flag,  as: :radio_buttons, label: translate('simple_form.important')%>
-  <%= f.label "Tags:" %>
-  <%= f.input :tag_list %>
-  <%= f.input :full_text, as: :ckeditor %>
-  <%= f.button :submit, class: 'btn btn-success' %>
-<% end %>
-
+</div>
 

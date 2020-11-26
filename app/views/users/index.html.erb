@@ -1,15 +1,15 @@
-<h1 class="my-4">
-  All users
-</h1>
-<ul class="list-group">
-  <% @users.each_with_index do |user, index|  %>
-      <li class="list-group-item list-group-item-primary">
-        <%= user.email %>
-        <%= link_to "#{translate('items.edit')}", edit_user_path(user), class: "btn btn-sm btn-outline-secondary justify-content-end" %>
+<div class="col-lg-12 d-flex justify-content-center">
+   <h1 class="my-4">
+     <%= translate('persons.all_users') %>
+   </h1>
+ </div>
+<div class="col-lg-12 d-flex justify-content-center">
+  <ul class="list-group">
+    <% @users.each_with_index do |user, index|  %>
+      <li class="list-group-item list-group-item-primary col-lg-12">
+        <%= user.email %> (<%= user.role %>)
+        <%= link_to "#{translate('items.edit')}", edit_user_path(user), class: "btn btn-sm btn-outline-secondary" %>
       </li>
-  <% end %>
-</ul>
-
-
-
-
+    <% end %>
+  </ul>
+</div>
