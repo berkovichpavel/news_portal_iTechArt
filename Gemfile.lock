@@ -241,6 +241,8 @@ GEM
     simple_form (5.0.3)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
+    social-buttons (0.3.9)
+      rails (>= 3.0.0)
     social-share-button (1.2.3)
       coffee-rails
     spring (2.1.1)
@@ -312,6 +314,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   simple_form
+  social-buttons (~> 0.3)
   social-share-button
   spring
   spring-watcher-listen (~> 2.0.0)

@@ -91,12 +91,21 @@
             <strong><%= translate('items.region') %>: </strong><%= link_to @item.region, items_path(region: @item.region) %> /
             <strong><%= translate('items.tags') %>: </strong><%==  @item.tags.map{ |t| link_to t.name, items_path(tag: t.name)}.join(', ')%>
           </p>
-          <% if can?(:update, @item) %>
-            <%= link_to translate('items.edit'), edit_item_path(@item), class: "btn btn-primary" %>
-          <% end %>
-          <% if can?(:destroy, @item) %>
-            <%= link_to translate('items.destroy'), @item, method: :delete, class: "btn btn-primary" %>
-          <% end %>
+          <div class="row">
+            <div class="col-md-9">
+              <% if can?(:update, @item) %>
+                <%= link_to translate('items.edit'), edit_item_path(@item), class: "btn btn-primary" %>
+              <% end %>
+              <% if can?(:destroy, @item) %>
+                <%= link_to translate('items.destroy'), @item, method: :delete, class: "btn btn-primary" %>
+              <% end %>
+            </div>
+            <div class="col-md-3 text-right">
+              <%= tweet_button( url: request.original_url, text: "Title: #{@item.title}.\nShort description: #{@item.short_description}\nMain img: #{url_for(@item.main_img_href) if @item.main_img_href.attached?}", class: "pull-right") %>
+              <script src="https://yastatic.net/share2/share.js" async></script>
+              <div class="ya-share2 pull-right" data-curtain data-lang="en" data-services="vkontakte,facebook,odnoklassniki,telegram,skype"></div>
+            </div>
+          </div>
           <hr/>
           <% unless current_user %>
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -137,8 +146,6 @@
     </div>
   </div>
 </div>
-
-<%= social_share_button_tag (@item.title) %>
 
 <script>
       $('.review-rating').raty({
