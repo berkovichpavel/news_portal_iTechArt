@@ -8,5 +8,7 @@ comments.insertAdjacentHTML('beforeend', '<%=j render partial: "comments/comment
 var form = comments.parentElement.querySelector("form")
 form.reset()
 
-
+<%# if @comment.parent_id? %>
+//  form.class.add('d-none')
+<%# end %>
 

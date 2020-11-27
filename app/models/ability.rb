@@ -20,7 +20,7 @@ class Ability
         can :read_verification, Item, status: ['check'], user_id: user.id
 
       elsif user.redactor?
-        can :update, Item, status: ['check']
+        can :update, Item, status: %w[check approved]
         can :read, Item
 
         can :read_verification, Item, status: ['check']

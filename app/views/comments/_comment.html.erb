@@ -6,7 +6,7 @@
     <strong>[deleted]</strong> posted
     <p>[deleted]</p>
   <% else %>
-    <div class="media mb-4">
+    <div class="media">
       <% if comment.user.photo.attached? %>
         <%= image_tag(comment.user.photo, class: "img_comment d-flex mr-3 rounded-circle") %>
       <% else %>
@@ -18,17 +18,26 @@
       </div>
     </div>
   <% end %>
+
   <div data-controller="reply">
     <small>
+      <div class="dropdown">
+        <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= translate('comments.reply') %>
+        </a>
+        <div class="dropdown-menu col-lg-8" aria-labelledby="dropdownMenuButton">
+          <%= render partial: 'comments/form', locals: {
+              commentable: comment.commentable,
+              parent_id: reply_to_comment_id(comment, nesting, max_nesting),
+              class: 'mt-4',
+              target: "reply.form"
+          } %>
+        </div>
+        <%= link_to translate('comments.delete'), [comment.commentable, comment], method: :delete, data: {confirm: "Are you sure?"} if comment.user == current_user %>
+      </div>
       <%#= link_to 'Reply', '#', data: { action: 'click->reply#toggle' }  %>
-      <%= link_to 'Delete', [comment.commentable, comment], method: :delete, data: {confirm: "Are you sure?"} if comment.user == current_user %>
+      <%#= link_to 'Delete', [comment.commentable, comment],class: 'btn btn-secondary btn-sm', method: :delete, data: {confirm: "Are you sure?"} if comment.user == current_user %>
     </small>
-    <%= render partial: 'comments/form', locals: {
-        commentable: comment.commentable,
-        parent_id: reply_to_comment_id(comment, nesting, max_nesting),
-        class: 'mt-4',
-        target: "reply.form"
-    } %>
   </div>
 
   <%= tag.div id: "#{dom_id(comment)}_comments" do%>

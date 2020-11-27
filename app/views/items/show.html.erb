@@ -128,7 +128,7 @@
             <div id='comments'>
               <%= render partial: 'comments/form', locals: {commentable: @item} %>
               <% if @item.comments.any? %>
-                <%= render @item.comments.order(created_at: :desc).where(parent_id: nil), max_nesting: 5 %>
+                <%= render @item.comments.where(parent_id: nil), max_nesting: 5 %>
               <% end %>
             </div>
         </div>
@@ -137,21 +137,7 @@
     </div>
   </div>
 </div>
-      <%# if @item.comments.any? %>
-        <%# @item.comments.order(created_at: :desc).each do |comment| %>
-<!--          <div class="media mb-4">-->
-<!--            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50">-->
-<!--            <div class="media-body">-->
-<!--              <small class="text-muted"><%#= comment.user_id %></small>-->
-              <%#= comment.body %>
-<!--            </div>-->
-<!--          </div>-->
-        <%# end %>
-      <%# end %>
 
-
-
-<%#= render 'disqus' %>
 
 <script>
       $('.review-rating').raty({
