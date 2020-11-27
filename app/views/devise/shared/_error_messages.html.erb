@@ -7,8 +7,10 @@
        %>
     </h2>
     <ul>
-      <% resource.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <% resource.errors.each do |attr, msg| %>
+        <div class="alert alert-danger", role="alert">
+          <%= attr %> <%= msg %>
+        </div>
       <% end %>
     </ul>
   </div>

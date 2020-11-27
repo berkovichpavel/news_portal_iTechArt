@@ -61,6 +61,7 @@ en:
       updated_but_not_signed_in: "Your account has been updated successfully, but since your password was changed, you need to sign in again"
       waiting confirmation: "Currently waiting confirmation for:"
       we_need_current_password: "we need your current password to confirm your changes"
+      update: "Update"
     sessions:
       log_in: "Log in"
       signed_in: "Signed in successfully."
