@@ -8,6 +8,9 @@ class User < ApplicationRecord
 
   has_one_attached :photo
 
+  validates :last_name, presence: true
+  validates :first_name, presence: true
+
   enum role: { admin: 'admin', redactor: 'redactor', correspondent: 'correspondent', user: 'user' }
   devise :database_authenticatable,
          :registerable,
