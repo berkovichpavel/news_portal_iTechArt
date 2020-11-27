@@ -39,3 +39,6 @@ yarn-debug.log*
 .DS_Store
 /config/database.yml
 .DS_Store
+
+# Ignore application configuration
+/config/application.yml

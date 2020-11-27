@@ -4,6 +4,8 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
+        binding.pry
+        NewUserEmailMailer.notify_user(@user).deliver_now
         format.html { redirect_to user_path(params[:id]) }
       else
         format.html { render :edit }
