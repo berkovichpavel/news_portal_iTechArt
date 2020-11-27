@@ -20,7 +20,7 @@ class Ability
         can :read_verification, Item, status: ['check'], user_id: user.id
 
       elsif user.redactor?
-        can :update, Item, status: ['check']
+        can :update, Item, status: %w[check approved]
         can :read, Item
 
         can :read_verification, Item, status: ['check']
@@ -33,6 +33,7 @@ class Ability
       can :read, User, id: user.id
       can :update, User, id: user.id
       can :read, Item, status: ['approved']
+      can :comment_item, Item
     else
       can :read, Item, status: ['approved'], mask: %w[visible title_annotation only_header]
       can :read_annotation, Item, mask: %w[visible title_annotation]

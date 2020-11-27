@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :users
 
   resources :items do
-    resources :comments
+    resources :comments, module: :items
     resources :reviews
   end
 end

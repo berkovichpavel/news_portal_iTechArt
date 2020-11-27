@@ -1,14 +1,34 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
+
   def create
-    @item = Item.find(params[:item_id])
-    @comment = @item.comments.create(comment_params.merge(commenter: current_user.email)) #переделать
-    redirect_to item_path(@item)
+    @comment = @commentable.comments.new(comment_params)
+    @comment.user = current_user
+    if @comment.save
+      respond_to do |format|
+        format.html { redirect_to @commentable }
+        format.js
+      end
+    else
+      redirect_to @commentable, alert: "Something went wrong"
+    end
+  end
+
+  def destroy
+    @comment = @commentable.comments.find(params[:id])
+    @comment.destroy
+    redirect_to @commentable
+  end
+
+  def update
+    @comment = @commentable.comments.find(params[:id])
+    @comment.update(comment_params)
+    redirect_to @commentable
   end
 
   private
 
   def comment_params
-
-    params.require(:comment).permit(:body)
+    params.require(:comment).permit(:body, :parent_id)
   end
 end

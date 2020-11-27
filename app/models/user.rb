@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :reviews
 
   has_one_attached :photo
+
   enum role: { admin: 'admin', redactor: 'redactor', correspondent: 'correspondent', user: 'user' }
   devise :database_authenticatable,
          :registerable,

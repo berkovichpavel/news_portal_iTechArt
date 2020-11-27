@@ -3,8 +3,9 @@ class Item < ApplicationRecord
 
   acts_as_taggable
 
-  has_many :comments
+  has_many :comments, as: :commentable
   has_many :reviews
+
   has_one_attached :main_img_href
 
   enum status: { 'approved' => 'approved', 'archive' => 'archive', 'revision' => 'revision', 'check' => 'check' }
