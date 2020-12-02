@@ -5,6 +5,7 @@ class User < ApplicationRecord
   has_many :items
   has_many :comments
   has_many :reviews
+  has_one :subscription
 
   has_one_attached :photo
 

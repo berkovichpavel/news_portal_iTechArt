@@ -8,7 +8,7 @@ class Item < ApplicationRecord
 
   has_one_attached :main_img_href
 
-  enum status: { 'approved' => 'approved', 'archive' => 'archive', 'revision' => 'revision', 'check' => 'check' }
+  enum status: { 'active' => 'active', 'archive' => 'archive', 'revision' => 'revision', 'check' => 'check' }
   enum active_status: { 'inactive' => 'inactive', 'published' => 'published', 'archived' => 'archived' }
   enum category: { 'news' => 'news', 'health' => 'health', 'finance' => 'finance', 'auto' => 'auto', 'people' => 'people',
                    'technology' => 'technology', 'realty' => 'realty' }

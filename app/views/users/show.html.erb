@@ -78,6 +78,17 @@
         </div>
       </div>
     </div>
+
+    <% if @user.subscription %>
+      <%= render @user.subscription %>
+      <%= link_to translate('items.edit'),  edit_user_subscription_path(@user, @user.subscription) %>
+      <%= link_to translate('items.delete'), user_subscription_path(@user, @user.subscription), method: :delete, data: { confirm: "Are you sure?"} %>
+    <% else %>
+      <%= link_to translate('items.new_review'),  new_user_subscription_path(@user) %>
+    <% end %>
+
+    <p>Original url <%= request.original_url %></p>
+
   </div>
 </div>
 

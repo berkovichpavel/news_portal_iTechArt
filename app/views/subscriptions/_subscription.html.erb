@@ -1,0 +1,3 @@
+<div><%= subscription.sending_frequency %></div>
+<p>Last send: <%= subscription.last_sent %></p>
+<p>Dispatch time: <%= pluralize(subscription.dispatch_hour, 'hour', locale: :en) %></p>

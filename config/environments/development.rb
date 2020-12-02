@@ -66,8 +66,8 @@ Rails.application.configure do
     port: 587,
     domain: 'gmail.com',
     authentication: 'plain',
-    user_name: ENV['gmail_username'],
-    password: ENV['gmail_password'],
+    user_name: 'news.portal.berdacha@gmail.com',
+    password: 'newsPortal070895',
     authentication: 'plain',
     enable_starttls_auto: true
   }

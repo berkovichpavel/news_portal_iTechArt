@@ -1,0 +1,17 @@
+<div class="block">
+  <h1><%= subscription_form_header(@subscription) %></h1>
+  <%= simple_form_for ([@user, @subscription]) do |f| %>
+    <%= f.input :dispatch_hour %>
+    <%= f.input :sending_frequency, collection: @sending_frequencies %>
+
+    <%= f.button :submit, class: 'btn btn-primary btn-xs btn-block'%>
+  <% end %>
+</div>
+
+
+<script>
+    $('.rating-form').raty({
+        path: '/assets/',
+        scoreName: 'review[rating]'
+    });
+</script>

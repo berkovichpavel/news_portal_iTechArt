@@ -1,0 +1,14 @@
+<h1>Welcome to Berdacha news portal!</h1>
+<h2>All news for your absence</h2>
+<% @items.each do |item| %>
+  <p>
+    <big><b><em>Title</em></b></big>: <%= item.title %>
+  </p>
+  <p>
+    <big><em><b>Short description</b></em></big>: <%= item.short_description %>
+  </p>
+  <p>
+    <small><em><b>Read completely:</b></em> <%= item_url(item) %></small>
+  </p>
+  <%#= image_tag(item.main_img_href) %>
+<% end %>

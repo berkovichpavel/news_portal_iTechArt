@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   # get 'users/profile', as: 'user_root'
   devise_for :users
 
-  resources :users
+  resources :users do
+    resources :subscriptions
+  end
 
   resources :items do
     resources :comments, module: :items
