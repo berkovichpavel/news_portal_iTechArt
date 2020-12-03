@@ -4,13 +4,14 @@ class CommentsController < ApplicationController
   def create
     @comment = @commentable.comments.new(comment_params)
     @comment.user = current_user
+    @comment.service_type = (current_user.role == 'user' ? 'default' : 'working')
     if @comment.save
       respond_to do |format|
         format.html { redirect_to @commentable }
         format.js
       end
     else
-      redirect_to @commentable, alert: "Something went wrong"
+      redirect_to @commentable, alert: 'Something went wrong'
     end
   end
 

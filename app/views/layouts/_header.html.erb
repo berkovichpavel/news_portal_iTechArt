@@ -23,6 +23,9 @@
         <%= link_to "More commentable", items_path(commentable: true), class: 'nav-link' %>
       </li>
       <li class="nav-item">
+        <%= link_to "More readable", items_path(readable: true), class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
         <% if can? :new, Item %><%= link_to t('layouts.create_news'), new_item_path, class: 'nav-link' %><% end %>
       </li>
       <li class="nav-item">

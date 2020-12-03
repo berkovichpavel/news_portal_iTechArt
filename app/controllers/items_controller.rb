@@ -18,9 +18,9 @@ class ItemsController < ApplicationController
           @items.where(status: params[:status], user_id: current_user.id)
         end
       elsif params[:commentable]
-        binding.pry
-        # @items.sort { |a, b| a.comments.where(user_id: User.where(role: 'user').ids).count <=> b.comments.where(user_id: User.where(role: 'user').ids).count }
-        #{@items.joins(:comments).order('comments.count')}
+        @items.joins(:comments).group(:id).select('items.*, COUNT(comments) as count_comments').where(comments: {service_type: 'default'}).order('COUNT(comments) DESC')
+      elsif params[:readable]
+        @items.joins(:items_users).group(:id).order('COUNT(id) DESC')
       else
         @items
       end
@@ -29,7 +29,8 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @redactor = User.find(@item.user_id).email
+    @item.users.push(current_user) unless @item.users.include?(current_user)
+    @redactor = User.find(@item.author_id).email
     @user_review = current_user.reviews.where(item_id: @item.id).first if current_user
     @average_review = if @item.reviews.blank?
                         @has_review = false
@@ -61,7 +62,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = current_user.items.new(item_params)
+    @item = current_user.created_items.new(item_params)
     if @item.save
       redirect_to item_path(@item.id)
     else

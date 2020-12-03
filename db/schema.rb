@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_18_095355) do
+ActiveRecord::Schema.define(version: 2020_12_03_173937) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 2020_11_18_095355) do
     t.text "body"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "service_type", default: "default"
     t.index ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
@@ -71,6 +72,14 @@ ActiveRecord::Schema.define(version: 2020_11_18_095355) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "status", default: "check"
+    t.bigint "author_id", null: false
+    t.index ["author_id"], name: "index_items_on_author_id"
+  end
+
+  create_table "items_users", id: false, force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "item_id", null: false
+    t.index ["user_id", "item_id"], name: "index_items_users_on_user_id_and_item_id", unique: true
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -132,5 +141,6 @@ ActiveRecord::Schema.define(version: 2020_11_18_095355) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "comments", "users"
+  add_foreign_key "items", "users", column: "author_id"
   add_foreign_key "taggings", "tags"
 end
