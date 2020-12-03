@@ -10,13 +10,17 @@ class ItemsController < ApplicationController
       elsif params[:region]
         @items.where(region: params[:region])
       elsif params[:tag].present?
-        @items.all.tagged_with(params[:tag])
+        @items.tagged_with(params[:tag])
       elsif params[:status]
         if current_user.redactor? || current_user.admin?
           @items.where(status: params[:status])
         else
           @items.where(status: params[:status], user_id: current_user.id)
         end
+      elsif params[:commentable]
+        binding.pry
+        # @items.sort { |a, b| a.comments.where(user_id: User.where(role: 'user').ids).count <=> b.comments.where(user_id: User.where(role: 'user').ids).count }
+        #{@items.joins(:comments).order('comments.count')}
       else
         @items
       end

@@ -11,6 +11,9 @@ class UsersController < ApplicationController
     end
   end
 
+  def activity
+
+  end
 
   private
 
