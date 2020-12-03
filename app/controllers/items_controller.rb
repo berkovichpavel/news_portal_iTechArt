@@ -29,7 +29,9 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item.users.push(current_user) unless @item.users.include?(current_user)
+    if current_user
+      @item.users.push(current_user) unless @item.users.include?(current_user)
+    end
     @redactor = User.find(@item.author_id).email
     @user_review = current_user.reviews.where(item_id: @item.id).first if current_user
     @average_review = if @item.reviews.blank?
