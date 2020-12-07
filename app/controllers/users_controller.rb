@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   load_and_authorize_resource
 
+  def index
+    @users = @users.where(params.keys.first => params[params.keys.first].to_sym) if params.keys.count > 2
+  end
+
   def update
     respond_to do |format|
       if @user.update(user_params)

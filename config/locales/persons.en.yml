@@ -23,3 +23,7 @@ en:
     title: 'Title'
     news_href: 'News href'
     date: 'Date'
+    users: 'Users'
+    correspondents: 'Correspondents'
+    admins: 'Admins'
+    redactors: 'Redactors'
