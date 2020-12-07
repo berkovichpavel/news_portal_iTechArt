@@ -11,8 +11,14 @@ class UsersController < ApplicationController
     end
   end
 
-  def activity
+  def comments_activity
+    @comments = @user.comments.page(params[:page]).per(10)
+    @comments = @comments.order(params.keys.first => params[params.keys.first].to_sym) if params.keys.count > 3
+  end
 
+  def items_activity
+    @items = @user.items.page(params[:page]).per(10)
+    @items = @items.order(params.keys.first => params[params.keys.first].to_sym) if params.keys.count > 3
   end
 
   private

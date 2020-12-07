@@ -13,3 +13,13 @@ en:
     full_name: "Full name"
     email: "Email"
     bio: "Biography"
+    activity: 'activity'
+    comments: 'comments'
+    items: 'items'
+    more: 'more'
+    show_comments_activity: 'Show comments activity'
+    show_items_activity: 'Show items activity'
+    back_to_user: 'Back to user'
+    title: 'Title'
+    news_href: 'News href'
+    date: 'Date'

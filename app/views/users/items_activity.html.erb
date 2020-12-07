@@ -1,0 +1,81 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-uppercase mb-0"><em><%=@user.email%></em> <%= translate('persons.items')%> <%= translate('persons.activity') %> </h5>
+        </div>
+        <div class="table-responsive">
+          <table class="table no-wrap user-table mb-0">
+            <thead>
+            <tr>
+              <th scope="col" class="border-0 text-uppercase font-medium pl-4">#</th>
+              <th scope="col" class="border-0 text-uppercase font-medium">
+                <%= translate('persons.title') %>
+                <%= link_to "", items_activity_user_path(@user, title: "ASC"), class: 'fa fa-caret-up' %>
+                <%= link_to "", items_activity_user_path(@user, title: "DESC"), class: 'fa fa-caret-down' %>
+              </th>
+              <th scope="col" class="border-0 text-uppercase font-medium">
+                <%= translate('persons.news_href') %>
+              </th>
+              <th scope="col" class="border-0 text-uppercase font-medium">
+                <%= translate('persons.date') %>
+                <%= link_to "", items_activity_user_path(@user, created_at: "ASC"), class: 'fa fa-caret-up' %>
+                <%= link_to "", items_activity_user_path(@user, created_at: "DESC"), class: 'fa fa-caret-down' %>
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <% @items.each.with_index(1) do |item, index| %>
+              <tr>
+                <td class="pl-4"><%= index %></td>
+                <td>
+                  <% if item.title.length > 60 %>
+                    <h12 class="font-medium mb-0"><%= item.title[0..60] %>...</h12>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModal2">
+                      <%= translate('persons.more') %>
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel2"><%= item.title %></h5>
+                          </div>
+                          <div class="modal-body">
+                            <%= item.short_description %>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--                    -->
+                  <% else %>
+                    <h12 class="font-medium mb-0"><%= item.title %></h12>
+                  <% end %>
+
+                </td>
+                <td>
+                  <span class="text-muted"><%= link_to item_path(item), item_path(item) %></span>
+                </td>
+                <td>
+                  <span class="text-muted"><%= item.created_at %></span><br>
+                </td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <ul class="pagination justify-content-center mt-4">
+        <%= paginate @items, theme: 'twitter-bootstrap-4' %>
+        <p><%= link_to translate('persons.back_to_user'), user_path(@user),class: "ml-4 pull-right btn btn-outline-secondary" %></p>
+      </ul>
+    </div>
+  </div>
+</div>
