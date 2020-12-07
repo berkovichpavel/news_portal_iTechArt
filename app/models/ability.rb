@@ -11,18 +11,13 @@ class Ability
         can :create, Item
         can :read, Item
         can :update, Item, author_id: user.id
-
         can :change_item, Item
-
         can :change_status, Item, author_id: user.id, status: [:revision]
-
         can :read_revision, Item, status: ['revision'], user_id: user.id
         can :read_verification, Item, status: ['check'], user_id: user.id
-
       elsif user.redactor?
         can :update, Item, status: %w[check approved]
         can :read, Item
-
         can :read_verification, Item, status: ['check']
         can :approve, Item
         can :change_status, Item, status: %w[check approved archive]
@@ -30,10 +25,12 @@ class Ability
       end
       can :read_annotation, Item
       can :read_full_text, Item
-      can :read, User, id: user.id
-      can :update, User, id: user.id
       can :read, Item, status: ['approved']
       can :comment_item, Item
+      can :read, User
+      can :read_user_activity, User, hidden: false
+      can :update, User, id: user.id
+
     else
       can :read, Item, status: ['approved'], mask: %w[visible title_annotation only_header]
       can :read_annotation, Item, mask: %w[visible title_annotation]

@@ -2,14 +2,32 @@
    <h1 class="my-4">
      <%= translate('persons.all_users') %>
    </h1>
- </div>
-<div class="col-lg-12 d-flex justify-content-center">
-  <ul class="list-group">
-    <% @users.each_with_index do |user, index|  %>
-      <li class="list-group-item list-group-item-primary col-lg-12">
-        <%= user.email %> (<%= user.role %>)
-        <%= link_to "#{translate('items.edit')}", edit_user_path(user), class: "btn btn-sm btn-outline-secondary" %>
-      </li>
+</div>
+
+<div class="container">
+  <div class="row">
+    <% @users.each do |user|  %>
+      <div class="col-md-6 col-xl-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="media align-items-center">
+              <% if user.photo.attached? %>
+                <%= image_tag(user.photo, style: '', class: "avatar avatar-xl mr-3") %>
+              <% else %>
+                <span style="background-image: url(https://bootdey.com/img/Content/avatar/avatar7.png)" class="avatar avatar-xl mr-3"></span>
+              <% end %>
+              <div class="media-body overflow-hidden">
+                <h5 class="card-text mb-0"><%= user.first_name + ' ' + user.last_name %></h5>
+                <p class="card-text text-muted"><%= user.role.upcase %></p>
+                <p class="card-text">
+                  <%= user.email %>
+                </p>
+              </div>
+            </div>
+            <%= link_to "", user_path(user), class: "tile-link" %>
+          </div>
+        </div>
+      </div>
     <% end %>
-  </ul>
+  </div>
 </div>

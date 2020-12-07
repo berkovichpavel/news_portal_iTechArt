@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    permitted = [:bio, :first_name, :last_name, :photo]
+    permitted = [:bio, :first_name, :last_name, :photo, :hidden]
     if can?(:manage, User)
       permitted << :role
     end

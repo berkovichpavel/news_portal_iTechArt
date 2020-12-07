@@ -14,12 +14,12 @@
               <div class="mt-3">
                 <% unless @user.first_name.nil? && @user.last_name.nil? %>
                   <h4><%= @user.first_name + " " + @user.last_name%> </h4>
-                  <p class="text-secondary mb-1">Full Stack Developer</p>
+                  <p class="text-secondary mb-1"><%= @user.role.upcase %></p>
                 <% end %>
                 <% if can? :update, @user %>
                   <%= link_to translate('items.edit_profile'), edit_user_path, class: "btn btn-sm btn-outline-secondary" %>
+                  <%= link_to translate('items.edit_password'), edit_user_registration_path, class: "btn btn-sm btn-outline-secondary" %>
                 <% end %>
-                <%= link_to translate('items.edit_password'), edit_user_registration_path, class: "btn btn-sm btn-outline-secondary" %>
               </div>
             </div>
           </div>

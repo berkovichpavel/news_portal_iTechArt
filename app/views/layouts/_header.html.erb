@@ -28,36 +28,35 @@
       <li class="nav-item">
         <% if can? :new, Item %><%= link_to t('layouts.create_news'), new_item_path, class: 'nav-link' %><% end %>
       </li>
-      <li class="nav-item">
-        <% if can?(:read_verification, Item) %>
-          <%= link_to t('layouts.verification'), items_path(status: 'check'), class: 'nav-link' %>
-        <% end %>
-      </li>
-      <li class="nav-item">
-        <% if can?(:read_revision, Item) %>
-          <%= link_to t('layouts.revision'), items_path(status: 'revision'), class: 'nav-link' %>
-        <% end %>
-      </li>
-      <li class="nav-item">
-        <% if can?(:check_archive, Item) %>
-          <%= link_to t('layouts.archive'), items_path(status: 'archive'), class: 'nav-link' %>
-        <% end %>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= t 'items.manage' %>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <% if can?(:read_verification, Item) %>
+            <%= link_to t('layouts.verification'), items_path(status: 'check'), class: 'nav-link' %>
+          <% end %>
+          <% if can?(:read_revision, Item) %>
+            <%= link_to t('layouts.revision'), items_path(status: 'revision'), class: 'nav-link' %>
+          <% end %>
+          <% if can?(:check_archive, Item) %>
+            <%= link_to t('layouts.archive'), items_path(status: 'archive'), class: 'nav-link' %>
+          <% end %>
+        </div>
       </li>
       <% if current_user %>
         <li class="nav-item">
           <%= link_to t('layouts.profile'), user_path(current_user), class: 'nav-link' %>
         </li>
         <li class="nav-item">
-          <% if can?(:manage, User) %>
             <%= link_to t('layouts.all_profiles'), users_path, class: 'nav-link' %>
-          <% end %>
         </li>
       <% end %>
 
     </ul>
     <div>
       <% if user_signed_in? %>
-        <span><%= t 'layouts.hello' %>, <%= current_user.email %></span>
+        <span><%= t 'layouts.hello' %>, <%= current_user.first_name %></span>
         <button type="button" class="btn btn-dark">
           <%= link_to translate('layouts.exit'), destroy_user_session_path, method: :delete %>
         </button>
