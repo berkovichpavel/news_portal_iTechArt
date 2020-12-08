@@ -9,7 +9,6 @@ Rails.application.routes.draw do
 
   resources :users do
     member do
-      get 'activity', to: 'users#activity'
       get 'comments_activity'
       get 'items_activity'
     end
