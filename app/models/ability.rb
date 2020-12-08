@@ -27,9 +27,10 @@ class Ability
       can :read_full_text, Item
       can :read, Item, status: ['approved']
       can :comment_item, Item
+
       can :read, User
+      can :view_full_profile, User
       can :update, User, id: user.id
-      #to do
       can :comments_activity, User, role: 'user'
       can :comments_activity, User, role: %w[correspondent admin redactor] if user.role.in?(%w[correspondent admin redactor])
       can :items_activity, User, hidden: false
@@ -38,6 +39,7 @@ class Ability
       can :read, Item, status: ['approved'], mask: %w[visible title_annotation only_header]
       can :read_annotation, Item, mask: %w[visible title_annotation]
       can :read_full_text, Item, mask: %w[visible]
+      can :read, User
     end
 
 
