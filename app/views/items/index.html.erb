@@ -1,3 +1,4 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 <div class="container-fluid">
   <div class="row">
     <div class="col-lg-9">
@@ -82,11 +83,13 @@
                         <span class="item-average-review-rating" data-score=<%= item.reviews.average(:rating).round(2) %>></span>
                         <br/>
                       <% end %>
-
-                      <small class="text-muted"><%= item.created_at %></small>
+                     <small>
+                       <small class="text-muted"><%= item.created_at %></small>
+                       <small><i class="fa fa-eye"></i> <%= item.item_views.count %></small>
+                     </small>
                     </div>
                   </div>
-                </div>
+                  </div>
               </div>
             <% end %>
           </div>

@@ -30,7 +30,10 @@ class ItemsController < ApplicationController
 
   def show
     if current_user
-      @item.users.push(current_user) unless @item.users.include?(current_user)
+      # @item.users.push(current_user) unless @item.users.include?(current_user)
+      @item.item_views.push(ItemView.new(user_id: current_user.id)) if @item.item_views.where(user_id: current_user.id).count.zero?
+    else
+      @item.item_views.push(ItemView.new(user_ip: Faker::Internet.ip_v4_address))
     end
     @redactor = User.find(@item.author_id).email
     @user_review = current_user.reviews.where(item_id: @item.id).first if current_user

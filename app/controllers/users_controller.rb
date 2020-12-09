@@ -17,12 +17,26 @@ class UsersController < ApplicationController
 
   def comments_activity
     @comments = @user.comments.page(params[:page]).per(10)
-    @comments = @comments.order(params.keys.first => params[params.keys.first].to_sym) if params.keys.count > 3
+    @comments = if params[:body]
+                  @comments.order(body: params[:body].to_sym)
+                elsif params[:created_at]
+                  @comments.order(created_at: params[:created_at].to_sym)
+                else
+                  @comments
+               end
   end
 
   def items_activity
-    @items = @user.items.page(params[:page]).per(10)
-    @items = @items.order(params.keys.first => params[params.keys.first].to_sym) if params.keys.count > 3
+    # @items = @user.items.page(params[:page]).per(10)
+    items_ids = ItemView.where(user_id: @user.id).pluck(:item_id)
+    @items = Item.where(id: items_ids).page(params[:page]).per(10)
+    @items = if params[:title]
+               @items.order(title: params[:title].to_sym)
+             elsif params[:created_at]
+               @items.order(created_at: params[:created_at].to_sym)
+             else
+               @items
+             end
   end
 
   private
