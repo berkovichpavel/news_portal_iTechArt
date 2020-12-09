@@ -2,28 +2,29 @@
 
 en:
   persons:
-    persons_profile: "Persons#profile"
-    hello: "Hello"
-    exit: "Exit"
-    sign_in: "Sign in"
-    sign_up: "Sign up"
-    find_me: "Find me in app/views/users/profile.html.erb"
-    or: "or"
-    all_users: "All users"
-    full_name: "Full name"
-    email: "Email"
-    bio: "Biography"
     activity: 'activity'
+    admins: 'Admins'
+    all_users: "All users"
+    back_to_user: 'Back to user'
+    bio: "Biography"
+    close: 'Close'
     comments: 'comments'
+    correspondents: 'Correspondents'
+    date: 'Date'
+    email: "Email"
+    exit: "Exit"
+    find_me: "Find me in app/views/users/profile.html.erb"
+    full_name: "Full name"
+    hello: "Hello"
     items: 'items'
     more: 'more'
+    news_href: 'News href'
+    or: "or"
+    persons_profile: "Persons#profile"
+    redactors: 'Redactors'
     show_comments_activity: 'Show comments activity'
     show_items_activity: 'Show items activity'
-    back_to_user: 'Back to user'
+    sign_in: "Sign in"
+    sign_up: "Sign up"
     title: 'Title'
-    news_href: 'News href'
-    date: 'Date'
     users: 'Users'
-    correspondents: 'Correspondents'
-    admins: 'Admins'
-    redactors: 'Redactors'
