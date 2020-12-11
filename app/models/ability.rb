@@ -10,19 +10,14 @@ class Ability
       elsif user.correspondent?
         can :create, Item
         can :read, Item
-        can :update, Item, user_id: user.id
-
+        can :update, Item, author_id: user.id
         can :change_item, Item
-
-        can :change_status, Item, user_id: user.id, status: [:revision]
-
+        can :change_status, Item, author_id: user.id, status: [:revision]
         can :read_revision, Item, status: ['revision'], user_id: user.id
         can :read_verification, Item, status: ['check'], user_id: user.id
-
       elsif user.redactor?
         can :update, Item, status: %w[check approved]
         can :read, Item
-
         can :read_verification, Item, status: ['check']
         can :approve, Item
         can :change_status, Item, status: %w[check approved archive]
@@ -30,14 +25,21 @@ class Ability
       end
       can :read_annotation, Item
       can :read_full_text, Item
-      can :read, User, id: user.id
-      can :update, User, id: user.id
       can :read, Item, status: ['approved']
       can :comment_item, Item
+
+      can :read, User
+      can :view_full_profile, User
+      can :update, User, id: user.id
+      can :comments_activity, User, role: 'user'
+      can :comments_activity, User, role: %w[correspondent admin redactor] if user.role.in?(%w[correspondent admin redactor])
+      can :items_activity, User, hidden: false
+      can :items_activity, User, hidden: true, id: user.id
     else
       can :read, Item, status: ['approved'], mask: %w[visible title_annotation only_header]
       can :read_annotation, Item, mask: %w[visible title_annotation]
       can :read_full_text, Item, mask: %w[visible]
+      can :read, User
     end
 
 

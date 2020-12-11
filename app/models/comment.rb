@@ -3,6 +3,8 @@ class Comment < ApplicationRecord
   belongs_to :commentable, polymorphic: true
   belongs_to :parent, optional: true, class_name: 'Comment'
 
+  enum service_type: { 'default' => 'default', 'working' => 'working' }
+
   def comments
     Comment.where(commentable: commentable, parent_id: id)
   end

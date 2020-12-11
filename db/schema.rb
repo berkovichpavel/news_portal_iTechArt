@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_18_095355) do
+ActiveRecord::Schema.define(version: 2020_12_08_152521) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,8 +55,17 @@ ActiveRecord::Schema.define(version: 2020_11_18_095355) do
     t.text "body"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "service_type", default: "default"
     t.index ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type"
     t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "item_views", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "item_id", null: false
+    t.inet "user_ip"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "items", force: :cascade do |t|
@@ -71,6 +80,14 @@ ActiveRecord::Schema.define(version: 2020_11_18_095355) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "status", default: "check"
+    t.bigint "author_id", null: false
+    t.index ["author_id"], name: "index_items_on_author_id"
+  end
+
+  create_table "items_users", id: false, force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "item_id", null: false
+    t.index ["user_id", "item_id"], name: "index_items_users_on_user_id_and_item_id", unique: true
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -126,11 +143,13 @@ ActiveRecord::Schema.define(version: 2020_11_18_095355) do
     t.string "first_name"
     t.string "last_name"
     t.string "role", default: "user"
+    t.boolean "hidden", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "comments", "users"
+  add_foreign_key "items", "users", column: "author_id"
   add_foreign_key "taggings", "tags"
 end
