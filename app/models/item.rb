@@ -1,10 +1,13 @@
 class Item < ApplicationRecord
-  belongs_to :user
+
+  belongs_to :author, class_name: 'User', foreign_key: 'author_id'
 
   acts_as_taggable
 
   has_many :comments, as: :commentable
   has_many :reviews
+  has_and_belongs_to_many :users
+  has_many :item_views
 
   has_one_attached :main_img_href
 
