@@ -15,11 +15,7 @@ class Ability
         can :change_status, Item, author_id: user.id, status: [:revision]
         can :read_revision, Item, status: ['revision'], user_id: user.id
         can :read_verification, Item, status: ['check'], user_id: user.id
-<<<<<<< HEAD
         can :read, Comment
-
-=======
->>>>>>> feature/SAN_add_admin_
       elsif user.redactor?
         can :update, Item, status: %w[check approved]
         can :read, Item
@@ -31,14 +27,7 @@ class Ability
       end
       can :read_annotation, Item
       can :read_full_text, Item
-<<<<<<< HEAD
-      can :read, User, id: user.id
-      can :update, User, id: user.id
       can :read, Item, status: ['active']
-      can :comment_item, Item #can :create, Comment
-      can :read, Comment, user_id: User.where(role: 'user').ids
-=======
-      can :read, Item, status: ['approved']
       can :comment_item, Item
 
       can :read, User
@@ -48,32 +37,15 @@ class Ability
       can :comments_activity, User, role: %w[correspondent admin redactor] if user.role.in?(%w[correspondent admin redactor])
       can :items_activity, User, hidden: false
       can :items_activity, User, hidden: true, id: user.id
->>>>>>> feature/SAN_add_admin_
+
+      can :read, Comment, user_id: User.where(role: 'user').ids
+
+      can :add_subscription, User, id: user.id
     else
       can :read, Item, status: ['active'], mask: %w[visible title_annotation only_header]
       can :read_annotation, Item, mask: %w[visible title_annotation]
       can :read_full_text, Item, mask: %w[visible]
       can :read, User
     end
-
-
-
-    # The first argument to `can` is the action you are giving the user
-    # permission to do.
-    # If you pass :manage it will apply to every action. Other common actions
-    # here are :read, :create, :update and :destroy.
-    #
-    # The second argument is the resource the user can perform the action on.
-    # If you pass :all it will apply to every resource. Otherwise pass a Ruby
-    # class of the resource.
-    #
-    # The third argument is an optional hash of conditions to further filter the
-    # objects.
-    # For example, here the user can only update published articles.
-    #
-    #   can :update, Article, :published => true
-    #
-    # See the wiki for details:
-    # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
   end
 end

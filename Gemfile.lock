@@ -100,11 +100,8 @@ GEM
       responders
       warden (~> 1.2.3)
     erubi (1.9.0)
-<<<<<<< HEAD
-=======
     faker (2.14.0)
       i18n (>= 1.6, < 2)
->>>>>>> feature/SAN_add_admin_
     ffi (1.13.1)
     figaro (1.2.0)
       thor (>= 0.14.0, < 2)
@@ -303,11 +300,8 @@ DEPENDENCIES
   carrierwave
   ckeditor
   devise
-<<<<<<< HEAD
-  figaro
-=======
   faker
->>>>>>> feature/SAN_add_admin_
+  figaro
   jbuilder (~> 2.7)
   jquery-rails
   kaminari

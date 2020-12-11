@@ -66,9 +66,7 @@ gem 'acts-as-taggable-on', '~> 6.0'
 gem 'kaminari'
 gem 'bootstrap4-kaminari-views'
 gem "social-buttons", '~> 0.3'
-<<<<<<< HEAD
 gem 'figaro'
 gem 'sidekiq'
 gem 'mail'
 gem 'faker'
-

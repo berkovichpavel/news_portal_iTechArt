@@ -86,19 +86,17 @@
         <% if can?(:items_activity, @user) %>
           <%= link_to translate('persons.show_items_activity'), items_activity_user_path(@user) , class: "btn btn-sm btn-outline-secondary" %>
         <% end %>
+        <% if can?(:add_subscription, @user) %>
+          <% if @user.subscription %>
+            <%= render @user.subscription %>
+            <%= link_to translate('items.edit'),  edit_user_subscription_path(@user, @user.subscription), class: "btn btn-sm btn-outline-secondary" %>
+            <%= link_to translate('items.delete'), user_subscription_path(@user, @user.subscription), method: :delete, data: { confirm: "Are you sure?"},class: "btn btn-sm btn-outline-secondary" %>
+          <% else %>
+            <%= link_to translate('items.new_review'),  new_user_subscription_path(@user), class: "btn btn-sm btn-outline-secondary" %>
+          <% end %>
+        <% end %>
       </div>
     </div>
-
-    <% if @user.subscription %>
-      <%= render @user.subscription %>
-      <%= link_to translate('items.edit'),  edit_user_subscription_path(@user, @user.subscription) %>
-      <%= link_to translate('items.delete'), user_subscription_path(@user, @user.subscription), method: :delete, data: { confirm: "Are you sure?"} %>
-    <% else %>
-      <%= link_to translate('items.new_review'),  new_user_subscription_path(@user) %>
-    <% end %>
-
-    <p>Original url <%= request.original_url %></p>
-
   </div>
 </div>
 

@@ -8,14 +8,11 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users do
-<<<<<<< HEAD
     resources :subscriptions
-=======
     member do
       get 'comments_activity'
       get 'items_activity'
     end
->>>>>>> feature/SAN_add_admin_
   end
 
   resources :items do
