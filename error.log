@@ -1,0 +1,1492 @@
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Bundler::GemNotFound: Could not find acts-as-taggable-on-6.5.0 in any of the sources
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/spec_set.rb:91:in `block in materialize'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/spec_set.rb:85:in `map!'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/spec_set.rb:85:in `materialize'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/definition.rb:170:in `specs'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/definition.rb:237:in `specs_for'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/definition.rb:226:in `requested_specs'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/runtime.rb:108:in `block in definition_method'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/runtime.rb:20:in `setup'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler.rb:107:in `setup'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/setup.rb:20:in `<top (required)>'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Bundler::GemNotFound: Could not find acts-as-taggable-on-6.5.0 in any of the sources
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/spec_set.rb:91:in `block in materialize'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/spec_set.rb:85:in `map!'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/spec_set.rb:85:in `materialize'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/definition.rb:170:in `specs'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/definition.rb:237:in `specs_for'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/definition.rb:226:in `requested_specs'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/runtime.rb:108:in `block in definition_method'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/runtime.rb:20:in `setup'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler.rb:107:in `setup'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/setup.rb:20:in `<top (required)>'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+Bundler::GemNotFound: Could not find acts-as-taggable-on-6.5.0 in any of the sources
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/spec_set.rb:91:in `block in materialize'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/spec_set.rb:85:in `map!'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/spec_set.rb:85:in `materialize'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/definition.rb:170:in `specs'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/definition.rb:237:in `specs_for'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/definition.rb:226:in `requested_specs'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/runtime.rb:108:in `block in definition_method'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/runtime.rb:20:in `setup'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler.rb:107:in `setup'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/bundler/setup.rb:20:in `<top (required)>'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+  /Users/pavelberkovich/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+Ignoring bcrypt-3.1.16 because its extensions are not built. Try: gem pristine bcrypt --version 3.1.16
+Ignoring bindex-0.8.1 because its extensions are not built. Try: gem pristine bindex --version 0.8.1
+Ignoring bootsnap-1.4.9 because its extensions are not built. Try: gem pristine bootsnap --version 1.4.9
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `pwd': Operation not permitted - getcwd (Errno::EPERM)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:85:in `lockfile_contents'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:73:in `lockfile_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:22:in `bundler_version_with_reason'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:7:in `bundler_version'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/bundler_version_finder.rb:39:in `compatible?'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:997:in `block in find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `each'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/specification.rb:996:in `find_by_path'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems.rb:204:in `try_activate'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:161:in `rescue in require'
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:156:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+/Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require': cannot load such file -- executable-hooks/hooks (LoadError)
+	from /Users/pavelberkovich/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0/rubygems/core_ext/kernel_require.rb:92:in `require'
+	from /Users/pavelberkovich/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:9:in `<main>'
+rake aborted!
+NoMethodError: undefined method `info' for nil:NilClass
+/Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/lib/tasks/mail.rake:3:in `block in <main>'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/rake-13.0.1/exe/rake:27:in `<top (required)>'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `eval'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `<main>'
+Tasks: TOP => mail
+(See full trace by running task with --trace)
+rake aborted!
+NoMethodError: undefined method `info' for nil:NilClass
+/Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/lib/tasks/mail.rake:3:in `block in <main>'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/rake-13.0.1/exe/rake:27:in `<top (required)>'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `eval'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `<main>'
+Tasks: TOP => mail
+(See full trace by running task with --trace)
+rake aborted!
+NoMethodError: undefined method `info' for nil:NilClass
+/Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/lib/tasks/mail.rake:3:in `block in <main>'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/rake-13.0.1/exe/rake:27:in `<top (required)>'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `eval'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `<main>'
+Tasks: TOP => mail
+(See full trace by running task with --trace)
+rake aborted!
+NameError: uninitialized constant FindAllUsersJob
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `block in load_missing_constant'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:9:in `without_bootsnap_cache'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `rescue in load_missing_constant'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:59:in `load_missing_constant'
+/Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/lib/tasks/mail.rake:3:in `block in <main>'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/rake-13.0.1/exe/rake:27:in `<top (required)>'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `eval'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `<main>'
+
+Caused by:
+NameError: uninitialized constant FindAllUsersJob
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:61:in `block in load_missing_constant'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:17:in `allow_bootsnap_retry'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:60:in `load_missing_constant'
+/Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/lib/tasks/mail.rake:3:in `block in <main>'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/rake-13.0.1/exe/rake:27:in `<top (required)>'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `eval'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `<main>'
+Tasks: TOP => mail
+(See full trace by running task with --trace)
+rake aborted!
+NameError: uninitialized constant FindAllUsersJob
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `block in load_missing_constant'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:9:in `without_bootsnap_cache'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `rescue in load_missing_constant'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:59:in `load_missing_constant'
+/Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/lib/tasks/mail.rake:2:in `block in <main>'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/rake-13.0.1/exe/rake:27:in `<top (required)>'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `eval'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `<main>'
+
+Caused by:
+NameError: uninitialized constant FindAllUsersJob
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:61:in `block in load_missing_constant'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:17:in `allow_bootsnap_retry'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:60:in `load_missing_constant'
+/Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/lib/tasks/mail.rake:2:in `block in <main>'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/rake-13.0.1/exe/rake:27:in `<top (required)>'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `eval'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `<main>'
+Tasks: TOP => mail
+(See full trace by running task with --trace)
+rake aborted!
+NameError: uninitialized constant FindAllUsersJob
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `block in load_missing_constant'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:9:in `without_bootsnap_cache'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `rescue in load_missing_constant'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:59:in `load_missing_constant'
+/Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/lib/tasks/mail.rake:2:in `block in <main>'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/rake-13.0.1/exe/rake:27:in `<top (required)>'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `eval'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `<main>'
+
+Caused by:
+NameError: uninitialized constant FindAllUsersJob
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:61:in `block in load_missing_constant'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:17:in `allow_bootsnap_retry'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:60:in `load_missing_constant'
+/Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/lib/tasks/mail.rake:2:in `block in <main>'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/rake-13.0.1/exe/rake:27:in `<top (required)>'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `eval'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `<main>'
+Tasks: TOP => mail
+(See full trace by running task with --trace)
+rake aborted!
+NameError: uninitialized constant FindAllUsersJob
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `block in load_missing_constant'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:9:in `without_bootsnap_cache'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:80:in `rescue in load_missing_constant'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:59:in `load_missing_constant'
+/Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/lib/tasks/mail.rake:2:in `block in <main>'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/rake-13.0.1/exe/rake:27:in `<top (required)>'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `eval'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `<main>'
+
+Caused by:
+NameError: uninitialized constant FindAllUsersJob
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:61:in `block in load_missing_constant'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:17:in `allow_bootsnap_retry'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/active_support.rb:60:in `load_missing_constant'
+/Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/lib/tasks/mail.rake:2:in `block in <main>'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/gems/rake-13.0.1/exe/rake:27:in `<top (required)>'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `eval'
+/Users/pavelberkovich/.rvm/gems/ruby-2.6.3/bin/ruby_executable_hooks:24:in `<main>'
+Tasks: TOP => mail
+(See full trace by running task with --trace)
+Running via Spring preloader in process 46239
+Running via Spring preloader in process 46347
+Running via Spring preloader in process 46462
+Running via Spring preloader in process 46654
+Running via Spring preloader in process 46778
+Running via Spring preloader in process 46890
+Running via Spring preloader in process 47018
+Running via Spring preloader in process 47129
+Running via Spring preloader in process 47246
+Running via Spring preloader in process 47369
+Running via Spring preloader in process 47479
+Running via Spring preloader in process 47590
+Running via Spring preloader in process 47694
+Running via Spring preloader in process 47808
+Running via Spring preloader in process 47922
+Running via Spring preloader in process 48029
+Running via Spring preloader in process 48138
+Running via Spring preloader in process 48247
+Running via Spring preloader in process 48353
+Running via Spring preloader in process 48460
+Running via Spring preloader in process 48622
