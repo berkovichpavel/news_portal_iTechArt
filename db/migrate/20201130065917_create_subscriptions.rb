@@ -4,7 +4,7 @@ class CreateSubscriptions < ActiveRecord::Migration[6.0]
       t.datetime :last_sent
       t.integer :dispatch_hour
       t.string :sending_frequency
-      t.integer :user_id #why????
+      t.integer :user_id
 
       # tags, regions, category ???
 
