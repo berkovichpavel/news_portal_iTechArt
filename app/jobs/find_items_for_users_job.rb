@@ -8,7 +8,7 @@ class FindItemsForUsersJob < ApplicationJob
     items = Item.where(status: 'active', updated_at: last_sent..Time.current)
     items_id = items.map(&:id)
     subscription.last_sent = Time.current
-    subscription.save
+    # subscription.save
     SendItemsToUserJob.perform_now(user_id, items_id)
   end
 end
