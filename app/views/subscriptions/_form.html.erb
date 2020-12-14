@@ -4,6 +4,10 @@
     <%= f.input :dispatch_hour %>
     <%= f.input :sending_frequency, collection: @sending_frequencies %>
 
+    <%= f.input :categories , collection: @all_categories, input_html: { multiple: true } %>
+    <%= f.input :tags , collection: @all_tags, input_html: { multiple: true } %>
+    <%= f.input :regions , collection: @all_regions, input_html: { multiple: true } %>
+
     <%= f.button :submit, class: 'btn btn-primary btn-xs btn-block'%>
   <% end %>
 </div>

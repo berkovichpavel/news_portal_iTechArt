@@ -15,6 +15,7 @@ class Item < ApplicationRecord
   enum active_status: { 'inactive' => 'inactive', 'published' => 'published', 'archived' => 'archived' }
   enum category: { 'news' => 'news', 'health' => 'health', 'finance' => 'finance', 'auto' => 'auto', 'people' => 'people',
                    'technology' => 'technology', 'realty' => 'realty' }
+
   enum mask: { 'visible' => 'visible', 'title_annotation' => 'title_annotation',
                'only_header' => 'only_header', 'hidden_unregistered' => 'hidden_unregistered' }
 

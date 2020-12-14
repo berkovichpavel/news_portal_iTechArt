@@ -3716,3 +3716,577 @@ Running via Spring preloader in process 62256
 Running via Spring preloader in process 62377
 Running via Spring preloader in process 62486
 Running via Spring preloader in process 62659
+Running via Spring preloader in process 74479
+Running via Spring preloader in process 74597
+Running via Spring preloader in process 74700
+Running via Spring preloader in process 74809
+Running via Spring preloader in process 74914
+Running via Spring preloader in process 75022
+Running via Spring preloader in process 75133
+Running via Spring preloader in process 75243
+Running via Spring preloader in process 75348
+Running via Spring preloader in process 75462
+Running via Spring preloader in process 75568
+Running via Spring preloader in process 75678
+Running via Spring preloader in process 75840
+Running via Spring preloader in process 75945
+Running via Spring preloader in process 76055
+Running via Spring preloader in process 76160
+Running via Spring preloader in process 76264
+Running via Spring preloader in process 76377
+Running via Spring preloader in process 76480
+Running via Spring preloader in process 76587
+Running via Spring preloader in process 76691
+Running via Spring preloader in process 76795
+Running via Spring preloader in process 76899
+Running via Spring preloader in process 77004
+Running via Spring preloader in process 77109
+Running via Spring preloader in process 77212
+Running via Spring preloader in process 77320
+Running via Spring preloader in process 77423
+Running via Spring preloader in process 77528
+Running via Spring preloader in process 77636
+Running via Spring preloader in process 77739
+Running via Spring preloader in process 77843
+Running via Spring preloader in process 77948
+Running via Spring preloader in process 78051
+Running via Spring preloader in process 78157
+Running via Spring preloader in process 78263
+Running via Spring preloader in process 78367
+Running via Spring preloader in process 78470
+Running via Spring preloader in process 78583
+Running via Spring preloader in process 78690
+Running via Spring preloader in process 78794
+Running via Spring preloader in process 78903
+Running via Spring preloader in process 79007
+Running via Spring preloader in process 79117
+Running via Spring preloader in process 79224
+Running via Spring preloader in process 79327
+Running via Spring preloader in process 79430
+Running via Spring preloader in process 79537
+Running via Spring preloader in process 79639
+Running via Spring preloader in process 79745
+Running via Spring preloader in process 79848
+Running via Spring preloader in process 79953
+Running via Spring preloader in process 80057
+Running via Spring preloader in process 80162
+Running via Spring preloader in process 80270
+Running via Spring preloader in process 80374
+Running via Spring preloader in process 80483
+Running via Spring preloader in process 80589
+Running via Spring preloader in process 80692
+Running via Spring preloader in process 80805
+Running via Spring preloader in process 80910
+Running via Spring preloader in process 81015
+Running via Spring preloader in process 81121
+Running via Spring preloader in process 81230
+Running via Spring preloader in process 81335
+Running via Spring preloader in process 81438
+Running via Spring preloader in process 81541
+Running via Spring preloader in process 81646
+Running via Spring preloader in process 81752
+Running via Spring preloader in process 81860
+Running via Spring preloader in process 81972
+Running via Spring preloader in process 82079
+Running via Spring preloader in process 82187
+Running via Spring preloader in process 82289
+Running via Spring preloader in process 82394
+Running via Spring preloader in process 82498
+Running via Spring preloader in process 82600
+Running via Spring preloader in process 82705
+Running via Spring preloader in process 82808
+Running via Spring preloader in process 82925
+Running via Spring preloader in process 83041
+Running via Spring preloader in process 83143
+Running via Spring preloader in process 83261
+Running via Spring preloader in process 83373
+Running via Spring preloader in process 83481
+Running via Spring preloader in process 83587
+Running via Spring preloader in process 83697
+Running via Spring preloader in process 83805
+Running via Spring preloader in process 83907
+Running via Spring preloader in process 84025
+Running via Spring preloader in process 84130
+Running via Spring preloader in process 84238
+Running via Spring preloader in process 84344
+Running via Spring preloader in process 84446
+Running via Spring preloader in process 84551
+Running via Spring preloader in process 84655
+Running via Spring preloader in process 84761
+Running via Spring preloader in process 84866
+Running via Spring preloader in process 84971
+Running via Spring preloader in process 85078
+Running via Spring preloader in process 85187
+Running via Spring preloader in process 85301
+Running via Spring preloader in process 85403
+Running via Spring preloader in process 85508
+Running via Spring preloader in process 85614
+Running via Spring preloader in process 85720
+Running via Spring preloader in process 85823
+Running via Spring preloader in process 85928
+Running via Spring preloader in process 86034
+Running via Spring preloader in process 86192
+Running via Spring preloader in process 86294
+Running via Spring preloader in process 86398
+Running via Spring preloader in process 86512
+Running via Spring preloader in process 86618
+Running via Spring preloader in process 86730
+Running via Spring preloader in process 86837
+Running via Spring preloader in process 86949
+Running via Spring preloader in process 87056
+Running via Spring preloader in process 87170
+Running via Spring preloader in process 87278
+Running via Spring preloader in process 87386
+Running via Spring preloader in process 87494
+Running via Spring preloader in process 87597
+Running via Spring preloader in process 87709
+Running via Spring preloader in process 87857
+Running via Spring preloader in process 87965
+Running via Spring preloader in process 88119
+Running via Spring preloader in process 88233
+Running via Spring preloader in process 88361
+Running via Spring preloader in process 88474
+Running via Spring preloader in process 88583
+Running via Spring preloader in process 88696
+Running via Spring preloader in process 88802
+Running via Spring preloader in process 88908
+Running via Spring preloader in process 89023
+Running via Spring preloader in process 89144
+Running via Spring preloader in process 89292
+Running via Spring preloader in process 89406
+Running via Spring preloader in process 89533
+Running via Spring preloader in process 89647
+Running via Spring preloader in process 89759
+Running via Spring preloader in process 89876
+Running via Spring preloader in process 90005
+Running via Spring preloader in process 90120
+Running via Spring preloader in process 90235
+Running via Spring preloader in process 90353
+Running via Spring preloader in process 90486
+Please specify a valid ruby command or the path of a script to run.
+Run 'rails runner -h' for help.
+
+undefined method `length' for #<Mail::Message:0x00007fe6c3ec7820>
+Running via Spring preloader in process 90636
+Please specify a valid ruby command or the path of a script to run.
+Run 'rails runner -h' for help.
+
+undefined method `length' for #<Mail::Message:0x00007fe6c7da3bc0>
+Running via Spring preloader in process 90753
+Please specify a valid ruby command or the path of a script to run.
+Run 'rails runner -h' for help.
+
+undefined method `length' for #<Mail::Message:0x00007fe6bf858358>
+Running via Spring preloader in process 90887
+Please specify a valid ruby command or the path of a script to run.
+Run 'rails runner -h' for help.
+
+undefined method `length' for #<Mail::Message:0x00007fe6c3e9df20>
+Running via Spring preloader in process 91007
+Please specify a valid ruby command or the path of a script to run.
+Run 'rails runner -h' for help.
+
+undefined method `length' for #<Mail::Message:0x00007fe6c792e798>
+Running via Spring preloader in process 91118
+Please specify a valid ruby command or the path of a script to run.
+Run 'rails runner -h' for help.
+
+undefined method `length' for #<ActiveStorage::Attached::One:0x00007fe6c3e3d698>
+Running via Spring preloader in process 91248
+Please specify a valid ruby command or the path of a script to run.
+Run 'rails runner -h' for help.
+
+undefined method `length' for #<ActiveStorage::Attached::One:0x00007fe6c6c65980>
+Running via Spring preloader in process 91363
+Running via Spring preloader in process 91478
+Running via Spring preloader in process 91586
+Running via Spring preloader in process 91709
+Running via Spring preloader in process 91827
+Running via Spring preloader in process 91947
+Running via Spring preloader in process 92052
+Running via Spring preloader in process 92160
+Running via Spring preloader in process 92270
+Running via Spring preloader in process 92380
+Running via Spring preloader in process 92486
+Running via Spring preloader in process 92588
+Running via Spring preloader in process 92690
+Running via Spring preloader in process 92798
+Running via Spring preloader in process 92928
+/Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/app/mailers/new_user_email_mailer.rb:10:in `read': No such file or directory @ rb_sysopen - https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png (Errno::ENOENT)
+	from /Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/app/mailers/new_user_email_mailer.rb:10:in `send_items_to_user'
+	from /Library/Ruby/Gems/2.6.0/gems/actionpack-6.0.3.4/lib/abstract_controller/base.rb:195:in `process_action'
+	from /Library/Ruby/Gems/2.6.0/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:101:in `run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:41:in `process_action'
+	from /Library/Ruby/Gems/2.6.0/gems/actionpack-6.0.3.4/lib/abstract_controller/base.rb:136:in `process'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/rescuable.rb:25:in `block in process'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/rescuable.rb:24:in `process'
+	from /Library/Ruby/Gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/rendering.rb:39:in `process'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/base.rb:637:in `block in process'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/base.rb:636:in `process'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/message_delivery.rb:124:in `block in processed_mailer'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/message_delivery.rb:123:in `tap'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/message_delivery.rb:123:in `processed_mailer'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/message_delivery.rb:114:in `deliver_now'
+	from /Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/app/jobs/send_items_to_user_job.rb:7:in `perform'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:40:in `block in perform_now'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/i18n-1.8.5/lib/i18n.rb:308:in `with_locale'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:25:in `block (4 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:24:in `block (3 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:45:in `block in tag_logger'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:28:in `tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:45:in `tag_logger'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:21:in `block (2 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:139:in `run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:39:in `perform_now'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:18:in `perform_now'
+	from /Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/app/jobs/find_items_for_users_job.rb:14:in `perform'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:40:in `block in perform_now'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/i18n-1.8.5/lib/i18n.rb:308:in `with_locale'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:25:in `block (4 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:24:in `block (3 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:45:in `block in tag_logger'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:28:in `tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:45:in `tag_logger'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:21:in `block (2 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:139:in `run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:39:in `perform_now'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:18:in `perform_now'
+	from /Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/app/jobs/find_all_users_job.rb:9:in `block in perform'
+	from /Library/Ruby/Gems/2.6.0/gems/activerecord-6.0.3.4/lib/active_record/relation/delegation.rb:87:in `each'
+	from /Library/Ruby/Gems/2.6.0/gems/activerecord-6.0.3.4/lib/active_record/relation/delegation.rb:87:in `each'
+	from /Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/app/jobs/find_all_users_job.rb:8:in `perform'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:40:in `block in perform_now'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/i18n-1.8.5/lib/i18n.rb:308:in `with_locale'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:25:in `block (4 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:24:in `block (3 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:45:in `block in tag_logger'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:28:in `tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:45:in `tag_logger'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:21:in `block (2 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:139:in `run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:39:in `perform_now'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:18:in `perform_now'
+	from /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/commands/runner/runner_command.rb:45:in `<main>'
+	from /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/commands/runner/runner_command.rb:45:in `eval'
+	from /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/commands/runner/runner_command.rb:45:in `perform'
+	from /Library/Ruby/Gems/2.6.0/gems/thor-1.0.1/lib/thor/command.rb:27:in `run'
+	from /Library/Ruby/Gems/2.6.0/gems/thor-1.0.1/lib/thor/invocation.rb:127:in `invoke_command'
+	from /Library/Ruby/Gems/2.6.0/gems/thor-1.0.1/lib/thor.rb:392:in `dispatch'
+	from /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/command/base.rb:69:in `perform'
+	from /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/command.rb:46:in `invoke'
+	from /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/commands.rb:18:in `<main>'
+	from /Library/Ruby/Gems/2.6.0/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	from /Library/Ruby/Gems/2.6.0/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	from /Library/Ruby/Gems/2.6.0/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	from /Library/Ruby/Gems/2.6.0/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	from /Library/Ruby/Gems/2.6.0/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	from /Library/Ruby/Gems/2.6.0/gems/zeitwerk-2.4.1/lib/zeitwerk/kernel.rb:33:in `require'
+	from /Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/bin/rails:9:in `<main>'
+	from /Library/Ruby/Gems/2.6.0/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:59:in `load'
+	from /Library/Ruby/Gems/2.6.0/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:59:in `load'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'
+Running via Spring preloader in process 93059
+/Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/app/mailers/new_user_email_mailer.rb:10:in `read': No such file or directory @ rb_sysopen - https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png (Errno::ENOENT)
+	from /Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/app/mailers/new_user_email_mailer.rb:10:in `send_items_to_user'
+	from /Library/Ruby/Gems/2.6.0/gems/actionpack-6.0.3.4/lib/abstract_controller/base.rb:195:in `process_action'
+	from /Library/Ruby/Gems/2.6.0/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:101:in `run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:41:in `process_action'
+	from /Library/Ruby/Gems/2.6.0/gems/actionpack-6.0.3.4/lib/abstract_controller/base.rb:136:in `process'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/rescuable.rb:25:in `block in process'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/rescuable.rb:24:in `process'
+	from /Library/Ruby/Gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/rendering.rb:39:in `process'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/base.rb:637:in `block in process'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/base.rb:636:in `process'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/message_delivery.rb:124:in `block in processed_mailer'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/message_delivery.rb:123:in `tap'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/message_delivery.rb:123:in `processed_mailer'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/message_delivery.rb:114:in `deliver_now'
+	from /Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/app/jobs/send_items_to_user_job.rb:7:in `perform'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:40:in `block in perform_now'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/i18n-1.8.5/lib/i18n.rb:308:in `with_locale'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:25:in `block (4 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:24:in `block (3 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:45:in `block in tag_logger'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:28:in `tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:45:in `tag_logger'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:21:in `block (2 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:139:in `run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:39:in `perform_now'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:18:in `perform_now'
+	from /Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/app/jobs/find_items_for_users_job.rb:14:in `perform'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:40:in `block in perform_now'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/i18n-1.8.5/lib/i18n.rb:308:in `with_locale'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:25:in `block (4 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:24:in `block (3 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:45:in `block in tag_logger'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:28:in `tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:45:in `tag_logger'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:21:in `block (2 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:139:in `run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:39:in `perform_now'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:18:in `perform_now'
+	from /Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/app/jobs/find_all_users_job.rb:9:in `block in perform'
+	from /Library/Ruby/Gems/2.6.0/gems/activerecord-6.0.3.4/lib/active_record/relation/delegation.rb:87:in `each'
+	from /Library/Ruby/Gems/2.6.0/gems/activerecord-6.0.3.4/lib/active_record/relation/delegation.rb:87:in `each'
+	from /Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/app/jobs/find_all_users_job.rb:8:in `perform'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:40:in `block in perform_now'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/i18n-1.8.5/lib/i18n.rb:308:in `with_locale'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:25:in `block (4 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:24:in `block (3 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:45:in `block in tag_logger'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:28:in `tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:45:in `tag_logger'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:21:in `block (2 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:139:in `run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:39:in `perform_now'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:18:in `perform_now'
+	from /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/commands/runner/runner_command.rb:45:in `<main>'
+	from /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/commands/runner/runner_command.rb:45:in `eval'
+	from /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/commands/runner/runner_command.rb:45:in `perform'
+	from /Library/Ruby/Gems/2.6.0/gems/thor-1.0.1/lib/thor/command.rb:27:in `run'
+	from /Library/Ruby/Gems/2.6.0/gems/thor-1.0.1/lib/thor/invocation.rb:127:in `invoke_command'
+	from /Library/Ruby/Gems/2.6.0/gems/thor-1.0.1/lib/thor.rb:392:in `dispatch'
+	from /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/command/base.rb:69:in `perform'
+	from /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/command.rb:46:in `invoke'
+	from /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/commands.rb:18:in `<main>'
+	from /Library/Ruby/Gems/2.6.0/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	from /Library/Ruby/Gems/2.6.0/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	from /Library/Ruby/Gems/2.6.0/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	from /Library/Ruby/Gems/2.6.0/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	from /Library/Ruby/Gems/2.6.0/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	from /Library/Ruby/Gems/2.6.0/gems/zeitwerk-2.4.1/lib/zeitwerk/kernel.rb:33:in `require'
+	from /Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/bin/rails:9:in `<main>'
+	from /Library/Ruby/Gems/2.6.0/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:59:in `load'
+	from /Library/Ruby/Gems/2.6.0/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:59:in `load'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'
+Running via Spring preloader in process 93171
+/Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/app/mailers/new_user_email_mailer.rb:10:in `read': No such file or directory @ rb_sysopen - https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png (Errno::ENOENT)
+	from /Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/app/mailers/new_user_email_mailer.rb:10:in `send_items_to_user'
+	from /Library/Ruby/Gems/2.6.0/gems/actionpack-6.0.3.4/lib/abstract_controller/base.rb:195:in `process_action'
+	from /Library/Ruby/Gems/2.6.0/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:101:in `run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/actionpack-6.0.3.4/lib/abstract_controller/callbacks.rb:41:in `process_action'
+	from /Library/Ruby/Gems/2.6.0/gems/actionpack-6.0.3.4/lib/abstract_controller/base.rb:136:in `process'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/rescuable.rb:25:in `block in process'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/rescuable.rb:24:in `process'
+	from /Library/Ruby/Gems/2.6.0/gems/actionview-6.0.3.4/lib/action_view/rendering.rb:39:in `process'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/base.rb:637:in `block in process'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/base.rb:636:in `process'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/message_delivery.rb:124:in `block in processed_mailer'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/message_delivery.rb:123:in `tap'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/message_delivery.rb:123:in `processed_mailer'
+	from /Library/Ruby/Gems/2.6.0/gems/actionmailer-6.0.3.4/lib/action_mailer/message_delivery.rb:114:in `deliver_now'
+	from /Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/app/jobs/send_items_to_user_job.rb:7:in `perform'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:40:in `block in perform_now'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/i18n-1.8.5/lib/i18n.rb:308:in `with_locale'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:25:in `block (4 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:24:in `block (3 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:45:in `block in tag_logger'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:28:in `tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:45:in `tag_logger'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:21:in `block (2 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:139:in `run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:39:in `perform_now'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:18:in `perform_now'
+	from /Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/app/jobs/find_items_for_users_job.rb:14:in `perform'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:40:in `block in perform_now'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/i18n-1.8.5/lib/i18n.rb:308:in `with_locale'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:25:in `block (4 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:24:in `block (3 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:45:in `block in tag_logger'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:28:in `tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:45:in `tag_logger'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:21:in `block (2 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:139:in `run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:39:in `perform_now'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:18:in `perform_now'
+	from /Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/app/jobs/find_all_users_job.rb:9:in `block in perform'
+	from /Library/Ruby/Gems/2.6.0/gems/activerecord-6.0.3.4/lib/active_record/relation/delegation.rb:87:in `each'
+	from /Library/Ruby/Gems/2.6.0/gems/activerecord-6.0.3.4/lib/active_record/relation/delegation.rb:87:in `each'
+	from /Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/app/jobs/find_all_users_job.rb:8:in `perform'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:40:in `block in perform_now'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:112:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/i18n-1.8.5/lib/i18n.rb:308:in `with_locale'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:25:in `block (4 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `block in instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/notifications.rb:180:in `instrument'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:24:in `block (3 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:45:in `block in tag_logger'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:28:in `tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/tagged_logging.rb:80:in `tagged'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:45:in `tag_logger'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/logging.rb:21:in `block (2 levels) in <module:Logging>'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `instance_exec'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activesupport-6.0.3.4/lib/active_support/callbacks.rb:139:in `run_callbacks'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:39:in `perform_now'
+	from /Library/Ruby/Gems/2.6.0/gems/activejob-6.0.3.4/lib/active_job/execution.rb:18:in `perform_now'
+	from /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/commands/runner/runner_command.rb:45:in `<main>'
+	from /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/commands/runner/runner_command.rb:45:in `eval'
+	from /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/commands/runner/runner_command.rb:45:in `perform'
+	from /Library/Ruby/Gems/2.6.0/gems/thor-1.0.1/lib/thor/command.rb:27:in `run'
+	from /Library/Ruby/Gems/2.6.0/gems/thor-1.0.1/lib/thor/invocation.rb:127:in `invoke_command'
+	from /Library/Ruby/Gems/2.6.0/gems/thor-1.0.1/lib/thor.rb:392:in `dispatch'
+	from /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/command/base.rb:69:in `perform'
+	from /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/command.rb:46:in `invoke'
+	from /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.4/lib/rails/commands.rb:18:in `<main>'
+	from /Library/Ruby/Gems/2.6.0/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	from /Library/Ruby/Gems/2.6.0/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	from /Library/Ruby/Gems/2.6.0/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	from /Library/Ruby/Gems/2.6.0/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	from /Library/Ruby/Gems/2.6.0/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	from /Library/Ruby/Gems/2.6.0/gems/zeitwerk-2.4.1/lib/zeitwerk/kernel.rb:33:in `require'
+	from /Users/pavelberkovich/Desktop/itechArtPr/news_portal_iTechArt/bin/rails:9:in `<main>'
+	from /Library/Ruby/Gems/2.6.0/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:59:in `load'
+	from /Library/Ruby/Gems/2.6.0/gems/bootsnap-1.4.9/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:59:in `load'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+	from -e:1:in `<main>'
+Running via Spring preloader in process 93305
