@@ -3,14 +3,16 @@
 <% if @items.count.zero? %>
   <h3>Unfortunately, new news did not appear on your subscription!</h3>
 <% else %>
-  <% @items.each do |item| %>
+  <% @items.each_with_index do |item, index| %>
     <p>
       <big><b><em>Title</em></b></big>: <%= item.title %>
     </p>
     <p>
       <big><em><b>Short description</b></em></big>: <%= item.short_description %>
     </p>
-    <%= image_tag attachments['1'].url %>
+    <% if attachments["img_#{index + 1}"] %>
+      <%= image_tag attachments["img_#{index + 1}"].url,  alt: "img_#{index + 1}" %>
+    <% end %>
     <p>
       <small><em><b>Read completely:</b></em> <%= item_url(item) %></small>
     </p>
