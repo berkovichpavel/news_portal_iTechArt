@@ -81,18 +81,16 @@
           </div>
         </div>
         <% if can?(:comments_activity, @user) %>
-        <%= link_to translate('persons.show_comments_activity'), comments_activity_user_path(@user), class: "btn btn-sm btn-outline-secondary" %>
+        <%= link_to translate('persons.show_comments_activity'), comments_activity_user_path(@user), class: "btn btn-sm btn-outline-secondary mb-3" %>
         <% end %>
         <% if can?(:items_activity, @user) %>
-          <%= link_to translate('persons.show_items_activity'), items_activity_user_path(@user) , class: "btn btn-sm btn-outline-secondary" %>
+          <%= link_to translate('persons.show_items_activity'), items_activity_user_path(@user) , class: "btn btn-sm btn-outline-secondary mb-3" %>
         <% end %>
         <% if can?(:add_subscription, @user) %>
-          <% if @user.subscription %>
+          <% if @user.subscription  %>
             <%= render @user.subscription %>
-            <%= link_to translate('items.edit'),  edit_user_subscription_path(@user, @user.subscription), class: "btn btn-sm btn-outline-secondary" %>
-            <%= link_to translate('items.delete'), user_subscription_path(@user, @user.subscription), method: :delete, data: { confirm: "Are you sure?"},class: "btn btn-sm btn-outline-secondary" %>
           <% else %>
-            <%= link_to translate('items.new_review'),  new_user_subscription_path(@user), class: "btn btn-sm btn-outline-secondary" %>
+            <%= link_to translate('items.new_subscription'),  new_user_subscription_path(@user), class: "btn btn-sm btn-outline-secondary mb-3" %>
           <% end %>
         <% end %>
       </div>
