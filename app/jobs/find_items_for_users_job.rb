@@ -1,7 +1,6 @@
 class FindItemsForUsersJob < ApplicationJob
   queue_as :default
 
-
   def perform(user_id)
     subscription = Subscription.where(user_id: user_id).first
     last_sent = subscription.last_sent

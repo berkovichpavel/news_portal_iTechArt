@@ -41,6 +41,7 @@
                               <span class="item-average-review-rating" data-score=<%= item.reviews.average(:rating).round(2) %>></span>
                             <% end %>
                             <small class="text-muted"><%= item.created_at %></small>
+                            <small><i class="fa fa-eye"></i> <%= item.item_views.count %></small>
                           </div>
                       </div>
                     </div>

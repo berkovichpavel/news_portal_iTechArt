@@ -69,6 +69,7 @@ class ItemsController < ApplicationController
   def create
     @item = current_user.created_items.new(item_params)
     if @item.save
+      FindUsersInstantlyJob.perform_now(@item.id)
       redirect_to item_path(@item.id)
     else
       @access_mask = Item.masks.keys
@@ -78,6 +79,7 @@ class ItemsController < ApplicationController
 
   def update
     if @item.update(item_params)
+      FindUsersInstantlyJob.perform_now(@item.id)
       redirect_to item_path(params[:id])
     else
       @access_mask = Item.masks.keys

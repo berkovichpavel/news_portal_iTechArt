@@ -22,6 +22,6 @@ set :output, { error: 'error.log', standard: 'cron.log' }
 #
 set :environment, :development
 
-every 1.minute do
+every 1.day do
   runner "FindAllUsersJob.perform_now"
 end

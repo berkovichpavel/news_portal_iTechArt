@@ -1,0 +1,16 @@
+<h1>Welcome to Berdacha news portal!</h1>
+<h2>Fresh news!</h2>
+<p>
+  <big><b><em>Title</em></b></big>: <%= @item.title %>
+</p>
+<p>
+  <big><em><b>Short description</b></em></big>: <%= @item.short_description %>
+</p>
+<% if attachments['img_1'] %>
+  <%= image_tag attachments['img_1'].url,  alt: 'img_1' %>
+<% end %>
+<p>
+  <small><em><b>Read completely:</b></em> <%= item_url(@item) %></small>
+</p>
+
+
