@@ -93,6 +93,9 @@
             <%= link_to translate('items.new_subscription'),  new_user_subscription_path(@user), class: "btn btn-sm btn-outline-secondary mb-3" %>
           <% end %>
         <% end %>
+        <% if can?(:manage, Statistic) %>
+          <%= link_to translate('statistics.create'), new_user_statistic_path(@user) , class: "btn btn-sm btn-outline-secondary mb-3" %>
+        <% end %>
       </div>
     </div>
   </div>

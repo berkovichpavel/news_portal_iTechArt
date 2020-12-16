@@ -12,4 +12,10 @@ class NewUserEmailMailer < ApplicationMailer
     end
     mail(to: email, subject: 'Newsletter from Berdacha news portal!')
   end
+
+  def send_items_statistic_to_admin(email, items)
+    @items = items
+    @email = email
+    mail(to: email, subject: 'Statistic from Berdacha news portal!')
+  end
 end

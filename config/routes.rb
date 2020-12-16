@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :subscriptions
+    resources :statistics
     member do
       get 'comments_activity'
       get 'items_activity'

@@ -1,6 +1,7 @@
 class Item < ApplicationRecord
   belongs_to :author, class_name: 'User', foreign_key: 'author_id'
   after_save :send_item_instantly
+  before_save :published_time
   acts_as_taggable
 
   has_many :comments, as: :commentable
@@ -26,5 +27,13 @@ class Item < ApplicationRecord
 
   def send_item_instantly
     FindUsersInstantlyJob.perform_now(id)
+  end
+
+  def published_time
+    if self.status == 'active'
+      self.published_at ||= Time.current
+    else
+      self.published_at = nil
+    end
   end
 end

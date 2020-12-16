@@ -4,6 +4,7 @@ class CreateItemViews < ActiveRecord::Migration[6.0]
       t.integer :user_id
       t.integer :item_id, null: false
       t.inet :user_ip
+      t.boolean :registered, default: false
 
       t.timestamps
     end

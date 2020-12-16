@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_13_122208) do
+ActiveRecord::Schema.define(version: 2020_12_16_130459) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 2020_12_13_122208) do
     t.integer "user_id"
     t.integer "item_id", null: false
     t.inet "user_ip"
+    t.boolean "registered", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -81,13 +82,8 @@ ActiveRecord::Schema.define(version: 2020_12_13_122208) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "status", default: "check"
     t.bigint "author_id", null: false
+    t.datetime "published_at"
     t.index ["author_id"], name: "index_items_on_author_id"
-  end
-
-  create_table "items_users", id: false, force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "item_id", null: false
-    t.index ["user_id", "item_id"], name: "index_items_users_on_user_id_and_item_id", unique: true
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -97,6 +93,13 @@ ActiveRecord::Schema.define(version: 2020_12_13_122208) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
     t.integer "item_id"
+  end
+
+  create_table "statistics", force: :cascade do |t|
+    t.datetime "begin_statistic"
+    t.datetime "end_statistic"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "subscriptions", force: :cascade do |t|
@@ -155,8 +158,8 @@ ActiveRecord::Schema.define(version: 2020_12_13_122208) do
     t.string "first_name"
     t.string "last_name"
     t.string "role", default: "user"
-    t.boolean "hidden", default: false
     t.boolean "signed", default: false
+    t.boolean "hidden", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

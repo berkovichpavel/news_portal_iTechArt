@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
       elsif params[:commentable]
         @items.joins(:comments).group(:id).select('items.*, COUNT(comments) as count_comments').where(comments: {service_type: 'default'}).order('COUNT(comments) DESC')
       elsif params[:readable]
-        @items.joins(:items_users).group(:id).order('COUNT(id) DESC')
+        @items.joins(:item_views).group(:id).order('COUNT(item_id) DESC')
       else
         @items
       end
@@ -30,8 +30,7 @@ class ItemsController < ApplicationController
 
   def show
     if current_user
-      # @item.users.push(current_user) unless @item.users.include?(current_user)
-      @item.item_views.push(ItemView.new(user_id: current_user.id)) if @item.item_views.where(user_id: current_user.id).count.zero?
+      @item.item_views.push(ItemView.new(user_id: current_user.id, registered: true, user_ip: current_user.current_sign_in_ip)) if @item.item_views.where(user_id: current_user.id).count.zero?
     else
       @item.item_views.push(ItemView.new(user_ip: Faker::Internet.ip_v4_address))
     end

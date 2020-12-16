@@ -71,3 +71,5 @@ gem 'sidekiq'
 gem 'mail'
 gem 'faker'
 gem 'whenever', require: false
+gem 'chartkick'
+gem 'groupdate'

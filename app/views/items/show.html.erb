@@ -104,22 +104,38 @@
           <% end %>
         </div>
       </div>
-      <% if can?(:comment_item, @item) %>
-        <div class="card my-4">
-          <h5 class="card-header"><%= translate('items.leave_a_coment') %></h5>
-          <div class="card-body">
-            <div id='comments'>
-              <%= render partial: 'comments/form', locals: {commentable: @item} %>
-              <% if @item.comments.any? %>
-                <%= render @item.comments.where(parent_id: nil), max_nesting: 5 %>
-              <% end %>
+        <% if can?(:mamage, @item)%>
+          <div class="card mt-4">
+            <h5 class="card-header"><%= translate('items.ratio_users') %></h5>
+            <div class="card-body">
+              <%= pie_chart [
+                                ["Registered users", @item.item_views.where(registered: true).count],
+                                ["Not regisered users", @item.item_views.where(registered: false).count]
+                            ] %>
             </div>
-        </div>
-        </div>
-      <% end %>
+          </div>
+        <% end %>
+        <% if can?(:comment_item, @item) %>
+          <div class="card mt-4">
+            <h5 class="card-header"><%= translate('items.leave_a_coment') %></h5>
+            <div class="card-body">
+              <div id='comments'>
+                <%= render partial: 'comments/form', locals: {commentable: @item} %>
+                <% if @item.comments.any? %>
+                  <%= render @item.comments.where(parent_id: nil), max_nesting: 5 %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
     </div>
   </div>
 </div>
+
+
+<%#= pie_chart Review.select("AVG(rating) as AV, item_id").group(:item_id).group_by_day(:created_at).count %>
+
+
 
 <script>
       $('.review-rating').raty({
