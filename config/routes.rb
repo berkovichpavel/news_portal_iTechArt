@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users do
+    resources :subscriptions
     member do
       get 'comments_activity'
       get 'items_activity'

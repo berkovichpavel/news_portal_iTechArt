@@ -21,5 +21,4 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(_resource)
     session.delete(:return_to)
   end
-
 end

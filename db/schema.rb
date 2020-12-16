@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_08_152521) do
+ActiveRecord::Schema.define(version: 2020_12_13_122208) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -99,6 +99,18 @@ ActiveRecord::Schema.define(version: 2020_12_08_152521) do
     t.integer "item_id"
   end
 
+  create_table "subscriptions", force: :cascade do |t|
+    t.datetime "last_sent"
+    t.integer "dispatch_hour"
+    t.string "sending_frequency"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "tags", default: [], array: true
+    t.string "regions", default: [], array: true
+    t.string "categories", default: [], array: true
+  end
+
   create_table "taggings", id: :serial, force: :cascade do |t|
     t.integer "tag_id"
     t.string "taggable_type"
@@ -144,6 +156,7 @@ ActiveRecord::Schema.define(version: 2020_12_08_152521) do
     t.string "last_name"
     t.string "role", default: "user"
     t.boolean "hidden", default: false
+    t.boolean "signed", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
