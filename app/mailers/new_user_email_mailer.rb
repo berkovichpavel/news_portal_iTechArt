@@ -12,11 +12,4 @@ class NewUserEmailMailer < ApplicationMailer
     end
     mail(to: email, subject: 'Newsletter from Berdacha news portal!')
   end
-
-  def send_item_to_user(email, item)
-    @item = item
-    @email = email
-    attachments.inline['img_1'] = item.main_img_href.blob.download if item.main_img_href.attached?
-    mail(to: email, subject: 'Newsletter from Berdacha news portal!')
-  end
 end

@@ -7,7 +7,7 @@ class FindUsersInstantlyJob < ApplicationJob
       users = User.joins(:subscription).where(signed: true, subscriptions: { sending_frequency: 'instantly' })
       users.each do |user|
         if user.subscription.categories.include?(item.category) || user.subscription.regions.include?(item.region) || (user.subscription.tags & item.tags).count.positive?
-          NewUserEmailMailer.send_item_to_user(user.email, item).deliver_now
+          NewUserEmailMailer.send_items_to_user(user.email, [item]).deliver_now
         end
       end
     end

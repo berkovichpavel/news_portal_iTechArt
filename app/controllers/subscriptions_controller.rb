@@ -15,7 +15,6 @@ class SubscriptionsController < ApplicationController
     @subscription = Subscription.new(subscription_params)
     @subscription.last_sent = Time.now
     @subscription.user_id = @user.id
-    @subscription.dispatch_hour = nil if @subscription.sending_frequency = 'instantly'
     if @subscription.save
       @user.signed = true
       @user.save

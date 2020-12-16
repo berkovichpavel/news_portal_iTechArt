@@ -1,7 +1,6 @@
 class Item < ApplicationRecord
-
   belongs_to :author, class_name: 'User', foreign_key: 'author_id'
-
+  after_save :send_item_instantly
   acts_as_taggable
 
   has_many :comments, as: :commentable
@@ -25,4 +24,7 @@ class Item < ApplicationRecord
   validates :category, presence: true
   validates :mask, presence: true
 
+  def send_item_instantly
+    FindUsersInstantlyJob.perform_now(id)
+  end
 end
