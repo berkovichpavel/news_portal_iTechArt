@@ -21,11 +21,21 @@
   <p>
     <em><b>The ratio of registered views to unregistered views</b></em>:
     <%= Float(item.item_views.where(registered: true).count) / item.item_views.where(registered: false ).count %>
+    (<%= item.item_views.where(registered: true).count %> / <%= item.item_views.where(registered: false ).count %>)
   </p>
   <p>
     <em><b>Average rating</b></em>: <%= Float(item.reviews.pluck(:rating).sum) / item.reviews.pluck(:rating).size %>
   </p>
+  <% countries = {} %>
+  <% item.item_views.each do |user| %>
+    <% ip = user.user_ip %>
+    <% country = Geocoder.search(ip).first.city if Geocoder.search(ip).first %>
+    <% countries[country] ? countries[country] += 1 : countries[country] = 1 %>
+  <% end %>
+  <% top_countries = countries.sort{|a,z| a[1]<=>z[1]}.reverse.to_h %>
   <p>
-    <em><b>Top 5 countries viewed news</b></em>: ?
+    <em><b>Top 5 countries viewed news</b></em>: <%= top_countries.slice(*(top_countries.keys[0..4])) %>
   </p>
 <% end %>
+
+
