@@ -30,7 +30,7 @@ class ItemsController < ApplicationController
 
   def show
     if current_user
-      @item.item_views.push(ItemView.new(user_id: current_user.id, registered: true, user_ip: current_user.current_sign_in_ip)) if @item.item_views.where(user_id: current_user.id).count.zero?
+      @item.item_views.push(ItemView.new(user_id: current_user.id, registered: true, user_ip: Faker::Internet.ip_v4_address)) if @item.item_views.where(user_id: current_user.id).count.zero?
     else
       @item.item_views.push(ItemView.new(user_ip: Faker::Internet.ip_v4_address))
     end

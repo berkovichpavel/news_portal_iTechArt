@@ -1,3 +1,5 @@
+<%= UserAgent.parse(request.env["HTTP_USER_AGENT"]).browser %>
+
 <div class="container-fluid">
   <div class="row">
 
@@ -106,18 +108,21 @@
       </div>
         <% if can?(:mamage, @item)%>
           <div class="card mt-4">
-            <h5 class="card-header"><%= translate('items.ratio_users') %></h5>
+            <h5 class="card-header"><%= translate('items.rating_change') %></h5>
             <div class="card-body">
-              <%= pie_chart [
-                                ["Registered users", @item.item_views.where(registered: true).count],
-                                ["Not regisered users", @item.item_views.where(registered: false).count]
-                            ] %>
+              <%= line_chart StatisticsHelper.rating_changed(@item) %>
+            </div>
+          </div>
+          <div class="card mt-4">
+            <h5 class="card-header"><%= translate('items.percent_countries') %></h5>
+            <div class="card-body">
+              <%= pie_chart StatisticsHelper.countries_for_item(@item).to_a %>
             </div>
           </div>
         <% end %>
         <% if can?(:comment_item, @item) %>
           <div class="card mt-4">
-            <h5 class="card-header"><%= translate('items.leave_a_coment') %></h5>
+            <h5 class="card-header"><%= translate('items.leave_a_comment') %></h5>
             <div class="card-body">
               <div id='comments'>
                 <%= render partial: 'comments/form', locals: {commentable: @item} %>

@@ -35,9 +35,10 @@ en:
     or: "or"
     sign_in: "Sign in"
     category: "Category"
-    leave_a_coment: "Leave a Comment:"
+    leave_a_comment: "Leave a Comment:"
     manage: "Manage"
-    ratio_users: "The ratio of registered users to non-registered users"
+    rating_change: "Change in average news rating over time"
+    percent_countries: "Percentage of countries of users who viewed the news"
 
 
 
