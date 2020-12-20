@@ -1,6 +1,7 @@
-Rails.application.routes.draw do
-  mount Ckeditor::Engine => '/ckeditor'
+require 'sidekiq/web'
 
+
+Rails.application.routes.draw do
   root to: 'items#index'
 
   # get 'users/profile'
@@ -17,9 +18,15 @@ Rails.application.routes.draw do
   end
 
   resources :items do
+    member do
+      post 'track'
+    end
     resources :comments, module: :items
     resources :reviews
   end
+
+  mount Ckeditor::Engine => '/ckeditor'
+  mount Sidekiq::Web => '/sidekiq'
 
 end
 

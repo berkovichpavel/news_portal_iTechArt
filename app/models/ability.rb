@@ -4,7 +4,9 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+
     if user
+      can :track, Item
       if user.admin?
         can :manage, :all
       elsif user.correspondent?
@@ -46,6 +48,9 @@ class Ability
       can :read_annotation, Item, mask: %w[visible title_annotation]
       can :read_full_text, Item, mask: %w[visible]
       can :read, User
+      can :track, Item
     end
+
   end
+
 end

@@ -1,7 +1,9 @@
 class ItemsController < ApplicationController
   load_and_authorize_resource
-  before_action :authenticate_user!, except: [:show, :index]
+  before_action :authenticate_user!, except: [:show, :index, :track]
   before_action :tag_cloud, only: [:index, :show]
+
+  TRACK_INTERVAL = 5
 
   def index
     @items =
@@ -29,25 +31,31 @@ class ItemsController < ApplicationController
   end
 
   def show
+    user_id = current_user ? current_user.id : nil
+    request_env = request.env["HTTP_USER_AGENT"]
+    InsertItemViewsJob.perform_later(user_id, @item.id, request_env, ip)
     if current_user
-      @item.item_views.push(ItemView.new(user_id: current_user.id, registered: true, user_ip: Faker::Internet.ip_v4_address)) if @item.item_views.where(user_id: current_user.id).count.zero?
-    else
-      @item.item_views.push(ItemView.new(user_ip: Faker::Internet.ip_v4_address))
+      @can_review = current_user.reviews.where(item_id: @item.id).count < 1
+      @user_review = current_user.reviews.where(item_id: @item.id).first
     end
     @redactor = User.find(@item.author_id).email
-    @user_review = current_user.reviews.where(item_id: @item.id).first if current_user
     @average_review = if @item.reviews.blank?
                         @has_review = false
                       else
                         @has_review = true
                         @item.reviews.average(:rating)
                       end
-    @can_review = if current_user
-                    current_user.reviews.where(item_id: @item.id).count < 1
-                  else
-                    false
-                  end
+  end
 
+  def track
+    if current_user
+      view_with_user = @item.item_views.find_by(user_id: current_user.id)
+      view_with_user.increment!(:watching_time, TRACK_INTERVAL) if view_with_user.present?
+    else
+      view_without_user = @item.item_views.find_by(user_ip: ip)
+      view_without_user.increment!(:watching_time, TRACK_INTERVAL) if view_without_user.present?
+    end
+    head :ok
   end
 
   def edit
@@ -89,6 +97,7 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @item.comments.destroy
     @item.destroy
+    # PG::UndefinedTable: ERROR: relation "items_users" does not exist LINE 8: WHERE a.attrelid = '"items_users"'::regclass ^
     respond_to do |format|
       format.html { redirect_to items_path }
     end

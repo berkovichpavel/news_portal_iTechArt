@@ -1,5 +1,3 @@
-<%= UserAgent.parse(request.env["HTTP_USER_AGENT"]).browser %>
-
 <div class="container-fluid">
   <div class="row">
 
@@ -23,7 +21,7 @@
         <h5 class="card-header"><%= translate('items.last_reviews') %></h5>
         <div class="card-body">
           <div>
-            <%= render @item.reviews.limit(5) %>
+            <%= render @item.reviews.order(:updated_at).limit(5) %>
           </div>
           <hr/>
           <div>
@@ -160,4 +158,18 @@
             return $(this).attr('data-score')
         }
         });
+</script>
+
+<script>
+  function func(){
+      $.ajax({
+          type: 'POST',
+          url: '/items/3/track',
+          data: {
+              authenticity_token: $('[name="csrf-token"]')[0].content,
+
+          },
+      });
+  }
+    let timerId = setInterval(() => func(), <%= ItemsController::TRACK_INTERVAL * 1000 %>);
 </script>

@@ -7,7 +7,7 @@ class Item < ApplicationRecord
   has_many :comments, as: :commentable
   has_many :reviews
   has_and_belongs_to_many :users
-  has_many :item_views
+  has_many :item_views, dependent: :destroy
 
   has_one_attached :main_img_href
 
