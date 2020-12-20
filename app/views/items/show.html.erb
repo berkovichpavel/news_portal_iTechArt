@@ -164,10 +164,9 @@
   function func(){
       $.ajax({
           type: 'POST',
-          url: '/items/3/track',
+          url: '<%= track_item_path(@item) %>',
           data: {
-              authenticity_token: $('[name="csrf-token"]')[0].content,
-
+              authenticity_token: $('[name="csrf-token"]')[0].content
           },
       });
   }
