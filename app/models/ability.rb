@@ -19,11 +19,11 @@ class Ability
         can :read_verification, Item, status: ['check'], user_id: user.id
         can :read, Comment
       elsif user.redactor?
-        can :update, Item, status: %w[check approved]
+        can :update, Item, status: %w[check active]
         can :read, Item
         can :read_verification, Item, status: ['check']
         can :approve, Item
-        can :change_status, Item, status: %w[check approved archive]
+        can :change_status, Item, status: %w[check active archive]
         can :check_archive, Item
         can :read, Comment
       end

@@ -23,6 +23,8 @@ class ItemsController < ApplicationController
         @items.joins(:comments).group(:id).select('items.*, COUNT(comments) as count_comments').where(comments: {service_type: 'default'}).order('COUNT(comments) DESC')
       elsif params[:readable]
         @items.joins(:item_views).group(:id).order('COUNT(item_id) DESC')
+      elsif params[:rss]
+        @items.where(rss: true)
       else
         @items
       end
@@ -38,7 +40,7 @@ class ItemsController < ApplicationController
       @can_review = current_user.reviews.where(item_id: @item.id).count < 1
       @user_review = current_user.reviews.where(item_id: @item.id).first
     end
-    @redactor = User.find(@item.author_id).email
+    @redactor = User.find(@item.author_id).email if @item.author_id
     @average_review = if @item.reviews.blank?
                         @has_review = false
                       else
@@ -118,6 +120,7 @@ class ItemsController < ApplicationController
        :mask,
        :region,
        :main_img_href,
+       :main_img,
        :flag,
        :tag_list]
     if can?(:change_status, Item)

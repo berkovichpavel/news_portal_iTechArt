@@ -24,7 +24,7 @@
     (<%= item.item_views.where(registered: true).count %> / <%= item.item_views.where(registered: false ).count %>)
   </p>
   <p>
-    <em><b>Average rating</b></em>: <%=  Float(item.reviews.average(:rating).round(4)) %>
+    <em><b>Average rating</b></em>: <%= item.reviews.count.zero? ? 'none information' : Float(item.reviews.average(:rating).round(4)) %>
   </p>
 
   <p>

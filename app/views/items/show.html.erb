@@ -50,6 +50,8 @@
       <div class="card mt-4">
         <% if @item.main_img_href.attached? %>
           <%= image_tag(@item.main_img_href, class: "my_news_main_img card-img-top") %>
+        <% elsif @item.main_img %>
+          <%= image_tag(@item.main_img, class: "my_news_main_img card-img-top") if @item.main_img %>
         <% else %>
           <img class="" src="http://placehold.it/900x400" alt="">
         <% end %>
@@ -95,7 +97,7 @@
           <% if can?(:read_full_text, @item) || can?(:read_annotation, @item) %>
             <div class="card-body">
               <% if can?(:read_annotation, @item) %>
-                <p><strong><%= translate('items.text_annotation')%></strong>: <%= @item.short_description %></p>
+                <p><strong><%= translate('items.text_annotation')%></strong>: <%== @item.short_description %></p>
               <% end %>
               <% if can?(:read_full_text, @item) %>
                 <p><strong><%= translate('items.full_text')%></strong>: <%= @item.full_text.html_safe %>

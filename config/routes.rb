@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :rss_subscriptions
+
   resources :items do
     member do
       post 'track'

@@ -75,3 +75,4 @@ gem 'chartkick'
 gem 'groupdate'
 gem 'geocoder'
 gem 'useragent'
+
