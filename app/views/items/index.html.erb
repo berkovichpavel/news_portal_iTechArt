@@ -4,7 +4,7 @@
     <div class="col-lg-9">
       <h1>
         <% if params[:category] == nil %>
-          <%= translate('items.all_news') %>
+          <%= translate('items.all_news') %> <%= link_to image_tag("feed-icon-28x28.png"), items_url(:rss) %>
         <% else %>
           <%= params[:category].capitalize %>
         <% end %>

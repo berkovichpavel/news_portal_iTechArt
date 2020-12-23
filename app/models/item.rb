@@ -1,3 +1,6 @@
+require 'rss'
+require 'open-uri'
+
 class Item < ApplicationRecord
 
   CATEGORIES = { 'news' => 'news', 'health' => 'health', 'finance' => 'finance', 'auto' => 'auto', 'people' => 'people',
@@ -30,6 +33,24 @@ class Item < ApplicationRecord
   def send_item_instantly
     FindUsersInstantlyJob.perform_now(id)
   end
+
+  # def self.to_rss
+  #   rss = RSS::Maker.make("atom") do |maker|
+  #     maker.channel.author = 'berkovich.pavel'
+  #     maker.channel.updated = Time.now.to_s
+  #     maker.channel.about = 'https://www.ruby-lang.org/en/feeds/news.rss'
+  #     maker.channel.title = 'All feeds from BerdachaNewsPortal'
+  #
+  #     all.each do |my_item|
+  #       maker.items.new_item do |item|
+  #         item.link = my_item.reference_link || 'none'
+  #         item.title = my_item.title
+  #         item.description = my_item.full_text
+  #         item.updated = my_item.updated_at.to_s
+  #       end
+  #     end
+  #   end
+  # end
 
   def published_time
     if self.status == 'active'

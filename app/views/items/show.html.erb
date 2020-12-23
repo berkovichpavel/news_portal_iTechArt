@@ -77,7 +77,7 @@
               <% end %>
             </div>
             <div class="col-md-3 text-right">
-              <%= tweet_button( url: request.original_url, text: "Title: #{@item.title}.\nShort description: #{@item.short_description}\nMain img: #{url_for(@item.main_img_href) if @item.main_img_href.attached?}", class: "pull-right") %>
+              <%= tweet_button( url: request.original_url, text: "Title: #{@item.title}.\n\nShort description: #{@item.short_description}\n\nMain img: #{image_tag(@item.main_img) if @item.main_img}", class: "pull-right") %>
               <script src="https://yastatic.net/share2/share.js" async></script>
               <div class="ya-share2 pull-right" data-curtain data-lang="en" data-services="vkontakte,facebook,odnoklassniki,telegram,skype"></div>
             </div>

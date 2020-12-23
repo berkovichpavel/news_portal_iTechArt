@@ -3,9 +3,6 @@ require 'sidekiq/web'
 
 Rails.application.routes.draw do
   root to: 'items#index'
-
-  # get 'users/profile'
-  # get 'users/profile', as: 'user_root'
   devise_for :users
 
   resources :users do

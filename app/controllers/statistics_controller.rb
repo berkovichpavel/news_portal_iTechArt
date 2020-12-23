@@ -8,7 +8,7 @@ class StatisticsController < ApplicationController
   def create
     @statistic = Statistic.new(statistic_params)
     if @statistic.save
-      FindItemsToStatisticJob.perform_now(@user.id, @statistic.id)
+      FindItemsToStatisticJob.perform_later(@user.id, @statistic.id)
       redirect_to user_path(@user)
     else
       @sending_frequencies = Subscription.sending_frequencies

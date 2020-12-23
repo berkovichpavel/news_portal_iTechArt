@@ -1,6 +1,6 @@
 set :environment, :development
 set :output, { error: 'error.log', standard: 'cron.log' }
-env :BUNDLE_PATH, ENV['BUNDLE_PATH']
+ENV.each { |k, v| env(k, v) }
 #
 # every 2.hours do
 #   command "/usr/bin/some_great_command"

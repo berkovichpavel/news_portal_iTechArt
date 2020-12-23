@@ -6,6 +6,8 @@ class ItemsController < ApplicationController
   TRACK_INTERVAL = 5
 
   def index
+    # case
+
     @items =
       if params[:category]
         @items.where(category: params[:category])
@@ -30,6 +32,10 @@ class ItemsController < ApplicationController
       end
     @important_items = @items.where(flag: true)
     @other_items = @items.where(flag: false).order(created_at: :desc).page(params[:page]).per(12)
+    # respond_to do |format|
+    #   format.html
+    #   format.rss { send_data @items.where(status: 'active').to_rss }
+    # end
   end
 
   def show
@@ -99,7 +105,6 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @item.comments.destroy
     @item.destroy
-    # PG::UndefinedTable: ERROR: relation "items_users" does not exist LINE 8: WHERE a.attrelid = '"items_users"'::regclass ^
     respond_to do |format|
       format.html { redirect_to items_path }
     end
