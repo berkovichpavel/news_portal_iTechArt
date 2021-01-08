@@ -9,41 +9,27 @@ class ItemsController < ApplicationController
   DEFAULT_IMAGE_INDEX_BIG = ''.freeze
 
   def index
-    # case
-
-    @items =
-      if params[:category]
-        @items.where(category: params[:category])
-      elsif params[:region]
-        @items.where(region: params[:region])
-      elsif params[:tag].present?
-        @items.tagged_with(params[:tag])
-      elsif params[:status]
-        if current_user.redactor? || current_user.admin?
-          @items.where(status: params[:status])
-        else
-          @items.where(status: params[:status], user_id: current_user.id)
-        end
-      elsif params[:commentable]
-        @items.joins(:comments).group(:id).select('items.*, COUNT(comments) as count_comments').where(comments: {service_type: 'default'}).order('COUNT(comments) DESC')
-      elsif params[:readable]
-        @items.joins(:item_views).group(:id).order('COUNT(item_id) DESC')
-      elsif params[:rss]
-        @items.where(rss: true)
-      else
-        @items
-      end
+    @items = if params[:category] then @items.where(category: params[:category])
+             elsif params[:region] then @items.where(region: params[:region])
+             elsif params[:tag].present? then @items.tagged_with(params[:tag])
+             elsif params[:status]
+               if current_user.redactor? || current_user.admin?
+                 @items.where(status: params[:status])
+               else
+                 @items.where(status: params[:status], user_id: current_user.id)
+               end
+             elsif params[:commentable] then @items.joins(:comments).group(:id).select('items.*, COUNT(comments) as count_comments').where(comments: { service_type: 'default' }).order('COUNT(comments) DESC')
+             elsif params[:readable] then @items.joins(:item_views).group(:id).order('COUNT(item_id) DESC')
+             elsif params[:rss] then @items.where(rss: true)
+             else @items
+             end
     @important_items = @items.where(flag: true)
     @other_items = @items.where(flag: false).order(created_at: :desc).page(params[:page]).per(12)
-    # respond_to do |format|
-    #   format.html
-    #   format.rss { send_data @items.where(status: 'active').to_rss }
-    # end
   end
 
   def show
     user_id = current_user ? current_user.id : nil
-    request_env = request.env["HTTP_USER_AGENT"]
+    request_env = request.env['HTTP_USER_AGENT']
     InsertItemViewsJob.perform_later(user_id, @item.id, request_env, ip)
     if current_user
       @can_review = current_user.reviews.where(item_id: @item.id).count < 1
@@ -108,7 +94,6 @@ class ItemsController < ApplicationController
       @access_mask = Item.masks.keys
       render 'edit'
     end
-
   end
 
   def destroy
@@ -127,20 +112,8 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    permitted =
-      [:title,
-       :category,
-       :short_description,
-       :full_text,
-       :mask,
-       :region,
-       :main_img_href,
-       :main_img,
-       :flag,
-       :tag_list]
-    if can?(:change_status, Item)
-      permitted << :status
-    end
+    permitted = [:title, :category, :short_description, :full_text, :mask, :region, :main_img_href, :main_img, :flag, :tag_list]
+    permitted << :status if can?(:change_status, Item)
     params.require(:item).permit(*permitted)
   end
 end
