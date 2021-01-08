@@ -93,6 +93,13 @@
             <%= link_to translate('items.new_subscription'),  new_user_subscription_path(@user), class: "btn btn-sm btn-outline-secondary mb-3" %>
           <% end %>
         <% end %>
+        <% if can?(:manage, Statistic) %>
+          <%= link_to translate('statistics.create'), new_user_statistic_path(@user) , class: "btn btn-sm btn-outline-secondary mb-3" %>
+        <% end %>
+        <% if can?(:manage, RssSubscription) %>
+          <%= link_to translate('rss_subscriptions.create_rss_subscription'), new_rss_subscription_path , class: "btn btn-sm btn-outline-secondary mb-3" %>
+          <%= link_to translate('rss_subscriptions.all_rss_subscriptions'), rss_subscriptions_path , class: "btn btn-sm btn-outline-secondary mb-3" %>
+        <% end %>
       </div>
     </div>
   </div>

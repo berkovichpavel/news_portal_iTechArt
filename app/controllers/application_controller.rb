@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :set_categories
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :set_ip
 
   protected
 
@@ -20,5 +21,13 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(_resource)
     session.delete(:return_to)
+  end
+
+  def set_ip
+    session[:user_ip] ||= Faker::Internet.ip_v4_address
+  end
+
+  def ip
+    session[:user_ip]
   end
 end

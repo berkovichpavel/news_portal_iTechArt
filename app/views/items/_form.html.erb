@@ -14,8 +14,8 @@
       <%= f.input :category, collection: @categories %>
       <%= f.input :mask, collection: @access_masks %>
       <%= f.input :region %>
-      <%= f.label :main_img %>
       <%= f.file_field :main_img_href %>
+      <%= f.input :main_img %>
       <%= f.input :flag,  as: :radio_buttons, label: translate('simple_form.important')%>
       <%= f.input :tag_list, label: translate('items.tags') %>
       <%= f.input :full_text, as: :ckeditor %>

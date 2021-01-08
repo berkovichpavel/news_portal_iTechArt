@@ -1,0 +1,8 @@
+<div class="block">
+  <h2> Create RSS subscription </h2>
+  <%= simple_form_for ( @rss_subscription) do |f| %>
+    <%= f.input :reference_link %>
+    <%= f.input :category , collection: @categories %>
+    <%= f.button :submit, class: 'btn btn-primary btn-xs btn-block'%>
+  <% end %>
+</div>

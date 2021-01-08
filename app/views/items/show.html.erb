@@ -21,7 +21,7 @@
         <h5 class="card-header"><%= translate('items.last_reviews') %></h5>
         <div class="card-body">
           <div>
-            <%= render @item.reviews.limit(5) %>
+            <%= render @item.reviews.order(:updated_at).limit(5) %>
           </div>
           <hr/>
           <div>
@@ -45,21 +45,20 @@
       </div>
     </div>
 
-    <div class="col-lg-9">
+
+    <div class="col-lg-8">
 
       <div class="card mt-4">
-        <% if @item.main_img_href.attached? %>
-          <%= image_tag(@item.main_img_href, class: "my_news_main_img card-img-top") %>
-        <% else %>
-          <img class="" src="http://placehold.it/900x400" alt="">
-        <% end %>
+        <div class="my-card-img" style="background-image: url('<%= @main_image %>')">
 
+          <%#= image_tag(@main_image, class: "img-responsive my-news-main-img card-img-top") %>
+        </div>
         <div class="card-body">
           <h3 class="card-title"><%= @item.title %></h3>
           <span class="text-warning average-review-rating", data-score=<%= @average_review %>>Average rating: </span>
           <span> <%= translate('items.based_on') %> <%= @item.reviews.count %> <%= translate('items.reviews') %></span>
           <p class="card-text">
-            <strong><%= translate('items.redactor') %>: </strong> <%= @redactor%> /
+            <strong><%= translate('items.redactor') %>: </strong> <%= @redactor %> /
             <strong><%= translate('items.updated_at') %>: </strong> <%= @item.updated_at %> /
             <strong><%= translate('items.category') %>: </strong><%= link_to @item.category, items_path(category: @item.category) %> /
             <strong><%= translate('items.region') %>: </strong><%= link_to @item.region, items_path(region: @item.region) %> /
@@ -75,7 +74,7 @@
               <% end %>
             </div>
             <div class="col-md-3 text-right">
-              <%= tweet_button( url: request.original_url, text: "Title: #{@item.title}.\nShort description: #{@item.short_description}\nMain img: #{url_for(@item.main_img_href) if @item.main_img_href.attached?}", class: "pull-right") %>
+              <%= tweet_button( url: request.original_url, text: "Title: #{@item.title}.\n\nShort description: #{@item.short_description}\n\nMain img: #{image_tag(@item.main_img) if @item.main_img}", class: "pull-right") %>
               <script src="https://yastatic.net/share2/share.js" async></script>
               <div class="ya-share2 pull-right" data-curtain data-lang="en" data-services="vkontakte,facebook,odnoklassniki,telegram,skype"></div>
             </div>
@@ -95,7 +94,7 @@
           <% if can?(:read_full_text, @item) || can?(:read_annotation, @item) %>
             <div class="card-body">
               <% if can?(:read_annotation, @item) %>
-                <p><strong><%= translate('items.text_annotation')%></strong>: <%= @item.short_description %></p>
+                <p><strong><%= translate('items.text_annotation')%></strong>: <%== @item.short_description %></p>
               <% end %>
               <% if can?(:read_full_text, @item) %>
                 <p><strong><%= translate('items.full_text')%></strong>: <%= @item.full_text.html_safe %>
@@ -104,39 +103,73 @@
           <% end %>
         </div>
       </div>
-      <% if can?(:comment_item, @item) %>
-        <div class="card my-4">
-          <h5 class="card-header"><%= translate('items.leave_a_coment') %></h5>
-          <div class="card-body">
-            <div id='comments'>
-              <%= render partial: 'comments/form', locals: {commentable: @item} %>
-              <% if @item.comments.any? %>
-                <%= render @item.comments.where(parent_id: nil), max_nesting: 5 %>
-              <% end %>
+        <% if can?(:mamage, @item)%>
+          <div class="card mt-4">
+            <h5 class="card-header"><%= translate('items.rating_change') %></h5>
+            <div class="card-body">
+              <%= line_chart StatisticsHelper.rating_changed(@item) %>
             </div>
-        </div>
-        </div>
-      <% end %>
+          </div>
+          <div class="card mt-4">
+            <h5 class="card-header"><%= translate('items.percent_countries') %></h5>
+            <div class="card-body">
+              <%= pie_chart StatisticsHelper.countries_for_item(@item).to_a %>
+            </div>
+          </div>
+        <% end %>
+        <% if can?(:comment_item, @item) %>
+          <div class="card mt-4">
+            <h5 class="card-header"><%= translate('items.leave_a_comment') %></h5>
+            <div class="card-body">
+              <div id='comments'>
+                <%= render partial: 'comments/form', locals: {commentable: @item} %>
+                <% if @item.comments.any? %>
+                  <%= render @item.comments.where(parent_id: nil), max_nesting: 5 %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
     </div>
   </div>
 </div>
 
+
+<%#= pie_chart Review.select("AVG(rating) as AV, item_id").group(:item_id).group_by_day(:created_at).count %>
+
+
+
 <script>
-      $('.review-rating').raty({
-          readOnly: true,
-          path: '/assets/',
-          score: function() {
-              return $(this).attr('data-score')
-          }
-      });
+    $('.review-rating').raty({
+        readOnly: true,
+        numberMax: 5,
+        path: '/assets/',
+        score: function() {
+            return $(this).attr('data-score')
+        }
+    });
 </script>
 
 <script>
     $('.average-review-rating').raty({
         readOnly: true,
+        numberMax: 5,
         path: '/assets/',
         score: function() {
             return $(this).attr('data-score')
         }
         });
+</script>
+
+<script>
+  function func(){
+      $.ajax({
+          type: 'POST',
+          url: '<%= track_item_path(@item) %>',
+          data: {
+              authenticity_token: $('[name="csrf-token"]')[0].content
+          },
+      });
+  }
+    let timerId = setInterval(() => func(), <%= ItemsController::TRACK_INTERVAL * 1000 %>);
 </script>

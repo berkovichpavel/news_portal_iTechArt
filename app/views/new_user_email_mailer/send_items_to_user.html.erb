@@ -5,10 +5,12 @@
     <big><b><em>Title</em></b></big>: <%= item.title %>
   </p>
   <p>
-    <big><em><b>Short description</b></em></big>: <%= item.short_description %>
+    <big><em><b>Short description</b></em></big>: <%== item.short_description %>
   </p>
-  <% if attachments["img_#{index + 1}"] %>
-    <%= image_tag attachments["img_#{index + 1}"].url,  alt: "img_#{index + 1}" %>
+  <% if attachments["active_img_#{index + 1}"] %>
+    <%= image_tag attachments["active_img_#{index + 1}"].url,  alt: "img_#{index + 1}" %>
+  <% elsif item.main_img %>
+    <%= image_tag item.main_img,  alt: "img_#{index + 1}" %>
   <% end %>
   <p>
     <small><em><b>Read completely:</b></em> <%= item_url(item) %></small>

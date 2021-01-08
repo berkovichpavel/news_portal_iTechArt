@@ -6,6 +6,6 @@ class Subscription < ApplicationRecord
                             'once_a_week' => 'once_a_week', 'instantly' => 'instantly' }
 
   def change_dispatch_hour
-    update(dispatch_hour: nil) if sending_frequency == 'instantly'
+    update(dispatch_hour: nil) if sending_frequency == 'instantly' && !dispatch_hour.nil?
   end
 end

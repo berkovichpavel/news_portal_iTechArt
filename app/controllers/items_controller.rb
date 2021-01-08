@@ -1,9 +1,16 @@
 class ItemsController < ApplicationController
   load_and_authorize_resource
-  before_action :authenticate_user!, except: [:show, :index]
+  before_action :authenticate_user!, except: [:show, :index, :track]
   before_action :tag_cloud, only: [:index, :show]
 
+  TRACK_INTERVAL = 100
+  DEFAULT_IMAGE_SHOW = 'http://placehold.it/1000x500'.freeze
+  DEFAULT_IMAGE_INDEX_SMALL = ''.freeze
+  DEFAULT_IMAGE_INDEX_BIG = ''.freeze
+
   def index
+    # case
+
     @items =
       if params[:category]
         @items.where(category: params[:category])
@@ -20,35 +27,53 @@ class ItemsController < ApplicationController
       elsif params[:commentable]
         @items.joins(:comments).group(:id).select('items.*, COUNT(comments) as count_comments').where(comments: {service_type: 'default'}).order('COUNT(comments) DESC')
       elsif params[:readable]
-        @items.joins(:items_users).group(:id).order('COUNT(id) DESC')
+        @items.joins(:item_views).group(:id).order('COUNT(item_id) DESC')
+      elsif params[:rss]
+        @items.where(rss: true)
       else
         @items
       end
     @important_items = @items.where(flag: true)
     @other_items = @items.where(flag: false).order(created_at: :desc).page(params[:page]).per(12)
+    # respond_to do |format|
+    #   format.html
+    #   format.rss { send_data @items.where(status: 'active').to_rss }
+    # end
   end
 
   def show
+    user_id = current_user ? current_user.id : nil
+    request_env = request.env["HTTP_USER_AGENT"]
+    InsertItemViewsJob.perform_later(user_id, @item.id, request_env, ip)
     if current_user
-      # @item.users.push(current_user) unless @item.users.include?(current_user)
-      @item.item_views.push(ItemView.new(user_id: current_user.id)) if @item.item_views.where(user_id: current_user.id).count.zero?
-    else
-      @item.item_views.push(ItemView.new(user_ip: Faker::Internet.ip_v4_address))
+      @can_review = current_user.reviews.where(item_id: @item.id).count < 1
+      @user_review = current_user.reviews.where(item_id: @item.id).first
     end
-    @redactor = User.find(@item.author_id).email
-    @user_review = current_user.reviews.where(item_id: @item.id).first if current_user
+    @main_image = if @item.main_img_href.attached?
+                    url_for(@item.main_img_href)
+                  elsif @item.main_img.empty?
+                    DEFAULT_IMAGE_SHOW
+                  else
+                    @item.main_img
+                  end
+    @redactor = User.find(@item.author_id).email if @item.author_id
     @average_review = if @item.reviews.blank?
                         @has_review = false
                       else
                         @has_review = true
                         @item.reviews.average(:rating)
                       end
-    @can_review = if current_user
-                    current_user.reviews.where(item_id: @item.id).count < 1
-                  else
-                    false
-                  end
+  end
 
+  def track
+    if current_user
+      view_with_user = @item.item_views.find_by(user_id: current_user.id)
+      view_with_user.increment!(:watching_time, TRACK_INTERVAL) if view_with_user.present?
+    else
+      view_without_user = @item.item_views.find_by(user_ip: ip)
+      view_without_user.increment!(:watching_time, TRACK_INTERVAL) if view_without_user.present?
+    end
+    head :ok
   end
 
   def edit
@@ -110,6 +135,7 @@ class ItemsController < ApplicationController
        :mask,
        :region,
        :main_img_href,
+       :main_img,
        :flag,
        :tag_list]
     if can?(:change_status, Item)

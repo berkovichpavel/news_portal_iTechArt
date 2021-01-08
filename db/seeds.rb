@@ -10,7 +10,7 @@ User.create!([
                { email: 'admin@gmail.com', password: '12345678', role: 'admin', bio: 'Example of bio', first_name: 'Pavel', last_name: 'Berkovich' },
                { email: 'redactor@gmail.com', password: '12345678', role: 'redactor', bio: 'Example of bio', first_name: 'Pavel', last_name: 'Erkovich' },
                { email: 'correspondent@gmail.com', password: '12345678', role: 'correspondent', bio: 'Example of bio', first_name: 'Pavel', last_name: 'Stashenko' },
-               { email: 'berkovich.pavel@gmail.com', password: '12345678', role: 'user', bio: 'Example of bio', first_name: 'Pavel', last_name: 'Berkovich' },
+               { email: 'berkovich.pasha@gmail.com', password: '12345678', role: 'user', bio: 'Example of bio', first_name: 'Pavel', last_name: 'Berkovich' },
                { email: 'bp@gmail.com', password: '12345678', role: 'correspondent', bio: 'Example of bio', first_name: 'Pavel', last_name: 'Bertolet' },
                { email: 'Berk@gmail.com', password: '12345678', role: 'user', bio: 'Example of bio', first_name: 'Pavel', last_name: 'Bertolet' }
              ])

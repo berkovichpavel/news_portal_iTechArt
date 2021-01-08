@@ -68,6 +68,13 @@ gem 'bootstrap4-kaminari-views'
 gem "social-buttons", '~> 0.3'
 gem 'figaro'
 gem 'sidekiq'
+gem 'nokogiri', '~> 1.11', '>= 1.11.1'
 gem 'mail'
 gem 'faker'
 gem 'whenever', require: false
+gem 'chartkick'
+gem 'groupdate'
+gem 'geocoder'
+gem 'useragent'
+gem 'rake'
+

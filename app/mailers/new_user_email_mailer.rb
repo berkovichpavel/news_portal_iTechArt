@@ -8,8 +8,14 @@ class NewUserEmailMailer < ApplicationMailer
     @items = items
     @email = email
     @items.each_with_index do |item, index|
-      attachments.inline["img_#{index + 1}"] = item.main_img_href.blob.download if item.main_img_href.attached?
+      attachments.inline["active_img_#{index + 1}"] = item.main_img_href.blob.download if item.main_img_href.attached?
     end
     mail(to: email, subject: 'Newsletter from Berdacha news portal!')
+  end
+
+  def send_items_statistic_to_admin(email, items)
+    @items = items
+    @email = email
+    mail(to: email, subject: 'Statistic from Berdacha news portal!')
   end
 end

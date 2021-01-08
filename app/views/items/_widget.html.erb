@@ -1,0 +1,27 @@
+<div class="col-lg-3">
+  <div class="card my-4">
+    <h5 class="card-header">Search</h5>
+    <div class="card-body">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for...">
+        <span class="input-group-btn"><button class="btn btn-secondary" type="button">Go!</button></span>
+      </div>
+    </div>
+  </div>
+  <% if tags %>
+    <div class="card my-4">
+      <h5 class="card-header"><%= translate('items.tag_cloud') %></h5>
+      <div class="card-body">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <% tag_cloud(tags.sort_by { |a| a.name }, %w(css1 css2 css3 css4)) do |tag, css_class| %>
+              <li class="breadcrumb-item">
+                <%= link_to tag.name, items_path(tag: tag.name), :class => css_class %>
+              </li>
+            <% end %>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  <% end %>
+</div>
