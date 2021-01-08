@@ -3,7 +3,10 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index, :track]
   before_action :tag_cloud, only: [:index, :show]
 
-  TRACK_INTERVAL = 5
+  TRACK_INTERVAL = 100
+  DEFAULT_IMAGE_SHOW = 'http://placehold.it/1000x500'.freeze
+  DEFAULT_IMAGE_INDEX_SMALL = ''.freeze
+  DEFAULT_IMAGE_INDEX_BIG = ''.freeze
 
   def index
     # case
@@ -46,6 +49,13 @@ class ItemsController < ApplicationController
       @can_review = current_user.reviews.where(item_id: @item.id).count < 1
       @user_review = current_user.reviews.where(item_id: @item.id).first
     end
+    @main_image = if @item.main_img_href.attached?
+                    url_for(@item.main_img_href)
+                  elsif @item.main_img.empty?
+                    DEFAULT_IMAGE_SHOW
+                  else
+                    @item.main_img
+                  end
     @redactor = User.find(@item.author_id).email if @item.author_id
     @average_review = if @item.reviews.blank?
                         @has_review = false

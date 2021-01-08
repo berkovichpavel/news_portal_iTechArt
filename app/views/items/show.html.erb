@@ -45,23 +45,20 @@
       </div>
     </div>
 
-    <div class="col-lg-9">
+
+    <div class="col-lg-8">
 
       <div class="card mt-4">
-        <% if @item.main_img_href.attached? %>
-          <%= image_tag(@item.main_img_href, class: "my_news_main_img card-img-top") %>
-        <% elsif @item.main_img %>
-          <%= image_tag(@item.main_img, class: "my_news_main_img card-img-top") if @item.main_img %>
-        <% else %>
-          <img class="" src="http://placehold.it/900x400" alt="">
-        <% end %>
+        <div class="my-card-img" style="background-image: url('<%= @main_image %>')">
 
+          <%#= image_tag(@main_image, class: "img-responsive my-news-main-img card-img-top") %>
+        </div>
         <div class="card-body">
           <h3 class="card-title"><%= @item.title %></h3>
           <span class="text-warning average-review-rating", data-score=<%= @average_review %>>Average rating: </span>
           <span> <%= translate('items.based_on') %> <%= @item.reviews.count %> <%= translate('items.reviews') %></span>
           <p class="card-text">
-            <strong><%= translate('items.redactor') %>: </strong> <%= @redactor%> /
+            <strong><%= translate('items.redactor') %>: </strong> <%= @redactor %> /
             <strong><%= translate('items.updated_at') %>: </strong> <%= @item.updated_at %> /
             <strong><%= translate('items.category') %>: </strong><%= link_to @item.category, items_path(category: @item.category) %> /
             <strong><%= translate('items.region') %>: </strong><%= link_to @item.region, items_path(region: @item.region) %> /
@@ -143,18 +140,20 @@
 
 
 <script>
-      $('.review-rating').raty({
-          readOnly: true,
-          path: '/assets/',
-          score: function() {
-              return $(this).attr('data-score')
-          }
-      });
+    $('.review-rating').raty({
+        readOnly: true,
+        numberMax: 5,
+        path: '/assets/',
+        score: function() {
+            return $(this).attr('data-score')
+        }
+    });
 </script>
 
 <script>
     $('.average-review-rating').raty({
         readOnly: true,
+        numberMax: 5,
         path: '/assets/',
         score: function() {
             return $(this).attr('data-score')

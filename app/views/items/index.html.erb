@@ -4,51 +4,21 @@
     <div class="col-lg-9">
       <h1>
         <% if params[:category] == nil %>
-          <%= translate('items.all_news') %> <%= link_to image_tag("feed-icon-28x28.png"), items_url(:rss) %>
+          <%= translate('items.all_news') %>
+          <%= link_to image_tag("feed-icon-28x28.png"), items_url(:rss), target: :_blank %>
         <% else %>
           <%= params[:category].capitalize %>
         <% end %>
       </h1>
       <h3><small class="text-muted"><%= translate('items.designed_by') %></small></h3>
-      <hr/>
       <% unless @important_items.blank? %>
+        <hr/>
         <h1><small><%= translate('items.important_news') %></small></h1>
         <main role="main">
          <div class="album py-5">
             <div class="container">
               <div class="row">
-                <% @important_items.each do |item| %>
-                  <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm">
-                      <% if item.main_img_href.attached? %>
-                        <%= image_tag(item.main_img_href, class: "my_important_item_image bd-placeholder-img card-img-top") %>
-                      <% elsif item.main_img %>
-                        <%= image_tag(item.main_img, class: "my_important_item_image bd-placeholder-img card-img-top") %>
-                      <% else %>
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Заполнитель: значок"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="42.5%" y="50%" fill="#eceeef" dy=".3em"><%= t "items.image" %></text></svg>
-                      <% end %>
-                      <div class="card-body">
-                        <p class="card-text"><%= item.title %></p>
-                          <div class="btn-group ">
-                            <%= link_to "#{translate('items.read_more')}", item, class: "btn btn-sm btn-outline-secondary" %>
-                            <% if can? :update, item %>
-                              <%= link_to "#{translate('items.edit')}", edit_item_path(item), class: "btn btn-sm btn-outline-secondary" %>
-                            <% end %>
-                            <% if can? :destroy, item %>
-                              <%= link_to "#{translate('items.destroy')}", item, method: :delete, class: "btn btn-sm btn-outline-secondary" %>
-                            <% end %>
-                          </div>
-                          <div>
-                            <% unless item.reviews.blank? %>
-                              <span class="item-average-review-rating" data-score=<%= item.reviews.average(:rating).round(2) %>></span>
-                            <% end %>
-                            <small class="text-muted"><%= item.created_at %></small>
-                            <small><i class="fa fa-eye"></i> <%= item.item_views.count %></small>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                <% end %>
+                <%= render partial: 'important_item', collection: @important_items%>
               </div>
             </div>
           </div>
@@ -60,84 +30,17 @@
         <h1><small><%= t 'items.other_news' %></small></h1>
         <div class="container">
           <div class="row text-center">
-            <% @other_items.each do |item| %>
-              <div class="col-lg-3 col-md-6 mb-4">
-                <div class="card-img-top">
-                  <% if item.main_img_href.attached? %>
-                    <%= image_tag(item.main_img_href, style: 'width: 100%; height: 150px; preserveAspectRatio="xMidYMid slice"; focusable="false"; role="img"', class: "bd-placeholder-img card-img-top") %>
-                  <% elsif item.main_img %>
-                    <%= image_tag(item.main_img, style: 'width: 100%; height: 150px; preserveAspectRatio="xMidYMid slice"; focusable="false"; role="img"', class: "bd-placeholder-img card-img-top") %>
-                  <% else %>
-                    <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-                  <% end %>
-                  <div class="card-body">
-                    <p class="card-text"><small><%= item.title %></small></p>
-                  </div>
-                  <div class="card-footer">
-                    <div class="btn-group">
-                      <%= link_to "#{translate('items.read_more')}", item, class: "btn btn-sm btn-outline-secondary" %>
-                      <% if can? :update, item %>
-                        <%= link_to "#{translate('items.edit')}", edit_item_path(item), class: "btn btn-sm btn-outline-secondary" %>
-                      <% end %>
-                      <% if can? :destroy, item %>
-                        <%= link_to "#{translate('items.destroy')}", item, method: :delete, class: "btn btn-sm btn-outline-secondary" %>
-                      <% end %>
-                    </div>
-                    <div>
-                      <% unless item.reviews.blank? %>
-                        <span class="item-average-review-rating" data-score=<%= item.reviews.average(:rating).round(2) %>></span>
-                        <br/>
-                      <% end %>
-                     <small>
-                       <small class="text-muted"><%= item.created_at %></small>
-                       <small><i class="fa fa-eye"></i> <%= item.item_views.count %></small>
-                     </small>
-                    </div>
-                  </div>
-                  </div>
-              </div>
-            <% end %>
+            <%= render partial: 'other_item', collection: @other_items%>
           </div>
           <ul class="pagination justify-content-center ">
             <%= paginate @other_items, theme: 'twitter-bootstrap-4' %>
           </ul>
         </div>
       <% end %>
-
     </div>
-
-<!-- WIDGET -->
-    <div class="col-lg-3">
-      <div class="card my-4">
-        <h5 class="card-header">Search</h5>
-        <div class="card-body">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for...">
-            <span class="input-group-btn"><button class="btn btn-secondary" type="button">Go!</button></span>
-          </div>
-        </div>
-      </div>
-      <% if @tags %>
-        <div class="card my-4">
-          <h5 class="card-header"><%= translate('items.tag_cloud') %></h5>
-            <div class="card-body">
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <% tag_cloud(@tags.sort_by { |a| a.name }, %w(css1 css2 css3 css4)) do |tag, css_class| %>
-                    <li class="breadcrumb-item">
-                      <%= link_to tag.name, items_path(tag: tag.name), :class => css_class %>
-                    </li>
-                  <% end %>
-                </ol>
-              </nav>
-            </div>
-          </div>
-      <% end %>
-    </div>
+    <%= render partial: 'widget', locals: {tags: @tags} %>
 </div>
 </div>
-
-
 
 
 <!-- Script for raty gem -->
