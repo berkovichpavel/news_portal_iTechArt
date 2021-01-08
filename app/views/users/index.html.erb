@@ -22,11 +22,7 @@
         <div class="card">
           <div class="card-body">
             <div class="media align-items-center">
-              <% if user.photo.attached? %>
-                <%= image_tag(user.photo, style: '', class: "avatar avatar-xl mr-3") %>
-              <% else %>
-                <span style="background-image: url(https://bootdey.com/img/Content/avatar/avatar7.png)" class="avatar avatar-xl mr-3"></span>
-              <% end %>
+              <%= image_tag(check_avatar(user), style: '', class: "avatar avatar-xl mr-3") %>
               <div class="media-body overflow-hidden">
                 <h5 class="card-text mb-0"><%= user.first_name + ' ' + user.last_name %></h5>
                 <p class="card-text text-muted"><%= user.role.upcase %></p>

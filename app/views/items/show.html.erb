@@ -7,7 +7,7 @@
 
     <div class="col-lg-8">
       <div class="card mt-4">
-        <div class="my-card-img" style="background-image: url('<%= @main_image %>')"></div>
+        <div class="my-card-img" style="background-image: url(<%= find_main_image(@item) %>)"></div>
         <div class="card-body">
           <h3 class="card-title"><%= @item.title %></h3>
           <span class="text-warning average-review-rating", data-score=<%= @average_review %>>Average rating: </span>
@@ -25,7 +25,7 @@
               <%= link_to translate('items.destroy'), @item, method: :delete, class: "btn btn-primary" if can?(:destroy, @item)%>
             </div>
             <div class="col-md-3 text-right">
-              <%= tweet_button( url: request.original_url, text: "Title: #{@item.title}\nShort description: #{@item.short_description}\nMain img: #{image_url(@main_image)}\n", class: "pull-right") %>
+              <%= tweet_button( url: request.original_url, text: "Title: #{@item.title}\nShort description: #{@item.short_description}\nMain img: #{image_url(find_main_image(@item))}\n", class: "pull-right") %>
               <script src="https://yastatic.net/share2/share.js" async></script>
               <div class="ya-share2 pull-right" data-curtain data-lang="en" data-services="vkontakte,facebook,odnoklassniki,telegram,skype"></div>
             </div>
@@ -54,7 +54,7 @@
           <% end %>
         </div>
       </div>
-        <% if can?(:mamage, @item)%>
+        <% if can?(:manage, @item)%>
           <div class="card mt-4">
             <h5 class="card-header"><%= translate('items.rating_change') %></h5>
             <div class="card-body">
