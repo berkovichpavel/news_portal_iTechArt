@@ -8,7 +8,6 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.string :mask, default: 'visible', null: false
       t.string :region
       t.boolean :flag, default: false
-      t.integer :user_id
 
       t.timestamps
     end
