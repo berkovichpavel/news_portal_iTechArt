@@ -34,6 +34,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'factory_bot_rails'
+  gem 'rspec-rails', '~> 3.5'
 end
 
 group :development do
@@ -65,7 +67,7 @@ gem 'cancancan'
 gem 'acts-as-taggable-on', '~> 6.0'
 gem 'kaminari'
 gem 'bootstrap4-kaminari-views'
-gem "social-buttons", '~> 0.3'
+gem 'social-buttons', '~> 0.3'
 gem 'figaro'
 gem 'sidekiq'
 gem 'nokogiri', '~> 1.11', '>= 1.11.1'
@@ -77,4 +79,6 @@ gem 'groupdate'
 gem 'geocoder'
 gem 'useragent'
 gem 'rake'
+gem 'factory_bot'
+
 

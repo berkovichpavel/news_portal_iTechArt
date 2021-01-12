@@ -4,7 +4,7 @@
     <div>
       <%= render item.reviews.order(:updated_at).limit(5) %>
     </div>
-    <hr/>
+    <%== '<hr/>' unless item.reviews.blank? %>
     <div>
       <strong><%= translate('items.my_review') %>:</strong>
       <% if current_user %>

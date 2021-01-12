@@ -6,6 +6,9 @@ class ItemsController < ApplicationController
   TRACK_INTERVAL = 100
 
   def index
+    # select
+    # без перезагрузки станицыреницы remote true
+    #
     @items = if params[:category] then @items.where(category: params[:category])
              elsif params[:region] then @items.where(region: params[:region])
              elsif params[:tag].present? then @items.tagged_with(params[:tag])

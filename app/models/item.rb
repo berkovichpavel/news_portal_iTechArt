@@ -25,7 +25,7 @@ class Item < ApplicationRecord
 
   validates :title, presence: true, length: { maximum: 150 }
   validates :short_description, presence: true, length: { minimum: 20, maximum: 800 }
-  validates :full_text, presence: true, length: { minimum: 100 }
+  validates :full_text, presence: true, length: { minimum: 50 }
   validates :category, presence: true
   validates :mask, presence: true
   validates :author, presence: true, unless: :rss?
@@ -33,27 +33,9 @@ class Item < ApplicationRecord
   def send_item_instantly
     FindUsersInstantlyJob.perform_now(id)
   end
-
-  # def self.to_rss
-  #   rss = RSS::Maker.make("atom") do |maker|
-  #     maker.channel.author = 'berkovich.pavel'
-  #     maker.channel.updated = Time.now.to_s
-  #     maker.channel.about = 'https://www.ruby-lang.org/en/feeds/news.rss'
-  #     maker.channel.title = 'All feeds from BerdachaNewsPortal'
-  #
-  #     all.each do |my_item|
-  #       maker.items.new_item do |item|
-  #         item.link = my_item.reference_link || 'none'
-  #         item.title = my_item.title
-  #         item.description = my_item.full_text
-  #         item.updated = my_item.updated_at.to_s
-  #       end
-  #     end
-  #   end
-  # end
-
+  
   def published_time
-    if self.status == 'active'
+    if status == 'active'
       self.published_at ||= Time.current
     else
       self.published_at = nil
