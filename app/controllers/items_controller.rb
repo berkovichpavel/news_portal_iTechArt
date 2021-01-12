@@ -30,7 +30,7 @@ class ItemsController < ApplicationController
   def show
     user_id = current_user ? current_user.id : nil
     request_env = request.env['HTTP_USER_AGENT']
-    InsertItemViewsJob.perform_later(user_id, @item.id, request_env, ip)
+    InsertItemViewsJob.perform_now(user_id, @item.id, request_env, ip)
     if current_user
       @can_review = current_user.reviews.where(item_id: @item.id).count < 1
       @user_review = current_user.reviews.where(item_id: @item.id).first

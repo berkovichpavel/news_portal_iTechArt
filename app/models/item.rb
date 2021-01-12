@@ -33,7 +33,7 @@ class Item < ApplicationRecord
   def send_item_instantly
     FindUsersInstantlyJob.perform_now(id)
   end
-  
+
   def published_time
     if status == 'active'
       self.published_at ||= Time.current
