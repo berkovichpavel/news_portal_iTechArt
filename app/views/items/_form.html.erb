@@ -9,22 +9,22 @@
       <% end %>
     <% end %>
     <% if can?(:change_item, Item) %>
-      <%= f.input :title %>
-      <%= f.input :short_description %>
-      <%= f.input :category, collection: @categories %>
-      <%= f.input :mask, collection: @access_masks %>
-      <%= f.input :region %>
+      <%= f.input :title, placeholder:'Title' %>
+      <%= f.input :short_description, placeholder:'Short description' %>
+      <%= f.input :category, collection: @categories, placeholder:'Category' %>
+      <%= f.input :mask, collection: @access_masks, placeholder:'Mask' %>
+      <%= f.input :region, placeholder:'Region' %>
       <%= f.file_field :main_img_href %>
-      <%= f.input :main_img %>
-      <%= f.input :flag,  as: :radio_buttons, label: translate('simple_form.important')%>
-      <%= f.input :tag_list, label: translate('items.tags') %>
+      <%= f.input :main_img, placeholder:'Image href' %>
+      <%= f.input :flag,  as: :radio_buttons, label: translate('simple_form.important') %>
+      <%= f.input :tag_list, label: translate('items.tags') , placeholder:'Tags' %>
       <%= f.input :full_text, as: :ckeditor %>
     <% end %>
     <% if can?(:change_status, Item) %>
       <% if can?(:approve, Item) %>
-        <%= f.input :status, collection: @statuses %>
+        <%= f.input :status, collection: @statuses, placeholder:'Status' %>
       <% else %>
-        <%= f.input :status, collection: @statuses_correspondent %>
+        <%= f.input :status, collection: @statuses_correspondent, placeholder:'Status' %>
       <% end %>
     <% end %>
     <div class="d-flex justify-content-center">
@@ -32,4 +32,5 @@
     </div>
   <% end %>
 </div>
+
 

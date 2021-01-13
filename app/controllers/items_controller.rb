@@ -75,6 +75,8 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to item_path(@item.id)
     else
+      @statuses = Item.statuses
+      @statuses_correspondent = { revision: 'revision', check: 'check' }
       @access_mask = Item.masks.keys
       render 'new'
     end
