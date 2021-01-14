@@ -1,7 +1,7 @@
-<%= render "devise/shared/error_messages", resource: resource %>
+<%= render 'devise/shared/error_messages', resource: resource %>
 <div class="log_in">
   <div class="cont">
-    <div class="form sign-in">
+    <div class="form">
       <h2 style="margin-top: 100px;"><%= t 'devise.passwords.change_password' %></h2>
       <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
         <%= f.hidden_field :reset_password_token %>

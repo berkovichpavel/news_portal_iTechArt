@@ -1,24 +1,16 @@
-<div class="container">
-  <div class="row padded">
-    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-      <div class="block1"></div>
+<div class="edit-role">
+  <div class="cont">
+    <div class="form form-group">
+        <h3><%= t('persons.edit_role') %></h3>
+          <%= simple_form_for @user do |f| %>
+            <% if can?(:manage, User) %>
+              <%= f.input :role, collection: User.roles, label: false %>
+            <%end %>
+            <%= f.button :submit, class: 'btn btn-sm btn-secondary btn-xs btn-block' %>
+        <% end %>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <div class="block2">
-        <div class="form-group">
-          <h3>Edit profile</h3>
-            <%= simple_form_for @user do |f| %>
-              <% if can?(:manage, User) %>
-                <%= f.input :role, collection: User.roles %>
-              <%end %>
-              <%= f.button :submit, class: 'btn btn-success btn-xs btn-block' %>
-          <% end %>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-      <div class="block3"></div>
-    </div>
+    <div class="img"></div>
   </div>
 </div>
+
 
