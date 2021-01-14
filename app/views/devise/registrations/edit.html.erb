@@ -21,23 +21,15 @@
               <%= f.input :first_name, autofocus: true, class: 'form-control' %>
             </div>
             <div class="field">
-              <%= f.label :photo %><br />
-              <%= f.file_field :photo, class: 'form-control' %>
+              <%= f.input :photo, as: :file, input_html: {data: { direct_upload_url: rails_direct_uploads_url }}, class: 'form-control' %>
             </div>
             <div class="field">
               <%= f.input :bio, autofocus: true, class: 'form-control' %>
             </div>
-            <% if can?(:manage, User) %>
-              <div class="field">
-                <%= f.input :role, collection: User.roles, class: 'form-control' %>
-              </div>
-            <%end %>
-
 
             <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
               <div><%= t 'devise.registrations.waiting confirmation' %> <%= resource.unconfirmed_email %></div>
             <% end %>
-
             <div class="field">
               <%= f.input :password, autocomplete: "new-password", class: 'form-control' %>
               <small><i>(leave blank if you don't want to change it)</i></small><br />
@@ -45,11 +37,9 @@
                 <small><em><%= @minimum_password_length %> <%= t 'devise.registrations.characters_min' %></em></small>
               <% end %>
             </div>
-
             <div class="field">
               <%= f.input :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
             </div>
-
             <div class="field">
               <%= f.input :current_password, autocomplete: "current-password", class: 'form-control' %>
               <small><i><%= "(#{t 'devise.registrations.we_need_current_password'})" %></i></small><br />

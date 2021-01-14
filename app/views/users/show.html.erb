@@ -12,8 +12,8 @@
                   <p class="text-secondary mb-1"><%= @user.role.upcase %></p>
                 <% end %>
                 <% if can? :update, @user %>
-                  <%= link_to translate('items.edit_profile'), edit_user_path, class: "btn btn-sm btn-outline-secondary" %>
-                  <%= link_to translate('items.edit_password'), edit_user_registration_path, class: "btn btn-sm btn-outline-secondary" %>
+                  <%= link_to translate('items.edit_role'), edit_user_path, class: "btn btn-sm btn-outline-secondary" if can?(:manage, User) %>
+                  <%= link_to translate('items.edit_profile'), edit_user_registration_path, class: "btn btn-sm btn-outline-secondary" if @user.id = current_user.id %>
                 <% end %>
               </div>
             </div>

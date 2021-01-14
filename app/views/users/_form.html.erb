@@ -8,12 +8,6 @@
         <div class="form-group">
           <h3>Edit profile</h3>
             <%= simple_form_for @user do |f| %>
-              <%= f.input :first_name %>
-              <%= f.input :last_name %>
-              <%= f.label :photo %>
-              <%= f.file_field :photo %>
-              <%= f.input :bio %>
-              <%= f.input :hidden %>
               <% if can?(:manage, User) %>
                 <%= f.input :role, collection: User.roles %>
               <%end %>
