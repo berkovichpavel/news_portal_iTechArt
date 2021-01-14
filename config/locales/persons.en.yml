@@ -28,3 +28,10 @@ en:
     sign_up: "Sign up"
     title: 'Title'
     users: 'Users'
+    account_settings: 'Account settings'
+    general: 'General'
+    change_password: 'Change password'
+    info: 'Info'
+    social_links: 'Social links'
+    upload_photo: 'Upload new photo'
+    allowed_photo: 'Allowed JPG, PNG or JPEG. Max size of 800K'

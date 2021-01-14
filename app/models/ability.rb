@@ -39,9 +39,7 @@ class Ability
       can :comments_activity, User, role: %w[correspondent admin redactor] if user.role.in?(%w[correspondent admin redactor])
       can :items_activity, User, hidden: false
       can :items_activity, User, hidden: true, id: user.id
-
       can :read, Comment, user_id: User.where(role: 'user').ids
-
       can :add_subscription, User, id: user.id
     else
       can :read, Item, status: ['active'], mask: %w[visible title_annotation only_header]
