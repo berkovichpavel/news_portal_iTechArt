@@ -1,23 +1,15 @@
-<div class="container">
-  <div class="row padded">
-    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-      <div class="block1"></div>
+<div class="wide-white-form">
+  <div class="cont">
+    <div class="form form-group">
+      <h3><%= translate('statistics.create') %></h3>
+      <%= simple_form_for ([@user, @statistic]) do |f| %>
+        <%= f.input :begin_statistic %>
+        <%= f.input :end_statistic %>
+        <%= f.button :submit, class: 'btn btn-sm btn-light btn-xs btn-block' %>
+      <% end %>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <div class="block2">
-        <div class="form-group">
-          <h2 class="text-center"><%= translate('statistics.create') %></h2>
-          <%= simple_form_for ([@user, @statistic]) do |f| %>
-            <%= f.input :begin_statistic %>
-            <%= f.input :end_statistic %>
-
-            <%= f.button :submit, class: 'btn btn-primary btn-xs btn-block'%>
-          <% end %>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-      <div class="block3"></div>
-    </div>
+    <div class="books-img-background"></div>
   </div>
 </div>
+
+

@@ -1,4 +1,4 @@
-.form-with-books{
+.white-form{
   .cont {
     overflow: hidden;
     position: relative;
@@ -27,36 +27,68 @@
       color: #ffffff;
     }
   }
+}
 
-  .img {
+.wide-white-form{
+  .cont {
     overflow: hidden;
-    z-index: 2;
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 90px auto 100px;
+    background: #fff;
+
+  }
+  .form {
+    z-index: 10;
+    position: relative;
+    width: 700px;
+    height: 100%;
+    padding: 50px 30px 0;
+    margin-top: 50px;
+    margin-left: 50px;
+    button{
+      color: #ffffff;
+    }
+    h3{
+      text-align: center;
+      color: #ffffff;
+    }
+    label{
+      color: #ffffff;
+    }
+  }
+}
+
+.books-img-background {
+  overflow: hidden;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 360px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://fotograf-shvetsov.kz/wp-content/uploads/2019/04/fon-iz-knig.jpg');
+    background-size: cover;
+  }
+
+  &:after {
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    padding-top: 360px;
-
-    &:before {
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('https://fotograf-shvetsov.kz/wp-content/uploads/2019/04/fon-iz-knig.jpg');
-      background-size: cover;
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.4);
-    }
+    background: rgba(0, 0, 0, 0.4);
   }
 }
+
