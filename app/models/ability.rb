@@ -4,7 +4,6 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-
     if user
       can :track, Item
       if user.admin?
@@ -12,11 +11,11 @@ class Ability
       elsif user.correspondent?
         can :create, Item
         can :read, Item
-        can :update, Item, author_id: user.id
+        can :update, Item, author_id: user.id, status: [:revision, :check]
         can :change_item, Item
         can :change_status, Item, author_id: user.id, status: [:revision]
-        can :read_revision, Item, status: ['revision'], user_id: user.id
-        can :read_verification, Item, status: ['check'], user_id: user.id
+        can :read_revision, Item, status: 'revision', author_id: user.id
+        can :read_verification, Item, status: 'check', author_id: user.id
         can :read, Comment
       elsif user.redactor?
         can :update, Item, status: %w[check active archive]

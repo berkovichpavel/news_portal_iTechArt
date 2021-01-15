@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
                if current_user.redactor? || current_user.admin?
                  @items.where(status: params[:status])
                else
-                 @items.where(status: params[:status], user_id: current_user.id)
+                 @items.where(status: params[:status], author_id: current_user.id)
                end
              elsif params[:commentable] then @items.joins(:comments).group(:id).select('items.*, COUNT(comments) as count_comments').where(comments: { service_type: 'default' }).order('COUNT(comments) DESC')
              elsif params[:readable] then @items.joins(:item_views).group(:id).order('COUNT(item_id) DESC')
