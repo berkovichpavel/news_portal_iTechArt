@@ -11,4 +11,8 @@ module ItemsHelper
       item.main_img
     end
   end
+
+  def item_form_header(item)
+    method = item.new_record? ? t('items.create_new_item') : t('items.edit_item')
+  end
 end

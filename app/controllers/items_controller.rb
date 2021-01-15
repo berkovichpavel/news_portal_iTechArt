@@ -56,6 +56,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    @class_name = current_user.role == 'redactor' ? 'wide-white-form' : 'big-white-form'
     @statuses = Item.statuses
     @categories = Item.categories
     @access_masks = Item.masks
@@ -63,6 +64,7 @@ class ItemsController < ApplicationController
   end
 
   def new
+    @class_name = 'big-white-form'
     @item = Item.new
     @categories = Item.categories
     @access_masks = Item.masks
@@ -75,6 +77,7 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to item_path(@item.id)
     else
+      @class_name = 'big-white-form'
       @statuses = Item.statuses
       @statuses_correspondent = { revision: 'revision', check: 'check' }
       @access_mask = Item.masks.keys
@@ -86,6 +89,7 @@ class ItemsController < ApplicationController
     if @item.update(item_params)
       redirect_to item_path(params[:id])
     else
+      @class_name = current_user.role == 'correspondent' ? 'wide-white-form' : 'big-white-form'
       @access_mask = Item.masks.keys
       render 'edit'
     end
@@ -109,4 +113,5 @@ class ItemsController < ApplicationController
     permitted << :status if can?(:change_status, Item)
     params.require(:item).permit(*permitted)
   end
+
 end

@@ -60,6 +60,34 @@
   }
 }
 
+.big-white-form{
+  .cont {
+    overflow: hidden;
+    position: relative;
+    width: 1300px;
+    height: 1000px;
+    margin: 90px auto 100px;
+    background: #fff;
+
+  }
+  .form {
+    z-index: 10;
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    padding: 50px 30px 0;
+    margin-top: 50px;
+    margin-left: 50px;
+    .form-control-file, .button, .col-form-label, h3, label,{
+      color: #ffffff;
+    }
+    h3{
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+}
+
 .books-img-background {
   overflow: hidden;
   z-index: 2;

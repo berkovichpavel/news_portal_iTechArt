@@ -39,6 +39,10 @@ en:
     manage: "Manage"
     rating_change: "Change in average news rating over time"
     percent_countries: "Percentage of countries of users who viewed the news"
+    image_href: "Image href"
+    status: "Status"
+    create_new_item: "Create new item"
+    edit_item: "Edit item"
 
 
 
