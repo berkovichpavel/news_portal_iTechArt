@@ -1,8 +1,13 @@
-<div class="block">
-  <h2> Create RSS subscription </h2>
-  <%= simple_form_for ( @rss_subscription) do |f| %>
-    <%= f.input :reference_link %>
-    <%= f.input :category , collection: @categories %>
-    <%= f.button :submit, class: 'btn btn-primary btn-xs btn-block'%>
-  <% end %>
+<div class="form-with-books">
+  <div class="cont">
+    <div class="form form-group" style="margin-top: 80px;">
+      <h3><%= translate('rss_subscriptions.create_rss_subscription') %></h3>
+      <%= simple_form_for @rss_subscription do |f| %>
+        <%= f.input :reference_link, label: false, placeholder: t('rss_subscriptions.reference_link') %>
+        <%= f.input :category , collection: @categories %>
+        <%= f.button :submit, class: 'btn btn-sm btn-light btn-xs btn-block' %>
+      <% end %>
+    </div>
+    <div class="img"></div>
+  </div>
 </div>
