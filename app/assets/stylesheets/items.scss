@@ -31,10 +31,21 @@
   background: none repeat scroll #ffffff;
   opacity: 0.8;
   margin-left: 3px;
-  padding: 7px 10px;
+  padding: 3px 3px;
   position: absolute;
   top: 0;
-  right: 15px;
+  right: 0;
+}
+
+.down{
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 5px;
+}
+
+.card-body{
+  position: relative;
 }
 
 .my_important_item_image{

@@ -1,12 +1,12 @@
-<div class="col-md-4">
+<div class="col-md-4 d-flex align-items-stretch">
   <div class="card mb-4 shadow-sm">
     <%= image_tag(find_main_image(important_item), class: 'my_important_item_image bd-placeholder-img card-img-top') %>
     <% unless important_item.reviews.blank? %>
       <span class="m-prop-tag-right item-average-review-rating" data-score=<%= important_item.reviews.average(:rating)&.round(2) %>></span>
     <% end %>
     <div class="card-body">
-      <p class="card-text" style="margin-bottom: 0px"><%= important_item.title %></p>
-      <div>
+      <p class="card-text"><%= important_item.title %></p>
+      <div class="down pt-3">
         <small class="text-muted"><%= important_item.created_at %></small>
         <small class="float-right"><i class="fa fa-eye"></i> <%= important_item.item_views.count %></small>
       </div>

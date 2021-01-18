@@ -1,39 +1,35 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-lg-9">
-      <% if params[:category] %>
-        <h1 class="text-center mt-2 font-italic"><%= params[:category].capitalize %></h1>
-      <% end %>
+  <% if params[:category] %>
+    <h1 class="text-center mt-2 font-italic"><%= params[:category].capitalize %></h1>
+  <% end %>
 
-      <% unless @important_items.blank? %>
-        <main role="main">
-         <div class="album">
-            <div class="container">
-              <div class="row">
-                <%= render partial: 'important_item', collection: @important_items%>
-              </div>
-            </div>
-          </div>
-        </main>
-      <% end %>
-
-      <% unless @other_items.blank? %>
-        <hr/>
+  <% unless @important_items.blank? %>
+    <main role="main">
+     <div class="album">
         <div class="container">
-          <div class="row text-center">
+          <div class="row">
+            <%= render partial: 'important_item', collection: @important_items%>
+          </div>
+        </div>
+      </div>
+    </main>
+  <% end %>
+  <% unless @other_items.blank? %>
+    <hr/>
+    <main role="main">
+      <div class="album">
+        <div class="container">
+          <div class="row">
             <%= render partial: 'other_item', collection: @other_items%>
           </div>
-          <ul class="pagination justify-content-center">
-            <%= paginate @other_items, theme: 'twitter-bootstrap-4' %>
-          </ul>
         </div>
-      <% end %>
-    </div>
-    <%= render partial: 'widget', locals: {tags: @tags} %>
-  </div>
+      </div>
+    </main>
+  <% end %>
 </div>
+
 
 
 <!-- Script for raty gem -->
