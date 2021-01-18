@@ -6,7 +6,7 @@
   <% end %>
 <% end %>
 
-<div class="<%= @class_name %>">
+<div class="<%= class_name %>">
   <div class="cont">
     <div class="form form-group">
       <%= javascript_include_tag Ckeditor.cdn_url %>
@@ -17,10 +17,10 @@
           <%= f.input :short_description, placeholder:'Short description', label: false %>
           <div class="form-row">
             <div class="col">
-              <%= f.input :category, collection: @categories, placeholder:'Category' %>
+              <%= f.input :category, collection: @categories %>
             </div>
             <div class="col">
-              <%= f.input :mask, collection: @access_masks, placeholder:'Mask' %>
+              <%= f.input :mask, collection: @access_mask %>
             </div>
           </div>
           <div class="form-row">
@@ -45,11 +45,7 @@
           <%= f.input :full_text, as: :ckeditor %>
         <% end %>
         <% if can?(:change_status, @item) %>
-          <% if can?(:approve, @item) %>
-            <%= f.input :status, collection: @statuses, placeholder:'Status' %>
-          <% else %>
-            <%= f.input :status, collection: @statuses_correspondent, placeholder:'Status' %>
-          <% end %>
+            <%= f.input :status, collection: (can?(:approve, @item) ? @statuses : @statuses_correspondent) %>
         <% end %>
         <%= f.button :submit, class: 'btn btn-sm btn-light btn-xs btn-block' %>
       <% end %>

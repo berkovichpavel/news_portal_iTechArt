@@ -1,7 +1,6 @@
 require 'rss'
 require 'open-uri'
 
-
 class RssParser
   include ActionView::Helpers::UrlHelper
 
@@ -9,7 +8,7 @@ class RssParser
     @url = url
     @category = category
   end
-  
+
   def parse
     rss_results = []
     rss = RSS::Parser.parse(open("#{@url}").read, false)

@@ -1,75 +1,36 @@
 class ItemsController < ApplicationController
   load_and_authorize_resource
+
   before_action :authenticate_user!, except: [:show, :index, :track]
   before_action :tag_cloud, only: [:index, :show]
+  before_action :set_access_masks, only: [:edit, :new, :create, :update]
+  before_action :set_statuses, only: [:edit, :new, :create, :update]
 
   TRACK_INTERVAL = 100
 
+  def new; end
+
+  def edit; end
+
   def index
-    # select
-    # без перезагрузки станицыреницы remote true
-    #
-    @items = if params[:category] then @items.where(category: params[:category])
-             elsif params[:region] then @items.where(region: params[:region])
-             elsif params[:tag].present? then @items.tagged_with(params[:tag])
-             elsif params[:status]
-               if current_user.redactor? || current_user.admin?
-                 @items.where(status: params[:status])
-               else
-                 @items.where(status: params[:status], author_id: current_user.id)
-               end
-             elsif params[:commentable] then @items.joins(:comments).group(:id).select('items.*, COUNT(comments) as count_comments').where(comments: { service_type: 'default' }).order('COUNT(comments) DESC')
-             elsif params[:readable] then @items.joins(:item_views).group(:id).order('COUNT(item_id) DESC')
-             elsif params[:rss] then @items.where(rss: true)
-             else @items
-             end
-    @important_items = @items.where(flag: true)
+    @items = ItemsFilter.call(items: @items, params: params)
+    @important_items = @items.select(&:flag)
+    # remote true
     @other_items = @items.where(flag: false).order(created_at: :desc).page(params[:page]).per(12)
   end
 
   def show
-    user_id = current_user ? current_user.id : nil
-    request_env = request.env['HTTP_USER_AGENT']
-    InsertItemViewsJob.perform_now(user_id, @item.id, request_env, ip)
-    if current_user
-      @can_review = current_user.reviews.where(item_id: @item.id).count < 1
-      @user_review = current_user.reviews.where(item_id: @item.id).first
-    end
+    InsertItemViewsJob.perform_now(current_user&.id, @item.id, request.env['HTTP_USER_AGENT'], ip)
+    @user_review = current_user.reviews.find_by(item_id: @item.id) if current_user
     @redactor = User.find(@item.author_id).email if @item.author_id
-    @average_review = if @item.reviews.blank?
-                        @has_review = false
-                      else
-                        @has_review = true
-                        @item.reviews.average(:rating)
-                      end
+    @average_review = @item.reviews.average(:rating)
+    @has_review = !!@average_review
   end
 
   def track
-    if current_user
-      view_with_user = @item.item_views.find_by(user_id: current_user.id)
-      view_with_user.increment!(:watching_time, TRACK_INTERVAL) if view_with_user.present?
-    else
-      view_without_user = @item.item_views.find_by(user_ip: ip)
-      view_without_user.increment!(:watching_time, TRACK_INTERVAL) if view_without_user.present?
-    end
+    view_track = current_user ? @item.item_views.find_by(user_id: current_user.id) : @item.item_views.find_by(user_ip: ip)
+    view_track.increment!(:watching_time, TRACK_INTERVAL) if view_track.present?
     head :ok
-  end
-
-  def edit
-    @class_name = current_user.role == 'redactor' ? 'wide-white-form' : 'big-white-form'
-    @statuses = Item.statuses
-    @categories = Item.categories
-    @access_masks = Item.masks
-    @statuses_correspondent = { revision: 'revision', check: 'check' }
-  end
-
-  def new
-    @class_name = 'big-white-form'
-    @item = Item.new
-    @categories = Item.categories
-    @access_masks = Item.masks
-    @statuses = Item.statuses
-    @statuses_correspondent = { revision: 'revision', check: 'check' }
   end
 
   def create
@@ -77,10 +38,6 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to item_path(@item.id)
     else
-      @class_name = 'big-white-form'
-      @statuses = Item.statuses
-      @statuses_correspondent = { revision: 'revision', check: 'check' }
-      @access_mask = Item.masks.keys
       render 'new'
     end
   end
@@ -89,21 +46,14 @@ class ItemsController < ApplicationController
     if @item.update(item_params)
       redirect_to item_path(params[:id])
     else
-      @class_name = current_user.role == 'correspondent' ? 'wide-white-form' : 'big-white-form'
-      @access_mask = Item.masks.keys
       render 'edit'
     end
   end
 
   def destroy
-    @item = Item.find(params[:id])
     @item.comments.destroy
     @item.destroy
     redirect_to items_path
-  end
-
-  def tag_cloud
-    @tags = Item.tag_counts_on(:tags)
   end
 
   private
@@ -114,4 +64,16 @@ class ItemsController < ApplicationController
     params.require(:item).permit(*permitted)
   end
 
+  def tag_cloud
+    @tags = Item.tag_counts_on(:tags)
+  end
+
+  def set_access_masks
+    @access_mask = Item.masks
+  end
+
+  def set_statuses
+    @statuses = Item.statuses
+    @statuses_correspondent = { revision: 'revision', check: 'check' }
+  end
 end

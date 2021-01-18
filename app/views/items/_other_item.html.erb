@@ -22,7 +22,7 @@
       </div>
       <div>
         <% unless other_item.reviews.blank? %>
-          <span class="item-average-review-rating" data-score=<%= other_item.reviews.average(:rating).round(2) %>></span>
+          <span class="item-average-review-rating" data-score=<%= other_item.reviews.average(:rating)&.round(2) %>></span>
           <br/>
         <% end %>
         <small>

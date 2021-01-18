@@ -14,7 +14,7 @@
       </div>
       <div>
         <% unless important_item.reviews.blank? %>
-          <span class="item-average-review-rating" data-score=<%= important_item.reviews.average(:rating).round(2) %>></span>
+          <span class="item-average-review-rating" data-score=<%= important_item.reviews.average(:rating)&.round(2) %>></span>
         <% end %>
         <small class="text-muted"><%= important_item.created_at %></small>
         <small><i class="fa fa-eye"></i> <%= important_item.item_views.count %></small>

@@ -2,14 +2,14 @@ require 'rss'
 require 'open-uri'
 
 class Item < ApplicationRecord
+  acts_as_taggable
 
   CATEGORIES = { 'news' => 'news', 'health' => 'health', 'finance' => 'finance', 'auto' => 'auto', 'people' => 'people',
                  'technology' => 'technology', 'realty' => 'realty' }.freeze
-  belongs_to :author, class_name: 'User', foreign_key: 'author_id', optional: true
   after_save :send_item_instantly
   before_save :published_time
-  acts_as_taggable
 
+  belongs_to :author, class_name: 'User', foreign_key: 'author_id', optional: true
   has_many :comments, as: :commentable
   has_many :reviews
   has_many :item_views, dependent: :destroy
@@ -19,7 +19,6 @@ class Item < ApplicationRecord
   enum status: { 'active' => 'active', 'archive' => 'archive', 'revision' => 'revision', 'check' => 'check' }
   enum active_status: { 'inactive' => 'inactive', 'published' => 'published', 'archived' => 'archived' }
   enum category: CATEGORIES
-
   enum mask: { 'visible' => 'visible', 'title_annotation' => 'title_annotation',
                'only_header' => 'only_header', 'hidden_unregistered' => 'hidden_unregistered' }
 
@@ -28,6 +27,7 @@ class Item < ApplicationRecord
   validates :full_text, presence: true, length: { minimum: 50 }
   validates :category, presence: true
   validates :mask, presence: true
+  validates :status, presence: true
   validates :author, presence: true, unless: :rss?
 
   def send_item_instantly

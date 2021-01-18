@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-lg-3">
       <%= render partial: 'tag_cloud', locals: {tags: @tags} %>
-      <%= render partial: 'review_cloud', locals: {item: @item, user_review: @user_review, can_review: @can_review} %>
+      <%= render partial: 'review_cloud', locals: {item: @item, user_review: @user_review, can_review: !@user_review } %>
     </div>
 
     <div class="col-lg-8">
