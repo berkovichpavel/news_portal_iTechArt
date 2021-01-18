@@ -39,6 +39,7 @@
 <script>
   $('.item-average-review-rating').raty({
       readOnly: true,
+      numberMax: 5,
       path: '/assets/',
       score: function() {
           return $(this).attr('data-score')

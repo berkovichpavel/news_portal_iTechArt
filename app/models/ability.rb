@@ -5,7 +5,6 @@ class Ability
 
   def initialize(user)
     if user
-      can :track, Item
       if user.admin?
         can :manage, :all
       elsif user.correspondent?
@@ -26,10 +25,13 @@ class Ability
         can :check_archive, Item
         can :read, Comment
       end
+      can :track, Item
       can :read_annotation, Item
       can :read_full_text, Item
       can :read, Item, status: ['active']
       can :comment_item, Item
+
+      can :review, Review
 
       can :read, User
       can :view_full_profile, User

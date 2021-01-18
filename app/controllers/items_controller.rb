@@ -13,7 +13,7 @@ class ItemsController < ApplicationController
   def edit; end
 
   def index
-    @items = ItemsFilter.call(items: @items, params: params)
+    @items = ItemsFilter.call(items: @items, params: params, user: current_user)
     @important_items = @items.select(&:flag)
     # remote true
     @other_items = @items.where(flag: false).order(created_at: :desc).page(params[:page]).per(12)

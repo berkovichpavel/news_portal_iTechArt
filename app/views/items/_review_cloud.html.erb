@@ -6,16 +6,17 @@
     </div>
     <%== '<hr/>' unless item.reviews.blank? %>
     <div>
-      <strong><%= translate('items.my_review') %>:</strong>
       <% if current_user %>
         <% if user_review %>
+          <strong><%= translate('items.my_review') %>:</strong>
           <div class="review-rating" data-score="<%= user_review.rating %>"></div>
           <p><%= user_review.comment %></p>
           <%= link_to translate('items.edit'), edit_item_review_path(user_review.item, user_review) %>
           <%= link_to translate('items.delete'), item_review_path(user_review.item, user_review), method: :delete, data: { confirm: "Are you sure?"} %>
         <% end %>
       <% end %>
-      <% if can_review %>
+      <% if can_review && can?(:review, Review) %>
+        <strong><%= translate('items.my_review') %>:</strong>
         <%= link_to translate('items.new_review'), new_item_review_path(item) %>
       <% end %>
     </div>
