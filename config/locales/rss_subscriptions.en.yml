@@ -1,9 +1,9 @@
 en:
   rss_subscriptions:
-    rss_subscription_from: "RSS subscription from"
-    category: "Category"
-    link: "Link"
-    delete: "Delete"
-    create_rss_subscription: "Create RSS subscription"
     all_rss_subscriptions: "All RSS subscriptions"
+    category: "Category"
+    create_rss_subscription: "Create RSS subscription"
+    delete: "Delete"
+    link: "Link"
     reference_link: "Reference link"
+    rss_subscription_from: "RSS subscription from"
