@@ -59,12 +59,12 @@
     </ul>
     <div>
       <% if user_signed_in? %>
-        <span><%= t 'layouts.hello' %>, <%= current_user.first_name %></span>
-        <%= link_to translate('layouts.exit'), destroy_user_session_path, method: :delete, class: "btn btn-sm btn-outline-secondary" %>
+        <%= link_to translate('layouts.exit'), destroy_user_session_path, method: :delete, class: 'btn btn-sm btn-outline-secondary' %>
       <% else %>
-          <%= link_to translate('layouts.log_in'), new_user_session_path, class: "btn btn-sm btn-outline-secondary" %>
-          <%= link_to translate('layouts.sign_up'), new_user_registration_path, class: "btn btn-sm btn-outline-secondary" %>
+          <%= link_to translate('layouts.log_in'), new_user_session_path, class: 'btn btn-sm btn-outline-secondary' %>
+          <%= link_to translate('layouts.sign_up'), new_user_registration_path, class: 'btn btn-sm btn-outline-secondary' %>
       <% end %>
+      <%= link_to image_tag('feed-icon-28x28.png'), items_url(:rss), target: :_blank %>
     </div>
   </div>
 </nav>
