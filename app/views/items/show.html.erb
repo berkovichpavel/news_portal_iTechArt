@@ -21,8 +21,8 @@
           </p>
           <div class="row">
             <div class="col-md-9">
-              <%= link_to translate('items.edit'), edit_item_path(@item), class: "btn btn-primary"  if can?(:update, @item)%>
-              <%= link_to translate('items.destroy'), @item, method: :delete, class: "btn btn-primary" if can?(:destroy, @item)%>
+              <%= link_to translate('items.edit'), edit_item_path(@item), class: 'btn btn-outline-secondary btn-sm'  if can?(:update, @item)%>
+              <%= link_to translate('items.destroy'), @item, method: :delete, class: 'btn btn-outline-danger btn-sm' if can?(:destroy, @item)%>
             </div>
             <div class="col-md-3 text-right">
               <%= tweet_button( url: request.original_url, text: "Title: #{@item.title}\nShort description: #{@item.short_description}\nMain img: #{image_url(find_main_image(@item))}\n", class: "pull-right") %>
