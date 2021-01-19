@@ -15,7 +15,7 @@
           <%= link_to translate('items.delete'), item_review_path(user_review.item, user_review), method: :delete, data: { confirm: "Are you sure?"} %>
         <% end %>
       <% end %>
-      <% if can_review && can?(:review, Review) %>
+      <% if can_review && can?(:manage, Review) %>
         <strong><%= translate('items.my_review') %>:</strong>
         <%= link_to translate('items.new_review'), new_item_review_path(item) %>
       <% end %>

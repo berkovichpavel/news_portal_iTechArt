@@ -31,7 +31,7 @@ class Ability
       can :read, Item, status: ['active']
       can :comment_item, Item
 
-      can :review, Review
+      can :manage, Review
 
       can :read, User
       can :view_full_profile, User

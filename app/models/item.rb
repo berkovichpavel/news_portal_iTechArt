@@ -16,6 +16,9 @@ class Item < ApplicationRecord
 
   has_one_attached :main_img_href
 
+  # has_rich_text :title
+  # has_rich_text :short_description
+
   enum status: { 'active' => 'active', 'archive' => 'archive', 'revision' => 'revision', 'check' => 'check' }
   enum active_status: { 'inactive' => 'inactive', 'published' => 'published', 'archived' => 'archived' }
   enum category: CATEGORIES
