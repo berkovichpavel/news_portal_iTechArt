@@ -11,17 +11,17 @@ This project aims to demonstrate my knowledge of the object-oriented programming
 
 # About news portal - Berdacha <a name = "about"></a>
 
-###General description:
+### General description:
 The system allows users to view news content according to
 with access rights.
 
-###Main roles:
+### Main roles:
 1. Administrator
 2. Editor
 3. Correspondent
 4. Registered user
 
-###The main components of the news
+### The main components of the news
 - Title
 - Short description
 - Full text
@@ -40,7 +40,7 @@ title, hidden from unregistered users)
 - Editor
 - Average rating (not available for editing)
 
-###Home page
+### Home page
 Blocks (or you can call them - feeds) news:
 - important news
 - news list (by category)
@@ -50,10 +50,10 @@ Blocks (or you can call them - feeds) news:
 
 For each news, the main image, the date of adding (or the last editing, in the case when it took place) is shown
 
-###Category
+### Category
 News are divided into categories.
 
-###News view page
+### News view page
 On the news view page, the news text is displayed in accordance with the rights
 user access.
 
@@ -68,19 +68,19 @@ After successful registration, you need to redirect users to the full news page.
 Also, when viewing, transitions to the lists "related materials" and "more by
 topic"(materials related to regions, categories, tags, etc.)
 
-###News life cycle
+### News life cycle
 News is written only by correspondents.
 Until the editor's approval, the news should not be visible to other users.
 The news is published (becomes visible to everyone) only after the editor's approval.
 
 The editor can also reject the news with a comment, thereby sending the news for revision.
 
-###RSS interaction
+### RSS interaction
 You can export news to RSS.
 Automatically fetch news from third-party RSS (once a day).
 Only the site administrator is responsible for setting up RSS.
 
-###User profile
+### User profile
 On the user's profile page, in addition to general requirements, a link to the user's activity page is implemented.
 A list (table) of all comments made by him (with a link to the news), as well as the news he viewed, has been added to the user's activities page. The user has the ability to do server pagination and sorting in the table.
 
@@ -88,21 +88,21 @@ Depending on the settings, the user can hide their news views from other users.
 
 The user profile can be accessed by all registered users to view. For unregistered users only the truncated profile (avatar and name) is shown.
 
-###Subscription to news digest (with letter)
+### Subscription to news digest (with letter)
 Each registered user has the opportunity to subscribe to news according to parameters - category, tags, region.
 In case of news publication, the user receives a letter with a list of news (short description and main image).
 The news digest comes depending on the settings (the letter can be received - instantly, once a day, in two days or once a week). If necessary, there is a possibility of settings for the approximate time of receipt of such a letter.
 
-###Comments
+### Comments
 Any registered users can leave comments to the news.
 
-###Rating
+### Rating
 Registered users should be able to rate the news.
 
-###Social networks
+### Social networks
 The ability to share the news on social networks (one social network to choose from).
 
-###Reports
+### Reports
 This functionality is available only to the administrator.
 The reports are based on the collected analytical data.
 The page has the ability to select the start and end date.
@@ -121,7 +121,7 @@ On the news viewing page, charts are available (available only to the admin):
 1) Change in average news rating over time (line chart)
 2) Percentage of countries of users who viewed the news (pie chart)
 
-###Analytics
+### Analytics
 Views statistics are collected for each news. The following information is remembered - the country from which the news was viewed, the browser, the user id (it can be empty if it is not registered), the viewing time, the IP address.
 
 
