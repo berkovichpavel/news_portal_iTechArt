@@ -1,52 +1,45 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-lg-9">
-      <h1>
-        <% if params[:category] == nil %>
-          <%= translate('items.all_news') %>
-          <%= link_to image_tag("feed-icon-28x28.png"), items_url(:rss), target: :_blank %>
-        <% else %>
-          <%= params[:category].capitalize %>
-        <% end %>
-      </h1>
-      <h3><small class="text-muted"><%= translate('items.designed_by') %></small></h3>
-      <% unless @important_items.blank? %>
-        <hr/>
-        <h1><small><%= translate('items.important_news') %></small></h1>
-        <main role="main">
-         <div class="album py-5">
-            <div class="container">
-              <div class="row">
-                <%= render partial: 'important_item', collection: @important_items%>
-              </div>
-            </div>
-          </div>
-        </main>
-      <% end %>
 
-      <% unless @other_items.blank? %>
-        <hr/>
-        <h1><small><%= t 'items.other_news' %></small></h1>
+<div class="container-fluid">
+  <% if params[:category] %>
+    <h1 class="text-center mt-2 font-italic"><%= params[:category].capitalize %></h1>
+  <% end %>
+
+  <% unless @important_items.blank? %>
+    <main role="main">
+     <div class="album">
         <div class="container">
-          <div class="row text-center">
+          <div class="row">
+            <%= render partial: 'important_item', collection: @important_items%>
+          </div>
+        </div>
+      </div>
+    </main>
+  <% end %>
+  <% unless @other_items.blank? %>
+    <hr/>
+    <main role="main">
+      <div class="album">
+        <div class="container">
+          <div class="row">
             <%= render partial: 'other_item', collection: @other_items%>
           </div>
-          <ul class="pagination justify-content-center ">
-            <%= paginate @other_items, theme: 'twitter-bootstrap-4' %>
-          </ul>
         </div>
-      <% end %>
-    </div>
-    <%= render partial: 'widget', locals: {tags: @tags} %>
+      </div>
+    </main>
+  <% end %>
+  <ul class="pagination justify-content-center">
+    <%= paginate @other_items, theme: 'twitter-bootstrap-4' %>
+  </ul>
 </div>
-</div>
+
 
 
 <!-- Script for raty gem -->
 <script>
   $('.item-average-review-rating').raty({
       readOnly: true,
+      numberMax: 5,
       path: '/assets/',
       score: function() {
           return $(this).attr('data-score')

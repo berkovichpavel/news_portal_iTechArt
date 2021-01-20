@@ -1,42 +1,40 @@
-<div class="container">
-  <div class="row padded">
-    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-      <div class="block1"></div>
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <div class="block2">
-        <h2><%= t 'devise.sessions.log_in' %></h2>
-
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <div class="field">
-            <%= f.label :email %><br />
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
-          </div>
-
-          <div class="field">
-            <%= f.label :password %><br />
-            <%= f.password_field :password, autocomplete: "current-password", class: 'form-control' %>
-          </div>
-
-          <% if devise_mapping.rememberable? %>
-            <div class="field">
-              <%= f.check_box :remember_me %>
-              <%= f.label :remember_me %>
-            </div>
-          <% end %>
-
-          <div class="actions">
-            <%= f.button translate('devise.sessions.log_in'), class: 'mt-2 btn btn-sm btn-outline-secondary btn-xs btn-block' %>
-          </div>
+<div class="log_in">
+  <div class="cont">
+    <div class="form sign-in">
+      <h2><%= t('devise.sessions.welcome_back') %></h2>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <label>
+          <span><%= f.label :email %></span>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        </label>
+        <label>
+          <span><%= f.label :password %></span>
+          <%= f.password_field :password, autocomplete: "current-password" %>
+        </label>
+        <% if devise_mapping.rememberable? %>
+          <label>
+            <span><%= f.label :remember_me %><%= f.check_box :remember_me %></span>
+          </label>
         <% end %>
-        <% session[:return_to] ||= request.referer %>
-        <div class="mt-2">
-          <%= render "devise/shared/links" %>
+        <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+          <p class="forgot-pass"><%= link_to t('devise.passwords.forgot_password'), new_password_path(resource_name), class: 'forgot-pass' %></p>
+        <% end %>
+        <%= f.button translate('devise.sessions.sign_in'), class: 'submit' %>
+      <% end %>
+      <% session[:return_to] ||= request.referer %>
+    </div>
+    <div class="sub-cont">
+      <div class="img">
+        <div class="img__text m--up">
+          <h2><%= t('devise.sessions.new_here') %></h2>
+          <p><%= t('devise.sessions.discover_opportunities') %></p>
+        </div>
+        <div class="img__btn">
+          <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+            <%= link_to "Sign up", new_registration_path(resource_name)%>
+          <% end %>
         </div>
       </div>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-      <div class="block3"></div>
     </div>
   </div>
 </div>

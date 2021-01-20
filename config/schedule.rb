@@ -12,10 +12,10 @@ ENV.each { |k, v| env(k, v) }
 #   runner "AnotherModel.prune_old_records"
 # end
 
-every 1.day do
-  runner "FindAllUsersJob.perform_now"
+every 1.hour do
+  runner 'FindAllUsersJob.perform_now'
 end
 
 every 1.day do
-  runner "RssSubscriptionEveryDayJob.perform_now"
+  runner 'RssSubscriptionEveryDayJob.perform_now'
 end

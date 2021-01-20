@@ -57,7 +57,12 @@
                   <% end %>
                 </td>
                 <td>
-                  <span class="text-muted"><%= link_to "#{comment.commentable.title[0..60]}...", item_path(comment.commentable) %></span>
+                  <% if comment.commentable %>
+                    <span class="text-muted"><%= link_to "#{comment.commentable.title[0..60]}...", item_path(comment.commentable) %></span>
+                  <% else %>
+                    <span class="text-muted"><%= [translate('comments.delete')] %></span>
+                  <% end %>
+
                 </td>
                 <td>
                   <span class="text-muted"><%= comment.created_at %></span><br>

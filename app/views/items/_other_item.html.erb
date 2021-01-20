@@ -1,35 +1,28 @@
-<div class="col-lg-3 col-md-6 mb-4">
-  <div class="card-img-top">
-    <% if other_item.main_img_href.attached? %>
-      <%= image_tag(other_item.main_img_href, style: 'width: 100%; height: 150px; preserveAspectRatio="xMidYMid slice"; focusable="false"; role="img"', class: "bd-placeholder-img card-img-top") %>
-    <% elsif other_item.main_img %>
-      <%= image_tag(other_item.main_img, style: 'width: 100%; height: 150px; preserveAspectRatio="xMidYMid slice"; focusable="false"; role="img"', class: "bd-placeholder-img card-img-top") %>
-    <% else %>
-      <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+<div class="col-lg-3 mb-4 d-flex align-items-stretch">
+  <div class="card mb-4 shadow-sm">
+    <%= image_tag(find_main_image(other_item), class: 'my_other_item_image bd-placeholder-img card-img-top') %>
+    <% unless other_item.reviews.blank? %>
+      <span class="o-prop-tag-right item-average-review-rating" data-score=<%= other_item.reviews.average(:rating)&.round(2) %>></span>
     <% end %>
     <div class="card-body">
-      <p class="card-text"><small><%= other_item.title %></small></p>
-    </div>
-    <div class="card-footer">
-      <div class="btn-group">
-        <%= link_to "#{translate('items.read_more')}", other_item, class: "btn btn-sm btn-outline-secondary" %>
-        <% if can? :update, other_item %>
-          <%= link_to "#{translate('items.edit')}", edit_item_path(other_item), class: "btn btn-sm btn-outline-secondary" %>
-        <% end %>
-        <% if can? :destroy, other_item %>
-          <%= link_to "#{translate('items.destroy')}", other_item, method: :delete, class: "btn btn-sm btn-outline-secondary" %>
-        <% end %>
-      </div>
-      <div>
-        <% unless other_item.reviews.blank? %>
-          <span class="item-average-review-rating" data-score=<%= other_item.reviews.average(:rating).round(2) %>></span>
-          <br/>
-        <% end %>
+      <p class="card-text text-left mb-1"><small><%= other_item.title %></small></p>
+      <div class="down">
         <small>
-          <small class="text-muted"><%= other_item.created_at %></small>
-          <small><i class="fa fa-eye"></i> <%= other_item.item_views.count %></small>
+          <small class="text-muted float-left"><%= other_item.created_at %></small>
+          <small class="float-right "><i class="fa fa-eye"></i> <%= other_item.item_views.count %></small>
         </small>
       </div>
+    </div>
+    <div class="card-footer text-center">
+      <div class="btn-group">
+        <%= link_to translate('items.read_more'), other_item, class: 'btn btn-sm btn-outline-secondary' %>
+        <% if can? :update, other_item %>
+          <%= link_to translate('items.edit'), edit_item_path(other_item), class: 'btn btn-sm btn-outline-secondary' %>
+        <% end %>
+        <% if can? :destroy, other_item %>
+          <%= link_to translate('items.destroy'), other_item, method: :delete, class: 'btn btn-sm btn-outline-danger' %>
+        <% end %>
+    </div>
     </div>
   </div>
 </div>

@@ -9,7 +9,7 @@ class FindItemsForUsersJob < ApplicationJob
                 .or(Item.where(status: 'active', updated_at: last_sent..Time.current, region: subscription.regions))
     items_id = items.map(&:id)
     subscription.last_sent = Time.current
-    # subscription.save
+    subscription.save
     return if items_id.empty?
 
     SendItemsToUserJob.perform_now(user_id, items_id)

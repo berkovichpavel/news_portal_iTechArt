@@ -1,35 +1,58 @@
-<div class="col-lg-12 d-flex justify-content-center">
-  <%= javascript_include_tag Ckeditor.cdn_url %>
-  <%= simple_form_for @item do |f| %>
-    <% if @item.errors.any? %>
-      <% @item.errors.each do |attr, msg| %>
-        <div class="alert alert-danger", role="alert">
-          <%= attr %> <%= msg %>
-        </div>
-      <% end %>
-    <% end %>
-    <% if can?(:change_item, Item) %>
-      <%= f.input :title %>
-      <%= f.input :short_description %>
-      <%= f.input :category, collection: @categories %>
-      <%= f.input :mask, collection: @access_masks %>
-      <%= f.input :region %>
-      <%= f.file_field :main_img_href %>
-      <%= f.input :main_img %>
-      <%= f.input :flag,  as: :radio_buttons, label: translate('simple_form.important')%>
-      <%= f.input :tag_list, label: translate('items.tags') %>
-      <%= f.input :full_text, as: :ckeditor %>
-    <% end %>
-    <% if can?(:change_status, Item) %>
-      <% if can?(:approve, Item) %>
-        <%= f.input :status, collection: @statuses %>
-      <% else %>
-        <%= f.input :status, collection: @statuses_correspondent %>
-      <% end %>
-    <% end %>
-    <div class="d-flex justify-content-center">
-      <%= f.button :submit, class: 'btn btn-success btn-xs btn-block' %>
+<% if @item.errors.any? %>
+  <% @item.errors.each do |attr, msg| %>
+    <div class="alert alert-danger", role="alert">
+      <%= attr %> <%= msg %>
     </div>
   <% end %>
+<% end %>
+
+<div class="<%= class_name %>">
+  <div class="cont">
+    <div class="form form-group">
+      <%= javascript_include_tag Ckeditor.cdn_url %>
+      <h3><%= item_form_header(@item) %></h3>
+      <%= simple_form_for @item do |f| %>
+        <% if can?(:change_item, @item) %>
+          <%= f.input :title, placeholder:'Title', label: false %>
+          <%= f.input :short_description, placeholder:'Short description', label: false %>
+          <div class="form-row">
+            <div class="col">
+              <%= f.input :category, collection: @categories %>
+            </div>
+            <div class="col">
+              <%= f.input :mask, collection: @access_mask %>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col">
+              <%= f.input :main_img_href, label: false, as: :file, input_html: {data: { direct_upload_url: rails_direct_uploads_url }} %>
+            </div>
+            <div class="col">
+              <%= f.input :main_img, placeholder: t('items.image_href'), label: false %>
+            </div>
+            <div class="col">
+              <%= f.input :region, placeholder: t('items.region'), label: false %>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col">
+              <%= f.input :flag,  as: :radio_buttons, label: translate('simple_form.important') %>
+            </div>
+            <div class="col">
+              <%= f.input :tag_list, placeholder:'Tags', label: false %>
+            </div>
+          </div>
+          <%= f.input :full_text, as: :ckeditor %>
+        <% end %>
+        <% if can?(:change_status, @item) %>
+            <%= f.input :status, collection: (can?(:approve, @item) ? @statuses : @statuses_correspondent) %>
+        <% end %>
+        <%= f.button :submit, class: 'btn btn-sm btn-light btn-xs btn-block' %>
+      <% end %>
+    </div>
+    <div class="books-img-background"></div>
+  </div>
 </div>
+
+
 

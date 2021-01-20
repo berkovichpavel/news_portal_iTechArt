@@ -1,11 +1,13 @@
 class ReviewsController < ApplicationController
+  load_and_authorize_resource
+
   before_action :find_item
   before_action :find_review, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit]
 
-  def new
-    @review = Review.new
-  end
+  def new; end
+
+  def edit; end
 
   def create
     @review = Review.new(review_params)
@@ -17,8 +19,6 @@ class ReviewsController < ApplicationController
       render 'new'
     end
   end
-
-  def edit; end
 
   def update
     if @review.update(review_params)

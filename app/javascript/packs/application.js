@@ -23,3 +23,6 @@ import '../stylesheets/application.scss'
 import "controllers"
 //= require jquery
 //= require jquery_ujs
+
+require("trix")
+require("@rails/actiontext")

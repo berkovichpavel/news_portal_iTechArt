@@ -1,94 +1,36 @@
 class ItemsController < ApplicationController
   load_and_authorize_resource
+
   before_action :authenticate_user!, except: [:show, :index, :track]
   before_action :tag_cloud, only: [:index, :show]
+  before_action :set_access_masks, only: [:edit, :new, :create, :update]
+  before_action :set_statuses, only: [:edit, :new, :create, :update]
 
   TRACK_INTERVAL = 100
-  DEFAULT_IMAGE_SHOW = 'http://placehold.it/1000x500'.freeze
-  DEFAULT_IMAGE_INDEX_SMALL = ''.freeze
-  DEFAULT_IMAGE_INDEX_BIG = ''.freeze
+
+  def new; end
+
+  def edit; end
 
   def index
-    # case
-
-    @items =
-      if params[:category]
-        @items.where(category: params[:category])
-      elsif params[:region]
-        @items.where(region: params[:region])
-      elsif params[:tag].present?
-        @items.tagged_with(params[:tag])
-      elsif params[:status]
-        if current_user.redactor? || current_user.admin?
-          @items.where(status: params[:status])
-        else
-          @items.where(status: params[:status], user_id: current_user.id)
-        end
-      elsif params[:commentable]
-        @items.joins(:comments).group(:id).select('items.*, COUNT(comments) as count_comments').where(comments: {service_type: 'default'}).order('COUNT(comments) DESC')
-      elsif params[:readable]
-        @items.joins(:item_views).group(:id).order('COUNT(item_id) DESC')
-      elsif params[:rss]
-        @items.where(rss: true)
-      else
-        @items
-      end
-    @important_items = @items.where(flag: true)
+    @items = ItemsFilter.call(items: @items, params: params, user: current_user)
+    @important_items = @items.order(created_at: :desc).select(&:flag)
+    # remote true
     @other_items = @items.where(flag: false).order(created_at: :desc).page(params[:page]).per(12)
-    # respond_to do |format|
-    #   format.html
-    #   format.rss { send_data @items.where(status: 'active').to_rss }
-    # end
   end
 
   def show
-    user_id = current_user ? current_user.id : nil
-    request_env = request.env["HTTP_USER_AGENT"]
-    InsertItemViewsJob.perform_later(user_id, @item.id, request_env, ip)
-    if current_user
-      @can_review = current_user.reviews.where(item_id: @item.id).count < 1
-      @user_review = current_user.reviews.where(item_id: @item.id).first
-    end
-    @main_image = if @item.main_img_href.attached?
-                    url_for(@item.main_img_href)
-                  elsif @item.main_img.empty?
-                    DEFAULT_IMAGE_SHOW
-                  else
-                    @item.main_img
-                  end
+    InsertItemViewsJob.perform_now(current_user&.id, @item.id, request.env['HTTP_USER_AGENT'], ip)
+    @user_review = current_user.reviews.find_by(item_id: @item.id) if current_user
     @redactor = User.find(@item.author_id).email if @item.author_id
-    @average_review = if @item.reviews.blank?
-                        @has_review = false
-                      else
-                        @has_review = true
-                        @item.reviews.average(:rating)
-                      end
+    @average_review = @item.reviews.average(:rating)
+    @has_review = !!@average_review
   end
 
   def track
-    if current_user
-      view_with_user = @item.item_views.find_by(user_id: current_user.id)
-      view_with_user.increment!(:watching_time, TRACK_INTERVAL) if view_with_user.present?
-    else
-      view_without_user = @item.item_views.find_by(user_ip: ip)
-      view_without_user.increment!(:watching_time, TRACK_INTERVAL) if view_without_user.present?
-    end
+    view_track = current_user ? @item.item_views.find_by(user_id: current_user.id) : @item.item_views.find_by(user_ip: ip)
+    view_track.increment!(:watching_time, TRACK_INTERVAL) if view_track.present?
     head :ok
-  end
-
-  def edit
-    @statuses = Item.statuses
-    @categories = Item.categories
-    @access_masks = Item.masks
-    @statuses_correspondent = { revision: 'revision', check: 'check' }
-  end
-
-  def new
-    @item = Item.new
-    @categories = Item.categories
-    @access_masks = Item.masks
-    @statuses = Item.statuses
-    @statuses_correspondent = { revision: 'revision', check: 'check' }
   end
 
   def create
@@ -96,7 +38,6 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to item_path(@item.id)
     else
-      @access_mask = Item.masks.keys
       render 'new'
     end
   end
@@ -105,42 +46,34 @@ class ItemsController < ApplicationController
     if @item.update(item_params)
       redirect_to item_path(params[:id])
     else
-      @access_mask = Item.masks.keys
       render 'edit'
     end
-
   end
 
   def destroy
-    @item = Item.find(params[:id])
     @item.comments.destroy
     @item.destroy
-    respond_to do |format|
-      format.html { redirect_to items_path }
-    end
+    redirect_to items_path
+  end
+
+  private
+
+  def item_params
+    permitted = [:title, :category, :short_description, :full_text, :mask, :region, :main_img_href, :main_img, :flag, :tag_list]
+    permitted << :status if can?(:change_status, Item)
+    params.require(:item).permit(*permitted)
   end
 
   def tag_cloud
     @tags = Item.tag_counts_on(:tags)
   end
 
-  private
+  def set_access_masks
+    @access_mask = Item.masks
+  end
 
-  def item_params
-    permitted =
-      [:title,
-       :category,
-       :short_description,
-       :full_text,
-       :mask,
-       :region,
-       :main_img_href,
-       :main_img,
-       :flag,
-       :tag_list]
-    if can?(:change_status, Item)
-      permitted << :status
-    end
-    params.require(:item).permit(*permitted)
+  def set_statuses
+    @statuses = Item.statuses
+    @statuses_correspondent = { revision: 'revision', check: 'check' }
   end
 end

@@ -1,58 +1,13 @@
 <div class="container-fluid">
   <div class="row">
-
     <div class="col-lg-3">
-      <div class="card my-4">
-        <h5 class="card-header"><%= translate('items.tag_cloud') %></h5>
-        <div class="card-body">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <% tag_cloud(@tags.sort_by { |a| a.name }, %w(css1 css2 css3 css4)) do |tag, css_class| %>
-                <li class="breadcrumb-item">
-                  <%= link_to tag.name, items_path(tag: tag.name), :class => css_class %>
-                </li>
-              <% end %>
-            </ol>
-          </nav>
-        </div>
-      </div>
-
-      <div class="card my-4">
-        <h5 class="card-header"><%= translate('items.last_reviews') %></h5>
-        <div class="card-body">
-          <div>
-            <%= render @item.reviews.order(:updated_at).limit(5) %>
-          </div>
-          <hr/>
-          <div>
-            <strong><%= translate('items.my_review') %>:</strong>
-            <% if current_user %>
-              <% if @user_review %>
-                <div class="review-rating" data-score="<%= @user_review.rating %>"></div>
-                <p><%= @user_review.comment %></p>
-                <%= link_to translate('items.edit'), edit_item_review_path(@user_review.item, @user_review) %>
-                <%= link_to translate('items.delete'), item_review_path(@user_review.item, @user_review), method: :delete, data: { confirm: "Are you sure?"} %>
-              <% end %>
-            <% end %>
-            <% if @can_review %>
-              <%# if can?(:review, @can_review) %>
-              <%= link_to translate('items.new_review'), new_item_review_path(@item) %>
-              <%# end %>
-            <% end %>
-          </div>
-
-        </div>
-      </div>
+      <%= render partial: 'tag_cloud', locals: {tags: @tags} %>
+      <%= render partial: 'review_cloud', locals: {item: @item, user_review: @user_review, can_review: !@user_review } %>
     </div>
 
-
     <div class="col-lg-8">
-
       <div class="card mt-4">
-        <div class="my-card-img" style="background-image: url('<%= @main_image %>')">
-
-          <%#= image_tag(@main_image, class: "img-responsive my-news-main-img card-img-top") %>
-        </div>
+        <div class="my-card-img" style="background-image: url(<%= find_main_image(@item) %>)"></div>
         <div class="card-body">
           <h3 class="card-title"><%= @item.title %></h3>
           <span class="text-warning average-review-rating", data-score=<%= @average_review %>>Average rating: </span>
@@ -66,15 +21,11 @@
           </p>
           <div class="row">
             <div class="col-md-9">
-              <% if can?(:update, @item) %>
-                <%= link_to translate('items.edit'), edit_item_path(@item), class: "btn btn-primary" %>
-              <% end %>
-              <% if can?(:destroy, @item) %>
-                <%= link_to translate('items.destroy'), @item, method: :delete, class: "btn btn-primary" %>
-              <% end %>
+              <%= link_to translate('items.edit'), edit_item_path(@item), class: 'btn btn-outline-secondary btn-sm'  if can?(:update, @item)%>
+              <%= link_to translate('items.destroy'), @item, method: :delete, class: 'btn btn-outline-danger btn-sm' if can?(:destroy, @item)%>
             </div>
             <div class="col-md-3 text-right">
-              <%= tweet_button( url: request.original_url, text: "Title: #{@item.title}.\n\nShort description: #{@item.short_description}\n\nMain img: #{image_tag(@item.main_img) if @item.main_img}", class: "pull-right") %>
+              <%= tweet_button( url: request.original_url, text: "Title: #{@item.title}\nShort description: #{@item.short_description}\nMain img: #{image_url(find_main_image(@item))}\n", class: "pull-right") %>
               <script src="https://yastatic.net/share2/share.js" async></script>
               <div class="ya-share2 pull-right" data-curtain data-lang="en" data-services="vkontakte,facebook,odnoklassniki,telegram,skype"></div>
             </div>
@@ -103,7 +54,7 @@
           <% end %>
         </div>
       </div>
-        <% if can?(:mamage, @item)%>
+        <% if can?(:manage, @item)%>
           <div class="card mt-4">
             <h5 class="card-header"><%= translate('items.rating_change') %></h5>
             <div class="card-body">
@@ -134,11 +85,6 @@
   </div>
 </div>
 
-
-<%#= pie_chart Review.select("AVG(rating) as AV, item_id").group(:item_id).group_by_day(:created_at).count %>
-
-
-
 <script>
     $('.review-rating').raty({
         readOnly: true,
@@ -148,9 +94,7 @@
             return $(this).attr('data-score')
         }
     });
-</script>
 
-<script>
     $('.average-review-rating').raty({
         readOnly: true,
         numberMax: 5,
@@ -159,9 +103,7 @@
             return $(this).attr('data-score')
         }
         });
-</script>
 
-<script>
   function func(){
       $.ajax({
           type: 'POST',
