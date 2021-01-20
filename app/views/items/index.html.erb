@@ -1,40 +1,53 @@
-<h1 class="my-4">
-  <% if params[:category] == nil %>
-    <%= t 'items.all_news' %>
-  <% else %>
-    <%= params[:category].capitalize %>
-  <% end %>
-</h1>
-<h1><small><%= t 'items.designed_by' %></small></h1>
-<% @items.each do |item| %>
-<div class="card mb-4">
-  <% if item.main_img_href.attached?%>
-    <div style="width: 928px; height: 500px">
-      <%= image_tag(item.main_img_href, style: 'width: 100%; height: 100%')%>
-    </div>
-    <% else %>
-    <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<div class="container-fluid">
+  <% if params[:category] %>
+    <h1 class="text-center mt-2 font-italic"><%= params[:category].capitalize %></h1>
   <% end %>
 
-  <div class="card-body">
-    <h2 class="card-title"><%= item.title %></h2>
-    <p class="card-text"><%= item.short_description.length <= 2000 ? item.short_description : item.short_description[0..2000] %></p>
-    <a href="/items/<%= item.id %>" class="btn btn-primary"><%= t 'items.read_more' %> &rarr;</a>
-  </div>
-  <div class="card-footer text-muted">
-    <%= item.created_at %>
-  </div>
+  <% unless @important_items.blank? %>
+    <main role="main">
+     <div class="album">
+        <div class="container">
+          <div class="row">
+            <%= render partial: 'important_item', collection: @important_items%>
+          </div>
+        </div>
+      </div>
+    </main>
+  <% end %>
+  <% unless @other_items.blank? %>
+    <hr/>
+    <main role="main">
+      <div class="album">
+        <div class="container">
+          <div class="row">
+            <%= render partial: 'other_item', collection: @other_items%>
+          </div>
+        </div>
+      </div>
+    </main>
+  <% end %>
+  <ul class="pagination justify-content-center">
+    <%= paginate @other_items, theme: 'twitter-bootstrap-4' %>
+  </ul>
 </div>
-<% end %>
 
 
 
-<!-- Pagination -->
-<ul class="pagination justify-content-center mb-4">
-  <li class="page-item">
-    <a class="page-link" href="#">&larr; Older</a>
-  </li>
-  <li class="page-item disabled">
-    <a class="page-link" href="#">Newer &rarr;</a>
-  </li>
-</ul>
+<!-- Script for raty gem -->
+<script>
+  $('.item-average-review-rating').raty({
+      readOnly: true,
+      numberMax: 5,
+      path: '/assets/',
+      score: function() {
+          return $(this).attr('data-score')
+      }
+  });
+</script>
+
+
+
+
+

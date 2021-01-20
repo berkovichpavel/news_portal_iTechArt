@@ -1,0 +1,16 @@
+<div class="white-form">
+  <div class="cont">
+    <div class="form form-group">
+        <h3><%= t('persons.edit_role') %></h3>
+          <%= simple_form_for @user do |f| %>
+            <% if can?(:manage, User) %>
+              <%= f.input :role, collection: User.roles, label: false %>
+            <%end %>
+            <%= f.button :submit, class: 'btn btn-sm btn-light btn-xs btn-block' %>
+        <% end %>
+    </div>
+    <div class="books-img-background"></div>
+  </div>
+</div>
+
+

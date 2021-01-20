@@ -2,10 +2,37 @@
 
 en:
   persons:
-    persons_profile: "Persons#profile"
-    hello: "Hello"
+    account_settings: 'Account settings'
+    activity: 'activity'
+    admins: 'Admins'
+    all_users: "All users"
+    allowed_photo: 'Allowed JPG, PNG or JPEG. Max size of 800K'
+    back_to_user: 'Back to user'
+    bio: "Biography"
+    change_password: 'Change password'
+    close: 'Close'
+    comments: 'comments'
+    correspondents: 'Correspondents'
+    date: 'Date'
+    edit_role: 'Edit role'
+    email: "Email"
     exit: "Exit"
+    find_me: "Find me in app/views/users/profile.html.erb"
+    full_name: "Full name"
+    general: 'General'
+    hello: "Hello"
+    info: 'Info'
+    items: 'items'
+    more: 'more'
+    news_href: 'News href'
+    or: "or"
+    persons_profile: "Persons#profile"
+    redactors: 'Redactors'
+    show_comments_activity: 'Show comments activity'
+    show_items_activity: 'Show items activity'
     sign_in: "Sign in"
     sign_up: "Sign up"
-    find_me: "Find me in app/views/persons/profile.html.erb"
-    or: "or"
+    social_links: 'Social links'
+    title: 'Title'
+    upload_photo: 'Upload new photo'
+    users: 'Users'

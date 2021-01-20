@@ -1,0 +1,20 @@
+<h1>Welcome to Berdacha news portal!</h1>
+<h2>All news for your absence</h2>
+<% @items.each_with_index do |item, index| %>
+  <p>
+    <big><b><em>Title</em></b></big>: <%= item.title %>
+  </p>
+  <p>
+    <big><em><b>Short description</b></em></big>: <%== item.short_description %>
+  </p>
+  <% if attachments["active_img_#{index + 1}"] %>
+    <%= image_tag attachments["active_img_#{index + 1}"].url,  alt: "img_#{index + 1}" %>
+  <% elsif item.main_img %>
+    <%= image_tag item.main_img,  alt: "img_#{index + 1}" %>
+  <% end %>
+  <p>
+    <small><em><b>Read completely:</b></em> <%= item_url(item) %></small>
+  </p>
+<% end %>
+
+

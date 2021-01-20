@@ -1,53 +1,117 @@
-<!-- Title -->
-<h1 class="mt-4"><%= @item.title %></h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3">
+      <%= render partial: 'tag_cloud', locals: {tags: @tags} %>
+      <%= render partial: 'review_cloud', locals: {item: @item, user_review: @user_review, can_review: !@user_review } %>
+    </div>
 
-<!-- Author -->
-<p class="lead">
-
-</p>
-
-<hr>
-
-<!-- Date/Time -->
-<p><%= @item.updated_at %></p>
-
-<hr>
-<p><%= @item.region %></p>
-
-<hr>
-<p>Important: <%= @item.flag %></p>
-
-<hr>
-<hr>
-<p>Tags: <%==  @item.tags.map{ |t| link_to t.name, items_path(tag: t.name)}.join(', ')%></p>
-
-<hr>
-
-<!-- News Content -->
-<%= @item.short_description %>
-<hr>
-<div class="full_text">
-  <%= @item.full_text.html_safe %>
-</div>
-<hr>
-
-<!-- Comments Form -->
-<div class="card my-4">
-  <h5 class="card-header">Leave a Comment:</h5>
-  <div class="card-body">
-    <form>
-      <div class="form-group">
-        <textarea class="form-control" rows="3"></textarea>
+    <div class="col-lg-8">
+      <div class="card mt-4">
+        <div class="my-card-img" style="background-image: url(<%= find_main_image(@item) %>)"></div>
+        <div class="card-body">
+          <h3 class="card-title"><%= @item.title %></h3>
+          <span class="text-warning average-review-rating", data-score=<%= @average_review %>>Average rating: </span>
+          <span> <%= translate('items.based_on') %> <%= @item.reviews.count %> <%= translate('items.reviews') %></span>
+          <p class="card-text">
+            <strong><%= translate('items.redactor') %>: </strong> <%= @redactor %> /
+            <strong><%= translate('items.updated_at') %>: </strong> <%= @item.updated_at %> /
+            <strong><%= translate('items.category') %>: </strong><%= link_to @item.category, items_path(category: @item.category) %> /
+            <strong><%= translate('items.region') %>: </strong><%= link_to @item.region, items_path(region: @item.region) %> /
+            <strong><%= translate('items.tags') %>: </strong><%==  @item.tags.map{ |t| link_to t.name, items_path(tag: t.name)}.join(', ')%>
+          </p>
+          <div class="row">
+            <div class="col-md-9">
+              <%= link_to translate('items.edit'), edit_item_path(@item), class: 'btn btn-outline-secondary btn-sm'  if can?(:update, @item)%>
+              <%= link_to translate('items.destroy'), @item, method: :delete, class: 'btn btn-outline-danger btn-sm' if can?(:destroy, @item)%>
+            </div>
+            <div class="col-md-3 text-right">
+              <%= tweet_button( url: request.original_url, text: "Title: #{@item.title}\nShort description: #{@item.short_description}\nMain img: #{image_url(find_main_image(@item))}\n", class: "pull-right") %>
+              <script src="https://yastatic.net/share2/share.js" async></script>
+              <div class="ya-share2 pull-right" data-curtain data-lang="en" data-services="vkontakte,facebook,odnoklassniki,telegram,skype"></div>
+            </div>
+          </div>
+          <hr/>
+          <% unless current_user %>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <strong>Do you want to read the news without limits?</strong>
+              <%= link_to translate('items.register_here') + '!', new_user_registration_path %>
+              <%= translate('items.or') %>
+              <%= link_to translate('items.sign_in') + '!', new_user_session_path %>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          <% end %>
+          <% if can?(:read_full_text, @item) || can?(:read_annotation, @item) %>
+            <div class="card-body">
+              <% if can?(:read_annotation, @item) %>
+                <p><strong><%= translate('items.text_annotation')%></strong>: <%== @item.short_description %></p>
+              <% end %>
+              <% if can?(:read_full_text, @item) %>
+                <p><strong><%= translate('items.full_text')%></strong>: <%= @item.full_text.html_safe %>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+        <% if can?(:manage, @item)%>
+          <div class="card mt-4">
+            <h5 class="card-header"><%= translate('items.rating_change') %></h5>
+            <div class="card-body">
+              <%= line_chart StatisticsHelper.rating_changed(@item) %>
+            </div>
+          </div>
+          <div class="card mt-4">
+            <h5 class="card-header"><%= translate('items.percent_countries') %></h5>
+            <div class="card-body">
+              <%= pie_chart StatisticsHelper.countries_for_item(@item).to_a %>
+            </div>
+          </div>
+        <% end %>
+        <% if can?(:comment_item, @item) %>
+          <div class="card mt-4">
+            <h5 class="card-header"><%= translate('items.leave_a_comment') %></h5>
+            <div class="card-body">
+              <div id='comments'>
+                <%= render partial: 'comments/form', locals: {commentable: @item} %>
+                <% if @item.comments.any? %>
+                  <%= render @item.comments.where(parent_id: nil), max_nesting: 5 %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+    </div>
   </div>
 </div>
-<!-- Single Comment -->
-<div class="media mb-4">
-  <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-  <div class="media-body">
-    <h5 class="mt-0">Commenter Name</h5>
-    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-  </div>
-</div>
+
+<script>
+    $('.review-rating').raty({
+        readOnly: true,
+        numberMax: 5,
+        path: '/assets/',
+        score: function() {
+            return $(this).attr('data-score')
+        }
+    });
+
+    $('.average-review-rating').raty({
+        readOnly: true,
+        numberMax: 5,
+        path: '/assets/',
+        score: function() {
+            return $(this).attr('data-score')
+        }
+        });
+
+  function func(){
+      $.ajax({
+          type: 'POST',
+          url: '<%= track_item_path(@item) %>',
+          data: {
+              authenticity_token: $('[name="csrf-token"]')[0].content
+          },
+      });
+  }
+    let timerId = setInterval(() => func(), <%= ItemsController::TRACK_INTERVAL * 1000 %>);
+</script>

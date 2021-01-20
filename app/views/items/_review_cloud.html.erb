@@ -1,0 +1,25 @@
+<div class="card my-4">
+  <h5 class="card-header"><%= translate('items.last_reviews') %></h5>
+  <div class="card-body">
+    <div>
+      <%= render item.reviews.order(:updated_at).limit(5) %>
+    </div>
+    <%== '<hr/>' unless item.reviews.blank? %>
+    <div>
+      <% if current_user %>
+        <% if user_review %>
+          <strong><%= translate('items.my_review') %>:</strong>
+          <div class="review-rating" data-score="<%= user_review.rating %>"></div>
+          <p><%= user_review.comment %></p>
+          <%= link_to translate('items.edit'), edit_item_review_path(user_review.item, user_review) %>
+          <%= link_to translate('items.delete'), item_review_path(user_review.item, user_review), method: :delete, data: { confirm: "Are you sure?"} %>
+        <% end %>
+      <% end %>
+      <% if can_review && can?(:manage, Review) %>
+        <strong><%= translate('items.my_review') %>:</strong>
+        <%= link_to translate('items.new_review'), new_item_review_path(item) %>
+      <% end %>
+    </div>
+
+  </div>
+</div>

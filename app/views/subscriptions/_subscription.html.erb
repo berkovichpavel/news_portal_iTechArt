@@ -1,0 +1,40 @@
+<div class="rss-sub-all d-style bgc-white btn btn-brc-tp w-100 my-2 py-3 shadow-sm border-2">
+  <div class="row align-items-center">
+    <div class="col-12 col-md-3">
+      <h4 class="pt-3">
+        <%= t('subscriptions.news_digest') %>
+      </h4>
+      <div class="text-secondary-d2 text-120">
+        <i class="material-icons text-info mr-2"><%= subscription.sending_frequency %></i>
+      </div>
+    </div>
+
+    <ul class="list-unstyled mb-0 col-12 col-md-6 text-dark-l1 text-90 text-left my-4 my-md-0">
+      <li>
+        <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
+        <%= translate('subscriptions.last_send') + ':' %> <i class="material-icons text-info mr-2"><%= subscription.last_sent %></i>
+      </li>
+
+      <li class="mt-25">
+        <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
+        <%= translate('subscriptions.dispatch_hour') + ':' %> <i class="material-icons text-info mr-2"><%= pluralize(subscription.dispatch_hour, 'hour', locale: :en) %></i>
+      </li>
+
+      <li class="mt-25">
+        <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
+        <%= translate('subscriptions.subscriptions') + ':' %>
+        <div style="padding-left: 40px">
+          <div><small><i class="material-icons text-info mr-2"><%= translate('subscriptions.categories') %>:</i>  <%= subscription.categories.reject(&:empty?).map{|c| c}.join(', ')  %></small></div>
+        </div>
+        <div style="padding-left: 40px">
+          <div><small><i class="material-icons text-info mr-2"><%= translate('subscriptions.regions')%>:</i> <%= subscription.regions.reject(&:empty?).map{|c| c}.join(', ') %></small></div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="col-12 col-md-3 text-center">
+      <%= link_to translate('items.edit'),  edit_user_subscription_path(@user, @user.subscription), class: "btn btn-sm btn-outline-secondary mt-2" %>
+      <%= link_to translate('items.delete'), user_subscription_path(@user, @user.subscription), method: :delete, data: { confirm: "Are you sure?"},class: "btn btn-sm btn-outline-danger mt-2" %>
+    </div>
+  </div>
+</div>

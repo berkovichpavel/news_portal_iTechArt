@@ -1,0 +1,31 @@
+<div class="wide-white-form">
+  <div class="cont">
+    <div class="form form-group">
+      <h3><%= subscription_form_header(@subscription) %></h3>
+      <%= simple_form_for ([@user, @subscription]) do |f| %>
+        <div class="form-row">
+          <div class="col">
+            <%= f.input :dispatch_hour %>
+          </div>
+          <div class="col">
+            <%= f.input :sending_frequency, collection: @sending_frequencies %>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col">
+            <%= f.input :categories , collection: @categories, input_html: { multiple: true } %>
+          </div>
+          <div class="col">
+            <%= f.input :tags , collection: @tags, input_html: { multiple: true } %>
+          </div>
+          <div class="col">
+            <%= f.input :regions , collection: @all_regions, input_html: { multiple: true } %>
+          </div>
+        </div>
+        <%= f.button :submit, class: 'btn btn-sm btn-light btn-xs btn-block' %>
+      <% end %>
+    </div>
+    <div class="books-img-background"></div>
+  </div>
+</div>
+

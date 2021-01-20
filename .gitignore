@@ -38,4 +38,10 @@ yarn-debug.log*
 .idea/
 .DS_Store
 /config/database.yml
+/config/application.yml
 .DS_Store
+vendor/bundle/
+error.log
+
+# Ignore application configuration
+/config/application.yml

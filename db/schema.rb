@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_09_110733) do
+ActiveRecord::Schema.define(version: 2021_01_14_110143) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "action_text_rich_texts", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "body"
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["record_type", "record_id", "name"], name: "index_action_text_rich_texts_uniqueness", unique: true
+  end
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -47,21 +57,84 @@ ActiveRecord::Schema.define(version: 2020_11_09_110733) do
     t.index ["type"], name: "index_ckeditor_assets_on_type"
   end
 
+  create_table "comments", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "commentable_id"
+    t.string "commentable_type"
+    t.integer "parent_id"
+    t.text "body"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "service_type", default: "default"
+    t.index ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "item_views", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "item_id", null: false
+    t.inet "user_ip"
+    t.boolean "registered", default: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "browser"
+    t.string "country"
+    t.integer "watching_time"
+  end
+
   create_table "items", force: :cascade do |t|
     t.string "title", null: false
     t.string "short_description", null: false
     t.text "full_text"
-    t.string "category", null: false
-    t.string "mask"
+    t.string "category", default: "news", null: false
+    t.string "mask", default: "visible", null: false
     t.string "region"
-    t.datetime "last_editing"
-    t.integer "status"
     t.boolean "flag", default: false
-    t.float "rating", default: 0.0
-    t.string "redactor"
-    t.float "average_rating", default: 0.0
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "status", default: "check"
+    t.bigint "author_id"
+    t.datetime "published_at"
+    t.string "reference_link"
+    t.boolean "rss", default: false
+    t.string "main_img"
+    t.index ["author_id"], name: "index_items_on_author_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "rating", default: 0
+    t.text "comment"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.integer "item_id"
+  end
+
+  create_table "rss_subscriptions", force: :cascade do |t|
+    t.string "reference_link", null: false
+    t.string "category", default: "news", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "statistics", force: :cascade do |t|
+    t.datetime "begin_statistic"
+    t.datetime "end_statistic"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "subscriptions", force: :cascade do |t|
+    t.datetime "last_sent"
+    t.integer "dispatch_hour"
+    t.string "sending_frequency"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "tags", default: [], array: true
+    t.string "regions", default: [], array: true
+    t.string "categories", default: [], array: true
   end
 
   create_table "taggings", id: :serial, force: :cascade do |t|
@@ -104,10 +177,21 @@ ActiveRecord::Schema.define(version: 2020_11_09_110733) do
     t.inet "last_sign_in_ip"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "bio"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "role", default: "user"
+    t.boolean "signed", default: false
+    t.boolean "hidden", default: false
+    t.string "user_site", default: "https://bootdey.com"
+    t.string "github", default: "https://bootdey.com"
+    t.string "instagram", default: "https://bootdey.com"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "comments", "users"
+  add_foreign_key "items", "users", column: "author_id"
   add_foreign_key "taggings", "tags"
 end

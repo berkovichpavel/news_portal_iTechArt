@@ -1,0 +1,15 @@
+<div class="wide-white-form">
+  <div class="cont">
+    <div class="form form-group">
+      <h3><%= translate('statistics.create') %></h3>
+      <%= simple_form_for ([@user, @statistic]) do |f| %>
+        <%= f.input :begin_statistic %>
+        <%= f.input :end_statistic %>
+        <%= f.button :submit, class: 'btn btn-sm btn-light btn-xs btn-block' %>
+      <% end %>
+    </div>
+    <div class="books-img-background"></div>
+  </div>
+</div>
+
+

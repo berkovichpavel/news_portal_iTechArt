@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'rails-i18n'
 gem 'pry-rails'
-
+gem 'jquery-rails'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -34,6 +34,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'factory_bot_rails'
+  gem 'rspec-rails', '~> 3.5'
 end
 
 group :development do
@@ -61,4 +63,21 @@ gem 'ckeditor'
 gem 'mini_magick'
 gem 'simple_form'
 gem 'carrierwave'
+gem 'cancancan'
 gem 'acts-as-taggable-on', '~> 6.0'
+gem 'kaminari'
+gem 'bootstrap4-kaminari-views'
+gem 'social-buttons', '~> 0.3'
+gem 'figaro'
+gem 'sidekiq'
+gem 'nokogiri', '~> 1.11', '>= 1.11.1'
+gem 'mail'
+gem 'faker'
+gem 'whenever', require: false
+gem 'chartkick'
+gem 'groupdate'
+gem 'geocoder'
+gem 'useragent'
+gem 'rake'
+gem 'factory_bot'
+

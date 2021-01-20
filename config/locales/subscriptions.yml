@@ -1,0 +1,10 @@
+en:
+  subscriptions:
+    categories: "Categories"
+    dispatch_hour: "Dispatch time"
+    last_send: "Last send"
+    news_digest: "News digest"
+    regions: "Regions"
+    sending_frequency: "Sending Frequency"
+    subscriptions: "Subscriptions"
+    tags: "Tags"

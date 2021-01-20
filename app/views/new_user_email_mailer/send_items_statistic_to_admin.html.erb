@@ -1,0 +1,36 @@
+<h1>Statistic of Berdacha news portal!</h1>
+<% @items.each do |item| %>
+  <h2>
+    <em>Title</em>: <%= item.title %>
+  </h2>
+  <p>
+    <em><b>Link:</b></em> <%= item_url(item) %>
+  </p>
+  <p>
+    <em><b>Publication date: </b></em>: <%= item.published_at %>
+  </p>
+  <p>
+    <em><b>Date of last edit</b></em>: <%= item.updated_at %>
+  </p>
+  <p>
+    <em><b>Number of views</b></em>: <%= item.item_views.count %>
+  </p>
+  <p>
+    <em><b>Number of comments</b></em>: <%= item.comments.count %>
+  </p>
+  <p>
+    <em><b>The ratio of registered views to unregistered views</b></em>:
+    <%= Float(item.item_views.where(registered: true).count) / item.item_views.where(registered: false ).count %>
+    (<%= item.item_views.where(registered: true).count %> / <%= item.item_views.where(registered: false ).count %>)
+  </p>
+  <p>
+    <em><b>Average rating</b></em>: <%= item.reviews.count.zero? ? 'none information' : Float(item.reviews.average(:rating).round(4)) %>
+  </p>
+
+  <p>
+    <% "Костыль!!!!!!!! Как его исправить и сделать красиво?" %>
+    <em><b>Top 5 countries viewed news</b></em>: <%= StatisticsHelper.top_five_countries_for_item(item) %>
+  </p>
+<% end %>
+
+
