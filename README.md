@@ -4,6 +4,7 @@
 <a href="#bw">Built With</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#gs">Getting Started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#author">Author</a>
+<a href="#sys">Show your support</a>
 
 This project aims to demonstrate my knowledge of the object-oriented programming language in Ruby, as well as the Rails web application framework. My web application is a news portal.
 
@@ -183,3 +184,7 @@ This app should be running at `http://localhost:3000/`
 - Github: [https://github.com/berkovichpavel](https://github.com/berkovichpavel)
 - Telegram: [https://t.me/BerkovichPavel](https://t.me/BerkovichPavel)
 - Linkedin: [https://www.linkedin.com/in/pavel-berkovich-9844251a4/](https://www.linkedin.com/in/pavel-berkovich-9844251a4/)
+
+# Show your support <a name = "sys"></a>
+
+Give a ⭐️ if you like this project!
