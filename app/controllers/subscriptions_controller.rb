@@ -62,6 +62,6 @@ class SubscriptionsController < ApplicationController
   end
 
   def set_regions
-    @all_regions = Item.select('region').pluck(:region).uniq
+    @all_regions = Item.select('region').pluck(:region).uniq.reject(&:blank?)
   end
 end
