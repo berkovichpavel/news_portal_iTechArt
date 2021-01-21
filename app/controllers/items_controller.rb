@@ -15,7 +15,6 @@ class ItemsController < ApplicationController
   def index
     @items = ItemsFilter.call(items: @items, params: params, user: current_user)
     @important_items = @items.order(created_at: :desc).select(&:flag)
-    # remote true
     @other_items = @items.where(flag: false).order(created_at: :desc).page(params[:page]).per(12)
   end
 
