@@ -1,6 +1,6 @@
 class ItemsFilter < ApplicationService
   def initialize(items:, params:, user:)
-    @items = items
+    @items = items.where(status: 'active')
     @params = params
     @user = user
   end
@@ -11,9 +11,9 @@ class ItemsFilter < ApplicationService
     elsif @params[:tag].present? then @items.tagged_with(@params[:tag])
     elsif @params[:status]
       if @user.redactor? || @user.admin?
-        @items.where(status: @params[:status])
+        @items.rewhere(status: @params[:status])
       else
-        @items.where(status: @params[:status], author_id: @user.id)
+        @items.rewhere(status: @params[:status], author_id: @user.id)
       end
     elsif @params[:commentable] then @items.joins(:comments).group(:id).select('items.*, COUNT(comments) as count_comments')
                                            .where(comments: { service_type: 'default' }).order('COUNT(comments) DESC')
