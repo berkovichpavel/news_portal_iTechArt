@@ -6,7 +6,6 @@ class User < ApplicationRecord
   has_many :reviews
   has_one :subscription
 
-
   has_one_attached :photo
 
   validates :last_name, presence: true
@@ -19,5 +18,5 @@ class User < ApplicationRecord
          :rememberable,
          :validatable,
          :trackable # keeps statistics of the number of entries, takes into account time and IT addresses.
-         # :omniauthable # authentication using social networks
+  # :omniauthable # authentication using social networks
 end

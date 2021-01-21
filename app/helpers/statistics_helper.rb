@@ -9,20 +9,20 @@ module StatisticsHelper
   end
 
   def self.rating_changed(item)
-    unless item.reviews.count.zero?
-      hash1 = item.reviews.group_by_day(:updated_at).sum(:rating)
-      hash2 = item.reviews.group_by_day(:updated_at).count
-      previous_sum = hash1.first[1]
-      previous_count = hash2.first[1]
-      answer = {}
-      hash1.map do |key, value|
-        unless value.nil? || key == hash1.first[0]
-          previous_sum += value
-          previous_count += hash2[key]
-        end
-        answer[key] = Float(previous_sum) / previous_count
+    return if item.reviews.count.zero?
+
+    hash1 = item.reviews.group_by_day(:updated_at).sum(:rating)
+    hash2 = item.reviews.group_by_day(:updated_at).count
+    previous_sum = hash1.first[1]
+    previous_count = hash2.first[1]
+    answer = {}
+    hash1.map do |key, value|
+      unless value.nil? || key == hash1.first[0]
+        previous_sum += value
+        previous_count += hash2[key]
       end
-      answer
+      answer[key] = Float(previous_sum) / previous_count
     end
+    answer
   end
 end

@@ -49,7 +49,5 @@ class Ability
       can :read, User
       can :track, Item
     end
-
   end
-
 end

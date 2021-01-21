@@ -15,7 +15,8 @@ class ItemsFilter < ApplicationService
       else
         @items.where(status: @params[:status], author_id: @user.id)
       end
-    elsif @params[:commentable] then @items.joins(:comments).group(:id).select('items.*, COUNT(comments) as count_comments').where(comments: { service_type: 'default' }).order('COUNT(comments) DESC')
+    elsif @params[:commentable] then @items.joins(:comments).group(:id).select('items.*, COUNT(comments) as count_comments')
+                                           .where(comments: { service_type: 'default' }).order('COUNT(comments) DESC')
     elsif @params[:readable] then @items.joins(:item_views).group(:id).order('COUNT(item_id) DESC')
     elsif @params[:rss] then @items.where(rss: true)
     else @items

@@ -80,4 +80,3 @@ gem 'geocoder'
 gem 'useragent'
 gem 'rake'
 gem 'factory_bot'
-

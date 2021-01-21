@@ -1,7 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Item, type: :model do
-  let(:current_user) { User.first_or_create!(email: 'example@gmail.com', password: '12345678', password_confirmation: '12345678', role: 'admin', first_name: 'first name', last_name: 'last name') }
+  let(:current_user) do
+    User.first_or_create!(email: 'example@gmail.com', password: '12345678', password_confirmation: '12345678', role: 'admin', first_name: 'first name', last_name: 'last name')
+  end
   let(:item) do
     Item.new(
       title: title,

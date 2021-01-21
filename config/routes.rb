@@ -1,6 +1,5 @@
 require 'sidekiq/web'
 
-
 Rails.application.routes.draw do
   root to: 'items#index'
   devise_for :users
@@ -26,8 +25,7 @@ Rails.application.routes.draw do
 
   mount Ckeditor::Engine => '/ckeditor'
   mount Sidekiq::Web => '/sidekiq'
-
 end
 
 # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-#root 'home#index'
+# root 'home#index'

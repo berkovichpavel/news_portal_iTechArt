@@ -13,7 +13,7 @@ module ItemsHelper
   end
 
   def item_form_header(item)
-    method = item.new_record? ? t('items.create_new_item') : t('items.edit_item')
+    item.new_record? ? t('items.create_new_item') : t('items.edit_item')
   end
 
   def choose_html_class
