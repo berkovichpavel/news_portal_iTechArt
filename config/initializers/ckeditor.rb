@@ -2,7 +2,7 @@
 
 # Use this hook to configure ckeditor
 Ckeditor.setup do |config|
-  config.cdn_url = "//cdn.ckeditor.com/4.6.1/standard/ckeditor.js"
+  config.cdn_url = '//cdn.ckeditor.com/4.6.1/standard/ckeditor.js'
 
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default), :mongo_mapper and

@@ -11,10 +11,10 @@ class RssParser
 
   def parse
     rss_results = []
-    rss = RSS::Parser.parse(open("#{@url}").read, false)
+    rss = RSS::Parser.parse(open(@url.to_s).read, false)
     rss.items.each do |result|
       href = result.enclosure.url
-      href[-3..-1] = 'jpg' if result.enclosure.url[-3..-1] == 'mp4'
+      href[(href.length - 3)...] = 'jpg' if href[(href.length - 3)...] == 'mp4'
       result = {
         title: result.title,
         short_description: "Details on the link: #{link_to result.link, result.link}",

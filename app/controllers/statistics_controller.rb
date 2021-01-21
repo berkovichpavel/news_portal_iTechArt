@@ -16,7 +16,6 @@ class StatisticsController < ApplicationController
     end
   end
 
-
   private
 
   def statistic_params
@@ -26,5 +25,4 @@ class StatisticsController < ApplicationController
   def find_user
     @user = User.find(params[:user_id])
   end
-
 end

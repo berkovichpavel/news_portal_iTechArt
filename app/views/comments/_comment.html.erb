@@ -8,12 +8,12 @@
       <p>[deleted]</p>
     <% else %>
       <div class="media">
-        <%= image_tag(check_avatar(comment.user), class: "img_comment d-flex mr-3 rounded-circle") %>
+        <%= image_tag(check_avatar(comment.user), class: 'img_comment d-flex mr-3 rounded-circle') %>
         <div class="media-body">
           <small class="text-muted">
             <%=link_to comment.user.email, user_path(comment.user) %>
           </small><br/>
-          <%== comment.body %>
+          <%= comment.body %>
           <div data-controller="reply">
             <small>
               <div class="dropdown">
@@ -25,23 +25,17 @@
                       commentable: comment.commentable,
                       parent_id: reply_to_comment_id(comment, nesting, max_nesting),
                       class: 'mt-4',
-                      target: "reply.form"
+                      target: 'reply.form'
                   } %>
                 </div>
-                <%= link_to translate('comments.delete'), [comment.commentable, comment], method: :delete, data: {confirm: "Are you sure?"} if comment.user == current_user %>
+                <%= link_to translate('comments.delete'), [comment.commentable, comment], method: :delete, data: { confirm: 'Are you sure?' } if comment.user == current_user %>
               </div>
-              <%#= link_to 'Reply', '#', data: { action: 'click->reply#toggle' }  %>
-              <%#= link_to 'Delete', [comment.commentable, comment],class: 'btn btn-secondary btn-sm', method: :delete, data: {confirm: "Are you sure?"} if comment.user == current_user %>
             </small>
           </div>
         </div>
-
       </div>
     <% end %>
-
-
-
-    <%= tag.div id: "#{dom_id(comment)}_comments" do%>
+    <%= tag.div id: "#{dom_id(comment)}_comments" do %>
       <% if comment.comments.any? %>
         <%= render comment.comments, nesting: nesting + 1, max_nesting: max_nesting %>
       <% end %>

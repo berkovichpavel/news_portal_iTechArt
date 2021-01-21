@@ -3,6 +3,4 @@ module ApplicationHelper
     method = object.new_record? ? 'Create new' : 'Edit'
     "#{method} #{object.class}:"
   end
-
-
 end

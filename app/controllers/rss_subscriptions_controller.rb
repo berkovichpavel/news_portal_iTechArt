@@ -27,5 +27,4 @@ class RssSubscriptionsController < ApplicationController
   def rss_subscription_params
     params.require(:rss_subscription).permit(:reference_link, :category)
   end
-
 end
