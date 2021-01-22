@@ -17,6 +17,7 @@ class User < ApplicationRecord
          :recoverable,
          :rememberable,
          :validatable,
-         :trackable # keeps statistics of the number of entries, takes into account time and IT addresses.
+         :trackable,
+         :confirmable # keeps statistics of the number of entries, takes into account time and IT addresses.
   # :omniauthable # authentication using social networks
 end

@@ -1,18 +1,15 @@
-<div class="col-lg-9">
-  <h2><%= t 'devise.confirmations.resend_instructions' %></h2>
-
-  <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
-    <%= render "devise/shared/error_messages", resource: resource %>
-
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+<%= render "devise/shared/error_messages", resource: resource %>
+<div class="white-form">
+  <div class="cont">
+    <div class="form form-group" style="margin-top: 80px;">
+      <h3><%= t 'devise.confirmations.resend_instructions' %></h3>
+      <%= simple_form_for resource, as: resource_name, url: confirmation_path(resource_name) do |f| %>
+        <%= f.input :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+        <%= f.button :submit, value: translate('devise.confirmations.resend_instructions'), class: 'btn btn-sm btn-light btn-xs btn-block' %>
+      <% end %>
+      <%= render 'devise/shared/links' %>
     </div>
-
-    <div class="actions">
-      <%= f.submit "#{translate('devise.confirmations.resend_instructions')}" %>
-    </div>
-  <% end %>
-
-  <%= render "devise/shared/links" %>
+    <div class="books-img-background"></div>
+  </div>
 </div>
+
