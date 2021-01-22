@@ -21,7 +21,7 @@ class ItemsController < ApplicationController
   def show
     InsertItemViewsJob.perform_now(current_user&.id, @item.id, request.env['HTTP_USER_AGENT'], ip)
     @user_review = current_user.reviews.find_by(item_id: @item.id) if current_user
-    @redactor = User.find(@item.author_id).email if @item.author_id
+    @redactor = User.find(@item.author_id).nickname if @item.author_id
     @average_review = @item.reviews.average(:rating)
     @has_review = !!@average_review
   end
