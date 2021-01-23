@@ -7,10 +7,8 @@
             <div class="d-flex flex-column align-items-center text-center">
              <%= image_tag(check_avatar(@user), class: 'edit-photo rounded-circle photo') %>
               <div class="mt-3">
-                <% unless @user.first_name.nil? && @user.last_name.nil? %>
-                  <h4><%= @user.first_name + " " + @user.last_name%> </h4>
-                  <p class="text-secondary mb-1"><%= @user.role.upcase %></p>
-                <% end %>
+                <h4><%= @user.nickname%> </h4>
+                <p class="text-secondary mb-1"><%= @user.role.upcase %></p>
                 <% if can? :update, @user %>
                   <%= link_to translate('items.edit_role'), edit_user_path, class: 'btn btn-sm btn-outline-secondary' if can?(:manage, User) %>
                   <%= link_to translate('items.edit_profile'), edit_user_registration_path, class: 'btn btn-sm btn-outline-secondary' if @user.id = current_user.id %>
@@ -38,21 +36,10 @@
           </div>
         <% end %>
       </div>
-      <div class="col-md-8">
-        <div class="card mb-3">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-sm-3">
-                <h6 class="mb-0"><%= translate('persons.full_name') %></h6>
-              </div>
-              <div class="col-sm-9 text-secondary">
-                <% unless @user.first_name.nil? && @user.last_name.nil? %>
-                  <%= @user.first_name + " " + @user.last_name%>
-                <% end %>
-              </div>
-            </div>
-            <% if can?(:view_full_profile, @user) %>
-              <hr>
+      <% if can?(:view_full_profile, @user) %>
+        <div class="col-md-8">
+          <div class="card mb-3">
+            <div class="card-body">
               <div class="row">
                 <div class="col-sm-3">
                   <h6 class="mb-0"><%= translate('persons.email') %></h6>
@@ -61,41 +48,74 @@
                   <%= @user.email %>
                 </div>
               </div>
-              <hr>
-              <div class="row">
-                <div class="col-sm-3">
-                  <h6 class="mb-0"><%= translate('persons.bio') %></h6>
+              <% unless @user.first_name.blank? && @user.last_name.blank? %>
+                <hr/>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0"><%= translate('persons.full_name') %></h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                      <%= @user.first_name + ' ' + @user.last_name%>
+                  </div>
                 </div>
-                <div class="col-sm-9 text-secondary">
-                  <% unless @user.bio.nil? && @user.last_name.nil? %>
-                    <%= @user.bio %>
-                  <% end %>
+              <% end %>
+              <% unless @user.address.blank? %>
+                <hr/>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0"><%= translate('persons.address') %></h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    <%= @user.address %>
+                  </div>
                 </div>
-              </div>
-            <% end %>
+              <% end %>
+              <% unless @user.DOB.blank? %>
+                <hr/>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0"><%= translate('persons.DOB') %></h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                    <%= @user.DOB %>
+                  </div>
+                </div>
+              <% end %>
+              <% unless @user.bio.blank? %>
+                <hr/>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <h6 class="mb-0"><%= translate('persons.bio') %></h6>
+                  </div>
+                  <div class="col-sm-9 text-secondary">
+                      <%= @user.bio %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
           </div>
-        </div>
-        <% if can?(:add_subscription, @user) %>
-          <% if @user.subscription  %>
-            <%= render @user.subscription %>
-          <% else %>
-            <%= link_to translate('items.new_subscription'),  new_user_subscription_path(@user), class: 'btn btn-usr-show btn-sm btn-light mb-3' %>
+          <% if can?(:add_subscription, @user) %>
+            <% if @user.subscription  %>
+              <%= render @user.subscription %>
+            <% else %>
+              <%= link_to translate('items.new_subscription'),  new_user_subscription_path(@user), class: 'btn btn-usr-show btn-sm btn-light mb-3' %>
+            <% end %>
           <% end %>
-        <% end %>
-        <% if can?(:comments_activity, @user) %>
-        <%= link_to translate('persons.show_comments_activity'), comments_activity_user_path(@user), class: 'btn btn-usr-show btn-sm btn-light mb-3' %>
-        <% end %>
-        <% if can?(:items_activity, @user) %>
-          <%= link_to translate('persons.show_items_activity'), items_activity_user_path(@user) , class: 'btn btn-usr-show btn-sm btn-light mb-3'%>
-        <% end %>
-        <% if can?(:manage, Statistic) %>
-          <%= link_to translate('statistics.create'), new_user_statistic_path(@user) , class: 'btn btn-usr-show btn-sm btn-light mb-3' %>
-        <% end %>
-        <% if can?(:manage, RssSubscription) %>
-          <%= link_to translate('rss_subscriptions.create_rss_subscription'), new_rss_subscription_path , class: 'btn btn-usr-show btn-sm btn-light mb-3' %>
-          <%= link_to translate('rss_subscriptions.all_rss_subscriptions'), rss_subscriptions_path , class: 'btn btn-usr-show btn-sm btn-light mb-3'%>
-        <% end %>
-      </div>
+          <% if can?(:comments_activity, @user) %>
+          <%= link_to translate('persons.show_comments_activity'), comments_activity_user_path(@user), class: 'btn btn-usr-show btn-sm btn-light mb-3' %>
+          <% end %>
+          <% if can?(:items_activity, @user) %>
+            <%= link_to translate('persons.show_items_activity'), items_activity_user_path(@user) , class: 'btn btn-usr-show btn-sm btn-light mb-3'%>
+          <% end %>
+          <% if can?(:manage, Statistic) %>
+            <%= link_to translate('statistics.create'), new_user_statistic_path(@user) , class: 'btn btn-usr-show btn-sm btn-light mb-3' %>
+          <% end %>
+          <% if can?(:manage, RssSubscription) %>
+            <%= link_to translate('rss_subscriptions.create_rss_subscription'), new_rss_subscription_path , class: 'btn btn-usr-show btn-sm btn-light mb-3' %>
+            <%= link_to translate('rss_subscriptions.all_rss_subscriptions'), rss_subscriptions_path , class: 'btn btn-usr-show btn-sm btn-light mb-3'%>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
