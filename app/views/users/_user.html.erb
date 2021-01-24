@@ -1,0 +1,17 @@
+<div class="col-md-6 col-xl-4">
+  <div class="card">
+    <div class="card-body">
+      <div class="media align-items-center">
+        <%= image_tag(check_avatar(user), style: '', class: 'avatar avatar-xl mr-3') %>
+        <div class="media-body overflow-hidden">
+          <h5 class="card-text mb-0"><%= user.nickname %></h5>
+          <p class="card-text text-muted"><%= user.role.upcase %></p>
+          <% if can?(:view_full_profile, user) %>
+            <p class="card-text"><%= user.email %></p>
+          <% end %>
+        </div>
+      </div>
+      <%= link_to "", user_path(user), class: 'tile-link' %>
+    </div>
+  </div>
+</div>
