@@ -68,8 +68,13 @@ Rails.application.configure do
     authentication: 'plain',
     user_name: 'news.portal.berdacha@gmail.com',
     password: 'newsPortal070895',
-    authentication: 'plain',
     enable_starttls_auto: true
   }
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
+
+  ENV['GOOGLE_OAUTH_CLIENT_ID'] = '1074575849741-qdcdhrqujjc5j55etk62hjbgusesijtt.apps.googleusercontent.com'
+  ENV['GOOGLE_OAUTH_CLIENT_SECRET'] = 'oboPhH0qfGPnLt9kT0sIQZNs'
+  ENV['FACEBOOK_OAUTH_CLIENT_ID'] = '712798649414506'
+  ENV['FACEBOOK_OAUTH_CLIENT_SECRET'] = '5b45b07552f95742d3b7ee6f20646b1d'
+
 end

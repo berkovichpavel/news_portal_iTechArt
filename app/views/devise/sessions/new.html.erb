@@ -21,6 +21,8 @@
         <% end %>
         <%= f.button translate('devise.sessions.sign_in'), class: 'submit' %>
       <% end %>
+      <%= link_to "Sign in with Google auth", user_google_oauth2_omniauth_authorize_path %><br/>
+      <%= link_to "Register with Facebook", user_facebook_omniauth_authorize_path %>
       <% session[:return_to] ||= request.referer %>
     </div>
     <div class="sub-cont">
