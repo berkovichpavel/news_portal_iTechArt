@@ -1,6 +1,6 @@
 <%= form_with model: [commentable, Comment.new] do |form| %>
   <div class="form-group">
-    <%= form.text_area :body, placeholder: 'Add a comment', class: 'form-control' %>
+    <%= form.text_area :body, placeholder: translate('comments.add_comment'), class: 'form-control' %>
   </div>
   <div class="form-group">
     <%= form.hidden_field :parent_id, value: local_assigns[:parent_id] %>
