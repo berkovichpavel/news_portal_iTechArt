@@ -10,6 +10,7 @@ module NewsPortal
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
+    config.i18n.available_locales = [:en, :ru]
     config.i18n.default_locale = :en
     # config.assets.initialize_on_precompile = false
     config.active_job.queue_adapter = :sidekiq
