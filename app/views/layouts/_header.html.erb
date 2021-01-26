@@ -14,7 +14,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <% @categories.keys.each do |category| %>
-            <%= link_to " #{category.capitalize}", items_path(category: "#{category}"), class: 'dropdown-item' %>
+            <%= link_to translate('items.' + category).capitalize, items_path(category: category), class: 'dropdown-item' %>
           <% end %>
           <%= link_to translate('layouts.rss_news'), items_path(rss: true), class: 'dropdown-item'%>
         </div>
