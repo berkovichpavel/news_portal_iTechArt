@@ -10,11 +10,12 @@ module NewsPortal
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
+    config.i18n.available_locales = [:en, :ru]
     config.i18n.default_locale = :en
     # config.assets.initialize_on_precompile = false
     config.active_job.queue_adapter = :sidekiq
     config.action_mailer.asset_host = 'http://localhost:3000/mailer'
-    config.autoload_paths += %W[#{config.root}/lib #{config.root}/services]
+    config.autoload_paths += %W[#{config.root}/lib #{config.root}/services #{config.root}/assets/images]
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

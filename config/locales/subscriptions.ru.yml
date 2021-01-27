@@ -1,0 +1,10 @@
+ru:
+  subscriptions:
+    categories: "Категории"
+    dispatch_hour: "Время отправки"
+    last_send: "Последняя отправка"
+    news_digest: "Новостной дайджест"
+    regions: "Регионы"
+    sending_frequency: "Частота отправки"
+    subscriptions: "Подписки"
+    tags: "Теги"

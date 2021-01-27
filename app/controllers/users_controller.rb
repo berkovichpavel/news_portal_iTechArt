@@ -2,7 +2,11 @@ class UsersController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @users = @users.where(params.keys.first => params[params.keys.first].to_sym) if params.keys.count > 2
+    if params[:role]
+      @users = @users.where(role: params[:role])
+    else
+      @users
+    end
   end
 
   def update
