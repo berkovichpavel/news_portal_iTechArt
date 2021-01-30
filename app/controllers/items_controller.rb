@@ -55,6 +55,10 @@ class ItemsController < ApplicationController
     redirect_to items_path
   end
 
+  def search
+    Item.__ elasticsearch __.Search (params[:query]).Results
+  end
+
   private
 
   def item_params

@@ -90,7 +90,6 @@ ActiveRecord::Schema.define(version: 2021_01_22_095543) do
     t.string "mask", default: "visible", null: false
     t.string "region"
     t.boolean "flag", default: false
-    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "status", default: "check"

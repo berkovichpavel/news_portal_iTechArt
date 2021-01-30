@@ -19,6 +19,7 @@ class ItemsFilter < ApplicationService
                                            .where(comments: { service_type: 'default' }).order('COUNT(comments) DESC')
     elsif @params[:readable] then @items.joins(:item_views).group(:id).order('COUNT(item_id) DESC')
     elsif @params[:rss] then @items.where(rss: true)
+    # elsif @params[:query].present? @items.search(@params[:query])
     else @items
     end
   end
