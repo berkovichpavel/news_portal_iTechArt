@@ -8,6 +8,5 @@ FactoryBot.define do
     status { 'active' }
 
     association :author, factory: :user
-
   end
 end
