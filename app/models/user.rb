@@ -1,6 +1,4 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
   has_many :created_items, class_name: 'Item', foreign_key: 'author_id'
   has_many :comments
   has_many :reviews
@@ -16,6 +14,7 @@ class User < ApplicationRecord
          :recoverable,
          :rememberable,
          :validatable,
-         :trackable # keeps statistics of the number of entries, takes into account time and IT addresses.
-  # :omniauthable # authentication using social networks
+         :trackable
+         # keeps statistics of the number of entries, takes into account time and IT addresses.
+         # :omniauthable # authentication using social networks
 end

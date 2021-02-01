@@ -6,6 +6,7 @@ class Item < ApplicationRecord
 
   CATEGORIES = { 'news' => 'news', 'health' => 'health', 'finance' => 'finance', 'auto' => 'auto', 'people' => 'people',
                  'technology' => 'technology', 'realty' => 'realty' }.freeze
+
   after_save :send_item_instantly
   before_save :published_time
 
@@ -15,9 +16,6 @@ class Item < ApplicationRecord
   has_many :item_views, dependent: :destroy
 
   has_one_attached :main_img_href
-
-  # has_rich_text :title
-  # has_rich_text :short_description
 
   enum status: { 'active' => 'active', 'archive' => 'archive', 'revision' => 'revision', 'check' => 'check' }
   enum active_status: { 'inactive' => 'inactive', 'published' => 'published', 'archived' => 'archived' }
