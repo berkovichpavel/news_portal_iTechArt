@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Item, type: :model do
   describe 'associations' do
-    it 'has have many associations', :aggregate_failures do
+    it 'has many associations', :aggregate_failures do
       is_expected.to have_many(:comments)
       is_expected.to have_many(:reviews)
       is_expected.to have_many(:item_views).dependent(:destroy)

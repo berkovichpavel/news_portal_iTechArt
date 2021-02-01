@@ -9,6 +9,7 @@ class User < ApplicationRecord
   validates :nickname, presence: true
 
   enum role: { admin: 'admin', redactor: 'redactor', correspondent: 'correspondent', user: 'user' }
+
   devise :database_authenticatable,
          :registerable,
          :recoverable,
