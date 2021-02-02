@@ -2,6 +2,9 @@ require 'rss'
 require 'open-uri'
 
 class Item < ApplicationRecord
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
+
   acts_as_taggable
 
   CATEGORIES = { 'news' => 'news', 'health' => 'health', 'finance' => 'finance', 'auto' => 'auto', 'people' => 'people',
@@ -16,9 +19,6 @@ class Item < ApplicationRecord
   has_many :item_views, dependent: :destroy
 
   has_one_attached :main_img_href
-
-  include Tire::Model::Search
-  include Tire::Model::Callbacks
 
   enum status: { 'active' => 'active', 'archive' => 'archive', 'revision' => 'revision', 'check' => 'check' }
   enum active_status: { 'inactive' => 'inactive', 'published' => 'published', 'archived' => 'archived' }

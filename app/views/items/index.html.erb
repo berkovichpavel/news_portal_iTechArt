@@ -1,13 +1,12 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
-
-
 <%= form_tag items_path, method: :get do  %>
   <p>
     <%= text_field_tag :query, params[:query] %>
     <%= submit_tag 'Search', name: nil %>
   </p>
 <% end %>
+
 <div class="container-fluid">
   <% if params[:category] %>
     <h1 class="text-center mt-2 font-italic"><%= params[:category].capitalize %></h1>
