@@ -15,20 +15,6 @@ RSpec.describe Comment, type: :model do
     end
   end
 
-  describe 'object' do
-    context 'when object generate with FactoryBot' do
-      let(:comment) { build(:comment) }
-
-      it 'should be valid' do
-        expect(comment).to be_valid
-      end
-
-      it 'should save valid object' do
-        expect { comment.save! }.not_to raise_error
-      end
-    end
-  end
-
   describe '#deleted' do
     context 'when user not nil' do
       let(:comment) { build(:comment) }

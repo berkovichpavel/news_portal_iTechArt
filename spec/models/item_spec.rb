@@ -30,21 +30,6 @@ RSpec.describe Item, type: :model do
     end
   end
 
-  describe 'object' do
-    context 'when object generate with FactoryBot' do
-      let(:item) { build(:item) }
-
-      it 'should be valid' do
-        expect(item).to be_valid
-      end
-
-      it 'should save valid object' do
-        expect { item.save! }.not_to raise_error
-      end
-    end
-  end
-
-
   describe 'callbacks' do
     describe '#published_time' do
       let(:item) { create(:item, status: 'active') }

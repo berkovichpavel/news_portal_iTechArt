@@ -18,21 +18,4 @@ RSpec.describe User, type: :model do
       is_expected.to validate_presence_of(:nickname)
     end
   end
-
-  describe 'object' do
-    context 'when object generate with FactoryBot' do
-      let(:user) { build(:user) }
-
-      it 'should be valid' do
-        expect(user).to be_valid
-      end
-
-      it 'should save valid object' do
-        expect { user.save! }.not_to raise_error
-      end
-    end
-  end
-
-
-
 end

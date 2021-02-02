@@ -17,24 +17,9 @@ RSpec.describe Subscription, type: :model do
     end
   end
 
-  describe 'object' do
-    context 'when object generate with FactoryBot' do
-      let(:subscription) { build(:subscription) }
-
-      it 'should be valid' do
-        expect(subscription).to be_valid
-      end
-
-      it 'should save valid object' do
-        expect { subscription.save! }.not_to raise_error
-      end
-    end
-  end
-
-
   describe 'callbacks' do
     describe '#change_dispatch_hour' do
-      let(:subscription) { build(:subscription) }
+      let(:subscription) { build(:subscription, sending_frequency: 'instantly') }
 
       it 'should change dispatch_hour to nil' do
         subscription.run_callbacks(:save)
