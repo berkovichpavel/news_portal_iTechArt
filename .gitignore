@@ -42,6 +42,6 @@ yarn-debug.log*
 .DS_Store
 vendor/bundle/
 error.log
-
+coverage
 # Ignore application configuration
 /config/application.yml
