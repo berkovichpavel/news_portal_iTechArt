@@ -24,7 +24,7 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0, 20]
       info = auth.info.name.split(' ')
       user.first_name = info.first unless info[0].blank?
-      #user.last_name = info.last unless info[1].blank?
+      user.last_name = info.last unless info[1].blank?
       user.nickname = auth.info.nickname
       user.skip_confirmation!
     end
