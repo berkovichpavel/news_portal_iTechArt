@@ -28,7 +28,6 @@
         <%= f.button translate('devise.registrations.sign_up'), class: 'submit' %>
       <% end %>
       <% session[:return_to] ||= request.referer %>
-      <h2><%= link_to "Sign in with Github", user_github_omniauth_authorize_path, method: :post %></h2>
     </div>
     <div class="sub-cont">
       <div class="img">

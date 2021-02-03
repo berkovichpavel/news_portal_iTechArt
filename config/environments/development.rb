@@ -72,11 +72,6 @@ Rails.application.configure do
   }
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
-  ENV['GOOGLE_OAUTH_CLIENT_ID'] = '1074575849741-qdcdhrqujjc5j55etk62hjbgusesijtt.apps.googleusercontent.com'
-  ENV['GOOGLE_OAUTH_CLIENT_SECRET'] = 'oboPhH0qfGPnLt9kT0sIQZNs'
-  ENV['FACEBOOK_OAUTH_CLIENT_ID'] = '712798649414506'
-  ENV['FACEBOOK_OAUTH_CLIENT_SECRET'] = '5b45b07552f95742d3b7ee6f20646b1d'
   ENV['GITHUB_OAUTH_CLIENT_ID'] = '856a6d6f26c74cbc3147'
-  ENV['GITHUB_OAUTH_CLIENT_SECRET'] = '3b45f3d4a0e3203e6a13853fc73eaeb08ebda41c'
-
+  ENV['GITHUB_OAUTH_CLIENT_SECRET'] = '8cda91cea8832f43a51c915f249a4bd9fd59002c'
 end
