@@ -69,6 +69,7 @@ en:
       new_here: "New here?"
       one_of_us: "One of us?"
       sign_in: "Sign in"
+      sign_in_with_github: "Sign in with Github"
       sign_up: "Sign up"
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."

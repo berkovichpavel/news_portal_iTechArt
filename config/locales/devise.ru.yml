@@ -67,6 +67,7 @@ ru:
       new_here: "Новенький тут?"
       one_of_us: "Один из нас?"
       sign_in: "Войти"
+      sign_in_with_github: "Войти через Github"
       sign_up: "Зарегестрироваться"
       signed_in: "Выполнен вход успешно."
       signed_out: "Вы успешно вышли из системы."
