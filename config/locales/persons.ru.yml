@@ -1,0 +1,37 @@
+ru:
+  persons:
+    account_settings: 'Настройки учетной записи'
+    activity: 'активность'
+    admins: 'Админы'
+    address: 'Адрес'
+    all_users: "Все пользователи"
+    allowed_photo: 'Разрешены JPG, PNG или JPEG. Максимальный размер 800 КБ'
+    back_to_user: 'Вернуться к пользователю'
+    bio: "Биография"
+    change_password: 'Изменить пароль'
+    close: 'Закрыть'
+    comments: 'Комментарии'
+    correspondents: 'Корреспонденты'
+    date: 'Дата'
+    DOB: 'Дата рождения'
+    edit_role: 'Ркдактировать роль'
+    email: "Email"
+    exit: "Выход"
+    full_name: "Полное имя"
+    general: 'Генеральный'
+    hello: "Привет"
+    info: 'Информация'
+    items: 'новости'
+    more: 'больше'
+    news_href: 'Ссылка на новость'
+    nickname: 'Ник'
+    or: "или"
+    redactors: 'Редакторы'
+    show_comments_activity: 'Показать активность комментариев'
+    show_items_activity: 'Показать новостную активность'
+    sign_in: "Войти в систему"
+    sign_up: "Зарегистрироваться"
+    social_links: 'Социальные ссылки'
+    title: 'Заглавие'
+    upload_photo: 'Загрузить новое фото'
+    users: 'Пользователи'

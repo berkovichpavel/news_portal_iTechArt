@@ -1,17 +1,13 @@
-<%= render "devise/shared/error_messages", resource: resource %>
+<%= render 'devise/shared/error_messages', resource: resource %>
+
 <div class="log_in">
   <div class="cont">
     <div class="form sign-in">
       <h2><%= t('devise.sessions.time_to_fill_like_home') %></h2>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-
         <label>
-          <span><%= f.label :first_name %></span>
-          <%= f.text_field :first_name, autofocus: true%>
-        </label>
-        <label>
-          <span><%= f.label :last_name %></span>
-          <%= f.text_field :last_name %>
+          <span><%= f.label :nickname %></span>
+          <%= f.text_field :nickname %>
         </label>
         <label>
           <span><%= f.label :email %></span>

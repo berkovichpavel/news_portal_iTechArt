@@ -5,6 +5,7 @@ en:
     account_settings: 'Account settings'
     activity: 'activity'
     admins: 'Admins'
+    address: 'Address'
     all_users: "All users"
     allowed_photo: 'Allowed JPG, PNG or JPEG. Max size of 800K'
     back_to_user: 'Back to user'
@@ -14,6 +15,7 @@ en:
     comments: 'comments'
     correspondents: 'Correspondents'
     date: 'Date'
+    DOB: 'DOB'
     edit_role: 'Edit role'
     email: "Email"
     exit: "Exit"
@@ -25,6 +27,7 @@ en:
     items: 'items'
     more: 'more'
     news_href: 'News href'
+    nickname: 'Nickname'
     or: "or"
     persons_profile: "Persons#profile"
     redactors: 'Redactors'

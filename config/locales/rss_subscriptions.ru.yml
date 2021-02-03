@@ -1,0 +1,9 @@
+ru:
+  rss_subscriptions:
+    all_rss_subscriptions: "Все RSS подписки"
+    category: "Категория"
+    create_rss_subscription: "Создать подписку RSS"
+    delete: "Удалить"
+    link: "Ссылка"
+    reference_link: "Ссылка на ссылку"
+    rss_subscription_from: "RSS подписка от"

@@ -1,7 +1,8 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css" integrity="sha256-nwNjrH7J9zS/Ti4twtWX7OsC5QdQHCIKTv5cLMsGo68=" crossorigin="anonymous" />
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-  <a class="navbar-brand" href="/"><%= t 'layouts.site_name' %></a>
+  <%= link_to translate('layouts.site_name'), root_path, class: 'navbar-brand' %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -13,7 +14,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <% @categories.keys.each do |category| %>
-            <%= link_to " #{category.capitalize}", items_path(category: "#{category}"), class: 'dropdown-item' %>
+            <%= link_to translate('items.' + category).capitalize, items_path(category: category), class: 'dropdown-item' %>
           <% end %>
           <%= link_to translate('layouts.rss_news'), items_path(rss: true), class: 'dropdown-item'%>
         </div>
@@ -53,9 +54,18 @@
           <%= link_to t('layouts.profile'), user_path(current_user), class: 'nav-link' %>
         </li>
       <% end %>
-        <li class="nav-item">
-            <%= link_to t('layouts.all_profiles'), users_path, class: 'nav-link' %>
-        </li>
+      <li class="nav-item">
+          <%= link_to t('layouts.all_profiles'), users_path, class: 'nav-link' %>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="mdi mdi-web"></i>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+          <%= link_to 'RU', root_path(locale: :ru), class: 'dropdown-item' %>
+          <%= link_to 'EN', root_path(locale: :en), class: 'dropdown-item' %>
+        </div>
+      </li>
     </ul>
     <div>
       <% if user_signed_in? %>
