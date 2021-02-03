@@ -273,7 +273,7 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   #
-  config.omniauth :github, ENV['GITHUB_OAUTH_CLIENT_ID'], ENV['GITHUB_OAUTH_CLIENT_SECRET'],
+  config.omniauth :github, Rails.application.credentials.git[:GITHUB_OAUTH_CLIENT_ID], Rails.application.credentials.git[:GITHUB_OAUTH_CLIENT_SECRET],
                   scope: 'user:email', provider_ignores_state: true
 
   # ==> Warden configuration

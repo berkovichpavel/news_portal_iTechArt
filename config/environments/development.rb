@@ -77,11 +77,9 @@ Rails.application.configure do
     domain: 'gmail.com',
     authentication: 'plain',
     user_name: 'news.portal.berdacha@gmail.com',
-    password: 'newsPortal070895',
+    password: Rails.application.credentials.mail[:password],
     enable_starttls_auto: true
   }
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
-  ENV['GITHUB_OAUTH_CLIENT_ID'] = '856a6d6f26c74cbc3147'
-  ENV['GITHUB_OAUTH_CLIENT_SECRET'] = '8cda91cea8832f43a51c915f249a4bd9fd59002c'
 end
