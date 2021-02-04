@@ -67,12 +67,19 @@ ru:
       new_here: "Новенький тут?"
       one_of_us: "Один из нас?"
       sign_in: "Войти"
+      sign_in_with_github: "Войти через Github"
       sign_up: "Зарегестрироваться"
       signed_in: "Выполнен вход успешно."
       signed_out: "Вы успешно вышли из системы."
       time_to_fill_like_home: "Пора почувствовать себя как дома,"
       we_have_missed_you: "Если у вас уже есть учетная запись, просто войдите в нее. Мы скучали по вам!"
       welcome_back: "Добро пожаловать,"
+    shared_links:
+      did_not_recive_confirmation_instructions: "Не получили инструкции по подтверждению?"
+      did_not_recive_unlock_instructions: "Не получили инструкции по разблокировке?"
+      forgot_password: "Забыли пароль?"
+      log_in: "Авторизоваться"
+      sign_in_with: 'Войти в систему с помощью %{parameter}'
     unlocks:
       resend_instructions: "Отправить инструкции по разблокировке повторно"
       send_instructions: "Вы получите электронное письмо с инструкциями по разблокировке учетной записи через несколько минут."

@@ -77,9 +77,9 @@ Rails.application.configure do
     domain: 'gmail.com',
     authentication: 'plain',
     user_name: 'news.portal.berdacha@gmail.com',
-    password: 'newsPortal070895',
-    authentication: 'plain',
+    password: Rails.application.credentials.mail[:password],
     enable_starttls_auto: true
   }
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
+
 end

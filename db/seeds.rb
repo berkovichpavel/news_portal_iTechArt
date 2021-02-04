@@ -15,3 +15,4 @@ User.create!([
                { email: 'bp@gmail.com', password: '12345678', role: 'correspondent', bio: 'Example of bio', first_name: 'Pavel', last_name: 'Bertolet', nickname: 'correspondent Bertolet' },
                { email: 'Berk@gmail.com', password: '12345678', role: 'user', bio: 'Example of bio', first_name: 'Pavel', last_name: 'Bertolet', nickname: 'user' }
              ])
+
