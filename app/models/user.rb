@@ -15,7 +15,19 @@ class User < ApplicationRecord
          :recoverable,
          :rememberable,
          :validatable,
-         :trackable
-         # keeps statistics of the number of entries, takes into account time and IT addresses.
-         # :omniauthable # authentication using social networks
+         :trackable,
+         :confirmable,
+         :omniauthable, omniauth_providers: [:github]
+
+  def self.from_omniauth(auth)
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+      user.email = auth.info.email
+      user.password = Devise.friendly_token[0, 20]
+      info = auth.info.name.split(' ')
+      user.first_name = info.first unless info[0].blank?
+      user.last_name = info.last unless info[1].blank?
+      user.nickname = auth.info.nickname
+      user.skip_confirmation!
+    end
+  end
 end

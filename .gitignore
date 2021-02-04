@@ -43,6 +43,5 @@ yarn-debug.log*
 vendor/bundle/
 error.log
 coverage
-
 # Ignore application configuration
 /config/application.yml

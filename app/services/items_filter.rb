@@ -1,6 +1,6 @@
 class ItemsFilter < ApplicationService
   def initialize(items:, params:, user:)
-    @items = items.where(status: 'active')
+    @items = items.where(status: 'active').includes([:main_img_href_attachment, :reviews])
     @params = params
     @user = user
   end

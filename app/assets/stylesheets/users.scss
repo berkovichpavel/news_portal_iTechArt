@@ -133,6 +133,16 @@
     cursor: pointer;
   }
 
+  .github-button {
+    display: block;
+    margin: 0 auto;
+    width: $inputW;
+    height: $btnH;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
   .img {
     overflow: hidden;
     z-index: 2;
@@ -282,4 +292,8 @@
 
 .btn-usr-show{
   width: 32.9%;
+}
+
+.btn-usr-show-2{
+  width: 32.7%;
 }

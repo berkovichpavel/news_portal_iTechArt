@@ -10,10 +10,21 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <%= javascript_include_tag '/jquery.raty.js' %>
+
+    <style>
+        .flash__alert   { color: red; }
+        .flash__notice  { color: blue; }
+        .flash__success { color: green; }
+    </style>
   </head>
 
   <body>
     <%= render 'layouts/header' %>
+    <% if flash.any? %>
+    <% flash.each do |key, value| -%>
+      <section class="flash flash__<%= key %>"><%= value.html_safe %></section>
+    <% end -%>
+  <% end %>
     <%= yield %>
     <%= render 'layouts/footer' %>
   </body>

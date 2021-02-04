@@ -48,7 +48,7 @@
                   <%= @user.email %>
                 </div>
               </div>
-              <% unless @user.first_name.blank? && @user.last_name.blank? %>
+              <% unless @user.first_name.blank? || @user.last_name.blank? %>
                 <hr/>
                 <div class="row">
                   <div class="col-sm-3">

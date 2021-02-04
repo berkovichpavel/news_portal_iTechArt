@@ -69,12 +69,19 @@ en:
       new_here: "New here?"
       one_of_us: "One of us?"
       sign_in: "Sign in"
+      sign_in_with_github: "Sign in with Github"
       sign_up: "Sign up"
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."
       time_to_fill_like_home: "Time to feel like home,"
       we_have_missed_you: "If you already has an account, just sign in. We've missed you!"
       welcome_back: "Welcome back,"
+    shared_links:
+      did_not_recive_confirmation_instructions: "Didn't receive confirmation instructions?"
+      did_not_recive_unlock_instructions: "Didn't receive unlock instructions?"
+      forgot_password: "Forgot password?"
+      log_in: "Log in"
+      sign_in_with: 'Sign in with %{parameter}'
     unlocks:
       resend_instructions: "Resend unlock instructions"
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
