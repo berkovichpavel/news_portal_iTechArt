@@ -23,6 +23,8 @@ Rails.application.routes.draw do
     resources :reviews
   end
 
+  get 'search', to: 'search#search'
+
   mount Ckeditor::Engine => '/ckeditor'
   mount Sidekiq::Web => '/sidekiq'
 end

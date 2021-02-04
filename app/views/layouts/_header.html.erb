@@ -68,6 +68,9 @@
       </li>
     </ul>
     <div>
+      <%= render 'search/form' %>
+    </div>
+    <div>
       <% if user_signed_in? %>
         <%= link_to translate('layouts.exit'), destroy_user_session_path, method: :delete, class: 'btn btn-sm btn-outline-secondary' %>
       <% else %>

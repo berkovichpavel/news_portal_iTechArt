@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 #
 require 'factory_bot'
+Item.__elasticsearch__.create_index!(force: true)
 User.create!([
                { email: 'admin@gmail.com', password: '12345678', role: 'admin', bio: 'Example of bio', first_name: 'Pavel', last_name: 'Berkovich', nickname: 'admin' },
                { email: 'redactor@gmail.com', password: '12345678', role: 'redactor', bio: 'Example of bio', first_name: 'Pavel', last_name: 'Erkovich', nickname: 'redactor' },

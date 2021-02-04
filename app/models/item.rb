@@ -6,6 +6,10 @@ class Item < ApplicationRecord
 
   CATEGORIES = { 'news' => 'news', 'health' => 'health', 'finance' => 'finance', 'auto' => 'auto', 'people' => 'people',
                  'technology' => 'technology', 'realty' => 'realty' }.freeze
+
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
+
   after_save :send_item_instantly
   before_save :published_time
 
@@ -15,9 +19,6 @@ class Item < ApplicationRecord
   has_many :item_views, dependent: :destroy
 
   has_one_attached :main_img_href
-
-  # has_rich_text :title
-  # has_rich_text :short_description
 
   enum status: { 'active' => 'active', 'archive' => 'archive', 'revision' => 'revision', 'check' => 'check' }
   enum active_status: { 'inactive' => 'inactive', 'published' => 'published', 'archived' => 'archived' }
@@ -44,4 +45,25 @@ class Item < ApplicationRecord
       self.published_at = nil
     end
   end
+
+  # def self.search(query)
+  #   __elasticsearch__.search(
+  #     {
+  #       query: {
+  #         multi_match: {
+  #           query: query,
+  #           fields: %w[title short_description]
+  #         }
+  #       },
+  #       highlight: {
+  #         pre_tags: ['<em>'],
+  #         post_tags: ['</em>'],
+  #         fields: {
+  #           title: {},
+  #           text: {}
+  #         }
+  #       }
+  #     }
+  #   )
+  # end
 end
