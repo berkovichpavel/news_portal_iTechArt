@@ -18,4 +18,6 @@ RSpec.describe User, type: :model do
       is_expected.to validate_presence_of(:nickname)
     end
   end
+
+  # test with Capybara http://www.jessespevack.com/blog/2016/10/16/how-to-test-drive-omniauth-google-oauth2-for-your-rails-app
 end
