@@ -8,14 +8,14 @@ FactoryBot.define do
     title { Faker::Lorem.paragraph_by_chars(number: 90) }
     short_description { Faker::Lorem.paragraph_by_chars(number: 100) }
     full_text { Faker::Lorem.paragraph(sentence_count: 20..45) }
-    tag_list { Faker::Lorem.words(number: 2..5) }
     category { 'auto' }
     mask { 'visible' }
     status { 'active' }
 
     association :author, factory: :user
 
-    factory :items_with_comments_and_reviews do
+    factory :item_with_comments_and_reviews do
+      tag_list { Faker::Lorem.words(number: 2..5) }
       category { CATEGORIES.sample }
       mask { MASKS.sample }
       status { STATUSES.sample }

@@ -10,4 +10,8 @@ module CommentsHelper
       comment.parent_id
     end
   end
+
+  def all_comments(item)
+    item.comments.where(parent_id: nil).includes([:user])
+  end
 end

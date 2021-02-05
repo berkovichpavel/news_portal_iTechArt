@@ -48,9 +48,9 @@ RSpec.describe Item, type: :model do
     describe '#send_item_instantly' do
       let(:item) { build(:item) }
 
-      it 'should change published_at to Time.current' do
-        expect(FindUsersInstantlyJob).to receive(:perform_now).once
-        item.run_callbacks(:save)
+      it 'should call FindUsersInstantlyJob' do
+        expect(item).to receive(:send_item_instantly)
+        item.save
       end
     end
   end

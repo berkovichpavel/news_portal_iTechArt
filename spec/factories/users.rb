@@ -1,5 +1,5 @@
 FactoryBot.define do
-  ROLES = %w[admin redactor correspondent user].freeze
+  ROLES = %w[redactor correspondent user].freeze
   factory :user do
     nickname { Faker::Name.unique.name }
     email { Faker::Internet.unique.email }
