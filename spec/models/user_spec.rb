@@ -19,5 +19,25 @@ RSpec.describe User, type: :model do
     end
   end
 
-  # test with Capybara http://www.jessespevack.com/blog/2016/10/16/how-to-test-drive-omniauth-google-oauth2-for-your-rails-app
+  describe '.from_omniauth' do
+    let(:auth) do
+      { provider: 'github',
+        uid: '66945592',
+        info: {
+          nickname: 'JesseSpervak2000',
+          email: 'jesse@mountainmantechnologies.com',
+          name: 'Jesse Spevack'
+        } }
+    end
+    it 'creates or updates itself from an oauth hash' do
+      User.from_omniauth(auth)
+      new_user = User.last
+      expect(new_user.provider).to eq('github')
+      expect(new_user.uid).to eq('66945592')
+      expect(new_user.email).to eq('jesse@mountainmantechnologies.com')
+      expect(new_user.nickname).to eq('JesseSpervak2000')
+      expect(new_user.first_name).to eq('Jesse')
+      expect(new_user.last_name).to eq('Spevack')
+    end
+  end
 end
