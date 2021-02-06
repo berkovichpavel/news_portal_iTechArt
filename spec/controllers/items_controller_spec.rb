@@ -25,7 +25,7 @@ describe ItemsController, type: :controller do
       expect(response).to render_template(:index)
     end
 
-    it 'return trust values' do
+    it 'returns trust values' do
       expect(assigns(:items)).to match_array(items)
       expect(assigns(:other_items)).to match_array(items)
       expect(assigns(:important_items)).to match_array([])
@@ -51,7 +51,7 @@ describe ItemsController, type: :controller do
       expect { subject }.to change(Item, :count).by(1)
     end
 
-    it 'redirect to items_path' do
+    it 'redirects to items_path' do
       is_expected.to redirect_to item_path(assigns(:item).id)
     end
 
@@ -64,7 +64,7 @@ describe ItemsController, type: :controller do
         expect { subject }.to_not change(Item, :count)
       end
 
-      it 'render new template' do
+      it 'renders new template' do
         is_expected.to render_template :new
       end
     end
@@ -79,11 +79,11 @@ describe ItemsController, type: :controller do
       }
     end
 
-    it 'should update item' do
+    it 'updates item' do
       expect { subject }.to change { item.reload.category }.from('auto').to('news')
     end
 
-    it 'redirect to items_path' do
+    it 'redirects to items_path' do
       is_expected.to redirect_to item_path(assigns(:item).id)
     end
 
@@ -101,7 +101,7 @@ describe ItemsController, type: :controller do
         expect { subject }.not_to change{ item.reload.category }
       end
 
-      it 'render new template' do
+      it 'renders new template' do
         is_expected.to render_template :edit
       end
     end
@@ -127,8 +127,25 @@ describe ItemsController, type: :controller do
     subject { post :track, params: params }
     let(:params) { { id: item.id } }
 
-    it 'increments watching time' do
+    it 'increments watching time when the user is registered' do
       expect { subject }.to change { item_view.reload.watching_time }.from(120).to(220)
+    end
+
+    it 'returns 200 OK' do
+      expect(response).to have_http_status(:ok)
+    end
+
+    context 'when current user is not registered' do
+      let(:item_view) { create(:item_view, watching_time: 120, user_ip: '11.23.123.46') }
+
+      it 'increments watching time when the user is registered', skip_before: true do
+        controller.stub(:ip).and_return('11.23.123.46')
+        expect { subject }.to change { item_view.reload.watching_time }.from(120).to(220)
+      end
+
+      it 'returns 200 OK' do
+        expect(response).to have_http_status(:ok)
+      end
     end
   end
 end
