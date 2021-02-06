@@ -23,6 +23,7 @@ describe ItemsController, type: :controller do
 
     it 'renders the action' do
       expect(response).to render_template(:index)
+      expect(response).to have_http_status(:ok)
     end
 
     it 'returns trust values' do
@@ -36,7 +37,8 @@ describe ItemsController, type: :controller do
     before { get :show, params: { id: item.id } }
 
     it 'renders the action' do
-      expect(response).to render_template :show
+      expect(response).to render_template(:show)
+      expect(response).to have_http_status(:ok)
     end
 
     it 'returns trust values' do
@@ -65,7 +67,7 @@ describe ItemsController, type: :controller do
       end
 
       it 'renders new template' do
-        is_expected.to render_template :new
+        is_expected.to render_template(:new)
       end
     end
   end
@@ -98,11 +100,11 @@ describe ItemsController, type: :controller do
       end
 
       it 'does not update' do
-        expect { subject }.not_to change{ item.reload.category }
+        expect { subject }.to_not change { item.reload.category }
       end
 
       it 'renders new template' do
-        is_expected.to render_template :edit
+        is_expected.to render_template(:edit)
       end
     end
   end
@@ -139,7 +141,7 @@ describe ItemsController, type: :controller do
       let(:item_view) { create(:item_view, watching_time: 120, user_ip: '11.23.123.46') }
 
       it 'increments watching time when the user is registered', skip_before: true do
-        controller.stub(:ip).and_return('11.23.123.46')
+        allow(controller).to receive(:ip).and_return('11.23.123.46')
         expect { subject }.to change { item_view.reload.watching_time }.from(120).to(220)
       end
 
