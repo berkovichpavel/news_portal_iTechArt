@@ -8,10 +8,6 @@ class ItemsController < ApplicationController
 
   TRACK_INTERVAL = 100
 
-  def new; end
-
-  def edit; end
-
   def index
     @items = ItemsFilter.call(items: @items, params: params, user: current_user)
     @important_items = @items.order(created_at: :desc).select(&:flag)

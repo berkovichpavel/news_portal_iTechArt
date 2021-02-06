@@ -14,6 +14,10 @@ FactoryBot.define do
 
     association :author, factory: :user
 
+    factory :important_item do
+      flag { true }
+    end
+
     factory :item_with_comments_and_reviews do
       tag_list { Faker::Lorem.words(number: 2..5) }
       category { CATEGORIES.sample }
