@@ -23,6 +23,9 @@ describe ItemsController, type: :controller do
 
     it 'renders the action' do
       expect(response).to render_template(:index)
+    end
+
+    it 'returns 200 OK' do
       expect(response).to have_http_status(:ok)
     end
 
@@ -38,6 +41,9 @@ describe ItemsController, type: :controller do
 
     it 'renders the action' do
       expect(response).to render_template(:show)
+    end
+
+    it 'returns 200 OK' do
       expect(response).to have_http_status(:ok)
     end
 
@@ -54,7 +60,7 @@ describe ItemsController, type: :controller do
     end
 
     it 'redirects to items_path' do
-      is_expected.to redirect_to item_path(assigns(:item).id)
+      expect(subject).to redirect_to item_path(assigns(:item).id)
     end
 
     context 'with invalid params' do
@@ -63,17 +69,18 @@ describe ItemsController, type: :controller do
       end
 
       it 'does not save' do
-        expect { subject }.to_not change(Item, :count)
+        expect { subject }.not_to change(Item, :count)
       end
 
       it 'renders new template' do
-        is_expected.to render_template(:new)
+        expect(subject).to render_template(:new)
       end
     end
   end
 
   context 'POST :update' do
     subject { put :update, params: params }
+
     let(:params) do
       {
         id: item.id,
@@ -86,7 +93,7 @@ describe ItemsController, type: :controller do
     end
 
     it 'redirects to items_path' do
-      is_expected.to redirect_to item_path(assigns(:item).id)
+      expect(subject).to redirect_to item_path(assigns(:item).id)
     end
 
     context 'with invalid params' do
@@ -94,24 +101,27 @@ describe ItemsController, type: :controller do
         {
           id: item.id,
           item: {
-            short_description: 'lol'
+            short_description: 'lol',
+            category: 'news'
           }
         }
       end
 
       it 'does not update' do
-        expect { subject }.to_not change { item.reload.category }
+        expect { subject }.not_to change { item.reload.category }.from('auto')
       end
 
       it 'renders new template' do
-        is_expected.to render_template(:edit)
+        expect(subject).to render_template(:edit)
       end
     end
   end
 
   context 'DELETE :delete' do
     subject { delete :destroy, params: params }
+
     let(:params) { { id: item.id } }
+
     before { item }
 
     it 'deletes from Item' do
@@ -119,15 +129,16 @@ describe ItemsController, type: :controller do
     end
 
     it 'redirects to items_path' do
-      is_expected.to redirect_to items_path
+      expect(subject).to redirect_to items_path
     end
   end
 
   context 'POST :track' do
-    let(:item_view) { create(:item_view, user_id: current_user.id, watching_time: 120) }
-    let(:item) { item_view.item }
     subject { post :track, params: params }
+
+    let(:item_view) { create(:item_view, user_id: current_user.id, watching_time: 120) }
     let(:params) { { id: item.id } }
+    let(:item) { item_view.item }
 
     it 'increments watching time when the user is registered' do
       expect { subject }.to change { item_view.reload.watching_time }.from(120).to(220)
