@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :users, except: [:create, :new, :destroy] do
     resources :subscriptions
-    resources :statistics
+    resources :statistics, except: [:index, :show, :edit, :destroy, :update]
     member do
       get 'comments_activity'
       get 'items_activity'
