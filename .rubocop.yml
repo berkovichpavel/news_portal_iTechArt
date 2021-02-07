@@ -1,5 +1,16 @@
 inherit_from: .rubocop_todo.yml
 
+require: rubocop-rspec
+
 Style/Documentation:
   Enabled: false
+
+RSpec/ContextWording:
+  Enabled: false
+
+RSpec/NamedSubject:
+  Enabled: false
+
+Metrics/BlockLength:
+  Max: 40
 

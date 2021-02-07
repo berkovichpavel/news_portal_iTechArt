@@ -24,7 +24,6 @@
       <%= link_to user_github_omniauth_authorize_path, method: :post, class: 'btn github-button btn-social btn-github' do %>
         <i class="fa fa-github"></i> <%= translate('devise.sessions.sign_in_with_github') %>
       <% end %>
-
       <% session[:return_to] ||= request.referer %>
     </div>
     <div class="sub-cont">
