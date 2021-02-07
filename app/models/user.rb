@@ -6,9 +6,11 @@ class User < ApplicationRecord
 
   has_one_attached :photo
 
-  validates :nickname, presence: true
-
   enum role: { admin: 'admin', redactor: 'redactor', correspondent: 'correspondent', user: 'user' }
+
+  validates :nickname, presence: true
+  validates :role, presence: true
+
 
   devise :database_authenticatable,
          :registerable,

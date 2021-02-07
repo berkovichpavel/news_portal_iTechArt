@@ -16,6 +16,7 @@ RSpec.describe User, type: :model do
   describe 'validations' do
     it 'has presence validate', :aggregate_failures do
       is_expected.to validate_presence_of(:nickname)
+      is_expected.to validate_presence_of(:role)
     end
   end
 
