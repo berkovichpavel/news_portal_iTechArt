@@ -6,11 +6,11 @@
   <ul class="search_results">
     <% @items.each do |item| %>
       <li>
-        <h3>
+        <p>
           <%= link_to item.try(:highlight).try(:title) ?
                         item.highlight.title[0].html_safe : item.title,
-                      controller: 'items', action: 'show', id: item._id %>
-        </h3>
+                      controller: 'items', action: 'show', id: item.id %>
+        </p>
         <% if item.try(:highlight).try(:short_description) %>
           <% item.highlight.full_text.each do |snippet| %>
             <p><%= snippet.html_safe %>...</p>

@@ -7,9 +7,6 @@ class Item < ApplicationRecord
   CATEGORIES = { 'news' => 'news', 'health' => 'health', 'finance' => 'finance', 'auto' => 'auto', 'people' => 'people',
                  'technology' => 'technology', 'realty' => 'realty' }.freeze
 
-  include Elasticsearch::Model
-  include Elasticsearch::Model::Callbacks
-
   after_save :send_item_instantly
   before_save :published_time
 
@@ -65,4 +62,10 @@ class Item < ApplicationRecord
   #     }
   #   )
   # end
+
+  def self.text_search(query)
+    if query.present?
+      where("title @@ :q or short_description @@ :q", q: query)
+    end
+  end
 end
