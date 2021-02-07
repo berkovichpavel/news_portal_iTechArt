@@ -20,7 +20,7 @@ Rails.application.routes.draw do
       post 'track'
     end
     resources :comments, module: :items
-    resources :reviews
+    resources :reviews, except: [:index, :show]
   end
 
   mount Ckeditor::Engine => '/ckeditor'

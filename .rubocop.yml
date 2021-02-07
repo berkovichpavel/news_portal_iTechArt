@@ -12,5 +12,5 @@ RSpec/NamedSubject:
   Enabled: false
 
 Metrics/BlockLength:
-  Max: 35
+  Max: 40
 
