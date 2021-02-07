@@ -1,31 +1,19 @@
 require 'rails_helper'
 
-# log in
-# RSpec.feature 'user logs in' do
-#   scenario 'using github' do
-#     stub_omniauth
-#     visit new_user_session_path
-#     expect(page).to have_link('Sign in with Github')
-#     click_link 'Sign in with Github'
-#     # to do
-#     expect(page).to have_link('Exit')
-#   end
-#
-#   def stub_omniauth
-#     OmniAuth.config.test_mode = true
-#     OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
-#                                                                   provider: 'github',
-#                                                                   uid: '66945592',
-#                                                                   info: {
-#                                                                     nickname: 'JesseSpervak2000',
-#                                                                     email: 'jesse@mountainmantechnologies.com',
-#                                                                     name: 'Jesse Spevack',
-#                                                                   },
-#                                                                   credentials: {
-#                                                                     token: 'abcdefg12345',
-#                                                                     refresh_token: '12345abcdefg',
-#                                                                     expires_at: DateTime.now
-#                                                                   }
-#                                                                 })
-#   end
-# end
+RSpec.feature 'user logs in', type: :feature do
+  context 'create new user' do
+    scenario 'should be successful' do
+      user = FactoryBot.create(:user, email: 'berkovich.pasha@gmail.com' )
+      user.skip_confirmation!
+
+      visit new_user_session_path
+      within('form') do
+        fill_in 'user_email', with: 'berkovich.pasha@gmail.com'
+        fill_in 'user_password', with: user.password
+      end
+      click_button 'button'
+      expect(page).to have_content('Signed in successfully.')
+    end
+  end
+
+end
