@@ -32,7 +32,6 @@ class Item < ApplicationRecord
   validates :category, presence: true
   validates :mask, presence: true
   validates :status, presence: true
-  validates :author, presence: true, unless: :rss?
 
   def send_item_instantly
     FindUsersInstantlyJob.perform_now(id)

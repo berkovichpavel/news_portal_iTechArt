@@ -8,13 +8,9 @@ class ItemsController < ApplicationController
 
   TRACK_INTERVAL = 100
 
-  def new; end
-
-  def edit; end
-
   def index
     @items = ItemsFilter.call(items: @items, params: params, user: current_user)
-    @important_items = @items.order(created_at: :desc).select(&:flag)
+    @important_items = @items.order(created_at: :desc).includes(:main_img_href_attachment, :reviews).select(&:flag)
     @other_items = @items.where(flag: false).order(created_at: :desc).page(params[:page]).per(12)
   end
 

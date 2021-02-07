@@ -75,7 +75,7 @@
               <div id='comments'>
                 <%= render partial: 'comments/form', locals: {commentable: @item} %>
                 <% if @item.comments.any? %>
-                  <%= render @item.comments.where(parent_id: nil), max_nesting: 5 %>
+                  <%= render all_comments(@item), max_nesting: 5 %>
                 <% end %>
               </div>
             </div>
