@@ -1,9 +1,4 @@
 FactoryBot.define do
-
-  CATEGORIES = %w[news health finance auto people technology realty].freeze
-  MASKS = %w[visible title_annotation only_header hidden_unregistered].freeze
-  STATUSES = %w[active archive revision check].freeze
-  IMPORTANT = [true, false].freeze
   factory :item do
     title { Faker::Lorem.paragraph_by_chars(number: 90) }
     short_description { Faker::Lorem.paragraph_by_chars(number: 100) }
@@ -20,10 +15,10 @@ FactoryBot.define do
 
     factory :item_with_comments_and_reviews do
       tag_list { Faker::Lorem.words(number: 2..5) }
-      category { CATEGORIES.sample }
-      mask { MASKS.sample }
-      status { STATUSES.sample }
-      flag { IMPORTANT.sample }
+      category { Item.categories.values.sample }
+      mask { Item.masks.values.sample }
+      status { Item.statuses.values.sample }
+      flag { [true, false].sample }
       transient do
         comments_count { Faker::Number.between(from: 15, to: 35) }
         review_count { Faker::Number.between(from: 10, to: 25) }

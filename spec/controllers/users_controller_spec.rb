@@ -5,6 +5,7 @@ describe UsersController, type: :controller do
 
   context 'GET :index' do
     subject { get :index, params: { role: 'admin' } }
+
     before { subject }
 
     it 'renders the action' do
@@ -20,17 +21,19 @@ describe UsersController, type: :controller do
     end
 
     context 'when returns all users' do
-      let!(:user) { create(:user, role: 'correspondent')}
       subject { get :index }
 
+      let!(:user) { create(:user, role: 'correspondent') }
+
       it 'returns trust values' do
-        expect(assigns(:users).to_a).to eq( [current_user, user] )
+        expect(assigns(:users).to_a).to eq([current_user, user])
       end
     end
   end
 
   context 'GET :comments_activity' do
     before { get :comments_activity, params: { id: current_user.id } }
+
     let!(:comment) { create(:comment, user: current_user) }
 
     it 'renders the action' do
@@ -48,6 +51,7 @@ describe UsersController, type: :controller do
 
   context 'GET :items_activity' do
     let!(:item_view) { create(:item_view, user_id: current_user.id) }
+
     before { get :items_activity, params: { id: current_user.id } }
 
     it 'renders the action' do

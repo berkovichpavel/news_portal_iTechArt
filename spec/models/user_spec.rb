@@ -3,20 +3,20 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   describe 'associations' do
     it 'has many associations', :aggregate_failures do
-      is_expected.to have_many(:created_items)
-      is_expected.to have_many(:comments)
-      is_expected.to have_many(:reviews)
+      expect(subject).to have_many(:created_items)
+      expect(subject).to have_many(:comments)
+      expect(subject).to have_many(:reviews)
     end
 
     it 'has one associations', :aggregate_failures do
-      is_expected.to have_one(:subscription)
+      expect(subject).to have_one(:subscription)
     end
   end
 
   describe 'validations' do
     it 'has presence validate', :aggregate_failures do
-      is_expected.to validate_presence_of(:nickname)
-      is_expected.to validate_presence_of(:role)
+      expect(subject).to validate_presence_of(:nickname)
+      expect(subject).to validate_presence_of(:role)
     end
   end
 
@@ -30,9 +30,10 @@ RSpec.describe User, type: :model do
           name: 'Jesse Spevack'
         } }
     end
+
     it 'creates or updates itself from an oauth hash' do
-      User.from_omniauth(auth)
-      new_user = User.last
+      described_class.from_omniauth(auth)
+      new_user = described_class.last
       expect(new_user.provider).to eq('github')
       expect(new_user.uid).to eq('66945592')
       expect(new_user.email).to eq('jesse@mountainmantechnologies.com')

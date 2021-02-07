@@ -9,6 +9,5 @@ FactoryBot.define do
     factory :review_for_seeds do
       association :user, factory: :user_with_different_role
     end
-
   end
 end

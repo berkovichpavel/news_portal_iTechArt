@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-#log in
+# log in
 # RSpec.feature 'user logs in' do
 #   scenario 'using github' do
 #     stub_omniauth

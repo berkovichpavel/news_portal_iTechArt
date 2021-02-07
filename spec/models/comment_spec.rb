@@ -3,15 +3,15 @@ require 'rails_helper'
 RSpec.describe Comment, type: :model do
   describe 'associations' do
     it 'has belong to associations', :aggregate_failures do
-      is_expected.to belong_to(:user).optional
-      is_expected.to belong_to(:parent).optional
-      is_expected.to belong_to(:commentable)
+      expect(subject).to belong_to(:user).optional
+      expect(subject).to belong_to(:parent).optional
+      expect(subject).to belong_to(:commentable)
     end
   end
 
   describe 'validations' do
     it 'has presence validate', :aggregate_failures do
-      is_expected.to validate_presence_of(:body)
+      expect(subject).to validate_presence_of(:body)
     end
   end
 
@@ -19,7 +19,7 @@ RSpec.describe Comment, type: :model do
     context 'when user not nil' do
       let(:comment) { build(:comment) }
 
-      it 'should return false' do
+      it 'returns false' do
         expect(comment.deleted?).to be false
       end
     end
@@ -27,7 +27,7 @@ RSpec.describe Comment, type: :model do
     context 'when user is nil' do
       let(:comment) { build(:comment, user: nil) }
 
-      it 'should return true' do
+      it 'returns true' do
         expect(comment.deleted?).to be true
       end
     end
@@ -36,7 +36,7 @@ RSpec.describe Comment, type: :model do
   describe '#destroy' do
     let(:comment) { build(:comment) }
 
-    it 'should change user and body' do
+    it 'changes user and body' do
       comment.destroy
       expect([comment.user, comment.body]).to eql([nil, '[deleted]'])
     end
@@ -46,10 +46,9 @@ RSpec.describe Comment, type: :model do
     let(:parent_comment) { create(:comment) }
     let(:comment) { create(:comment, parent_id: parent_comment.id, commentable: parent_comment.commentable) }
 
-    it 'should return comment' do
+    it 'returns comment' do
       comment.save
       expect(parent_comment.comments.first).to eq(comment)
     end
-
   end
 end
