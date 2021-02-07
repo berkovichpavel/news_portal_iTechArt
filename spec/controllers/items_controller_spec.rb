@@ -145,7 +145,7 @@ describe ItemsController, type: :controller do
     end
 
     it 'returns 200 OK' do
-      expect(response).to have_http_status(:ok)
+      expect(subject).to have_http_status(:ok)
     end
 
     context 'when current user is not registered' do
@@ -157,7 +157,7 @@ describe ItemsController, type: :controller do
       end
 
       it 'returns 200 OK' do
-        expect(response).to have_http_status(:ok)
+        expect(subject).to have_http_status(:ok)
       end
     end
   end

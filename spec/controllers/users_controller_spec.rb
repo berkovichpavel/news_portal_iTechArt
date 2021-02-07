@@ -8,11 +8,11 @@ describe UsersController, type: :controller do
     before { subject }
 
     it 'renders the action' do
-      expect(response).to render_template(:index)
+      expect(subject).to render_template(:index)
     end
 
     it 'returns 200 OK' do
-      expect(response).to have_http_status(:ok)
+      expect(subject).to have_http_status(:ok)
     end
 
     it 'returns trust values' do

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'items#index'
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
-  resources :users, except: [:create, :new] do
+  resources :users, except: [:create, :new, :destroy] do
     resources :subscriptions
     resources :statistics
     member do
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :rss_subscriptions
+  resources :rss_subscriptions, except: [:show, :edit, :update]
 
   resources :items do
     member do
