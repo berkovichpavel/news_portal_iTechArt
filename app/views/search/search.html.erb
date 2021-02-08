@@ -1,22 +1,30 @@
-<h1>Search Results</h1>
-
-<% if @items.blank? %>
-  <p>Your search did not match any documents.</p>
-<% else %>
-  <ul class="search_results">
-    <% @items.each do |item| %>
-      <li>
-        <p>
-          <%= link_to item.try(:highlight).try(:title) ?
-                        item.highlight.title[0].html_safe : item.title,
-                      controller: 'items', action: 'show', id: item.id %>
-        </p>
-        <% if item.try(:highlight).try(:short_description) %>
-          <% item.highlight.full_text.each do |snippet| %>
-            <p><%= snippet.html_safe %>...</p>
-          <% end %>
-        <% end %>
-      </li>
-    <% end %>
+<div class="container-fluid">
+  <% if @items.blank? %>
+    <h1 class="text-center mt-3 font-italic">Your search did not match any documents.</h1>
+  <% else %>
+    <h1 class="text-center mt-3 font-italic">Search Results</h1>
+    <main role="main">
+      <div class="album">
+        <div class="container">
+          <div class="row">
+            <%= render partial: 'items/other_item', collection: @items %>
+          </div>
+        </div>
+      </div>
+    </main>
+  <% end %>
+  <ul class="pagination justify-content-center">
+    <%= paginate @items, theme: 'twitter-bootstrap-4' %>
   </ul>
-<% end %>
+</div>
+
+<script>
+    $('.item-average-review-rating').raty({
+        readOnly: true,
+        numberMax: 5,
+        path: '/assets/',
+        score: function() {
+            return $(this).attr('data-score')
+        }
+    });
+</script>
