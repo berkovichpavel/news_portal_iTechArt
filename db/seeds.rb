@@ -1,6 +1,4 @@
 require 'factory_bot'
-Item.__elasticsearch__.create_index!(force: true)
-
 require 'factory_bot_rails'
 
 User.create!([

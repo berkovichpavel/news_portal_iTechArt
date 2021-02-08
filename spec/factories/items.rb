@@ -18,6 +18,7 @@ FactoryBot.define do
       category { Item.categories.values.sample }
       mask { Item.masks.values.sample }
       status { Item.statuses.values.sample }
+      main_img { 'https://baconmockup.com/' + Faker::Number.between(from: 640, to: 800).to_s + '/' + Faker::Number.between(from: 360, to: 520).to_s }
       flag { [true, false].sample }
       transient do
         comments_count { Faker::Number.between(from: 15, to: 35) }
