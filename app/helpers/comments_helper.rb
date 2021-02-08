@@ -12,6 +12,6 @@ module CommentsHelper
   end
 
   def all_comments(item)
-    item.comments.where(parent_id: nil).includes([:user, user: :photo_attachment])
+    item.comments.includes(:user, user: :photo_attachment).where(parent_id: nil)
   end
 end
