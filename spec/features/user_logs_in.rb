@@ -7,7 +7,7 @@ RSpec.feature 'user logs in', type: :feature do
       user.skip_confirmation!
 
       visit new_user_session_path
-      within('form') do
+      within('#registration-form') do
         fill_in 'user_email', with: 'berkovich.pasha@gmail.com'
         fill_in 'user_password', with: user.password
       end
