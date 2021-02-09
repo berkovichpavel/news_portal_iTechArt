@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
   resources :users, except: [:create, :new, :destroy] do
-    resources :subscriptions
+    resources :subscriptions, except: [:index, :show]
     resources :statistics, except: [:index, :show, :edit, :destroy, :update]
     member do
       get 'comments_activity'
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     member do
       post 'track'
     end
-    resources :comments, module: :items
+    resources :comments, module: :items, except: [:update, :edit, :show, :index]
     resources :reviews, except: [:index, :show]
   end
 
