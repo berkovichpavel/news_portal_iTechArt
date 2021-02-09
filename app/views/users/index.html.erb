@@ -19,4 +19,7 @@
   <div class="row">
     <%= render partial:'users/user', collection: @users %>
   </div>
+  <ul class="pagination justify-content-center">
+    <%= paginate @users, theme: 'twitter-bootstrap-4' %>
+  </ul>
 </div>

@@ -3,9 +3,9 @@ class UsersController < ApplicationController
 
   def index
     @users = if params[:role]
-               @users.where(role: params[:role]).includes([:photo_attachment])
+               @users.where(role: params[:role]).includes([:photo_attachment]).order(created_at: :desc).page(params[:page]).per(12)
              else
-               @users.includes([:photo_attachment])
+               @users.includes([:photo_attachment]).order(created_at: :desc).page(params[:page]).per(12)
              end
   end
 
