@@ -1,0 +1,4 @@
+<%= form_for :query, url: search_path, html: { class: 'form-inline mr-2' },  method: :get do |form| %>
+    <%= text_field_tag :query, params[:query], class: 'form-control mr-sm-2', placeholder: translate('enter_anything') %>
+    <%= submit_tag translate('search'), name: nil, class: 'btn btn-sm btn-outline-success my-2 my-sm-0' %>
+<% end %>

@@ -60,7 +60,7 @@ class ItemsController < ApplicationController
   end
 
   def tag_cloud
-    @tags = Item.tag_counts_on(:tags)
+    @tags = Item.where(status: 'active').tag_counts_on(:tags)
   end
 
   def set_access_masks

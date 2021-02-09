@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <% if @items.blank? %>
+    <h1 class="text-center mt-3 font-italic">Your search did not match any documents.</h1>
+  <% else %>
+    <h1 class="text-center mt-3 font-italic">Search Results</h1>
+    <main role="main">
+      <div class="album">
+        <div class="container">
+          <div class="row">
+            <%= render partial: 'items/other_item', collection: @items %>
+          </div>
+        </div>
+      </div>
+    </main>
+  <% end %>
+  <ul class="pagination justify-content-center">
+    <%= paginate @items, theme: 'twitter-bootstrap-4' %>
+  </ul>
+</div>
+
+<script>
+    $('.item-average-review-rating').raty({
+        readOnly: true,
+        numberMax: 5,
+        path: '/assets/',
+        score: function() {
+            return $(this).attr('data-score')
+        }
+    });
+</script>

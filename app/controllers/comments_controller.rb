@@ -18,6 +18,7 @@ class CommentsController < ApplicationController
   def destroy
     @commentable.comments.find(params[:id]).destroy
     redirect_to @commentable
+    # render json: { success: true }
   end
 
   private

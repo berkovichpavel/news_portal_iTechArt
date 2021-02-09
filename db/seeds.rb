@@ -1,4 +1,6 @@
+require 'factory_bot'
 require 'factory_bot_rails'
+
 User.create!([
                { email: 'admin@gmail.com', password: '12345678', role: 'admin', bio: 'Example of bio', first_name: 'Denis', last_name: 'Berkovich', nickname: 'admin' },
                { email: 'redactor@gmail.com', password: '12345678', role: 'redactor', bio: 'Example of bio', first_name: 'Vsa', last_name: 'Erkovich', nickname: 'redactor' },
