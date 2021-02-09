@@ -40,7 +40,7 @@
     <% end %>
     <%= tag.div id: "#{dom_id(comment)}_comments" do %>
       <% if comment.comments.any? %>
-        <%= render comment.comments, nesting: nesting + 1, max_nesting: max_nesting %>
+        <%= render comment.comments.includes([:commentable, :user]), nesting: nesting + 1, max_nesting: max_nesting %>
       <% end %>
     <% end %>
   <% end %>

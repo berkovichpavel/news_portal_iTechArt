@@ -27,4 +27,6 @@ Rails.application.routes.draw do
 
   mount Ckeditor::Engine => '/ckeditor'
   mount Sidekiq::Web => '/sidekiq'
+
+  get '*unmatched_route', to: 'application#raise_not_found'
 end
