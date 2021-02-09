@@ -1,6 +1,6 @@
 class SearchController < ApplicationController
   def search
-    @items = if params[:query].nil?
+    @items = if params[:query].blank?
                []
              else
                Item.text_search(params[:query]).includes(:reviews, :main_img_href_attachment).order(created_at: :desc).page(params[:page]).per(12)
