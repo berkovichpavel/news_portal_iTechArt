@@ -26,7 +26,7 @@ describe UsersController, type: :controller do
       let!(:user) { create(:user, role: 'correspondent') }
 
       it 'returns trust values' do
-        expect(assigns(:users).to_a).to eq([current_user, user])
+        expect(assigns(:users).to_a).to eq([user, current_user])
       end
     end
   end
