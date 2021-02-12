@@ -5,6 +5,6 @@ module ReviewsHelper
   end
 
   def find_reviews_for_item(item)
-    item.reviews.order(:updated_at).includes([:user]).limit(5)
+    item.reviews.order('updated_at DESC').includes([:user]).limit(5)
   end
 end

@@ -1,7 +1,7 @@
 <div class="card my-4">
   <h5 class="card-header"><%= translate('items.last_reviews') %></h5>
   <div class="card-body">
-    <div>
+    <div id='all-reviews'>
       <%= render find_reviews_for_item(item) %>
     </div>
     <%== '<hr/>' unless item.reviews.blank? %>
@@ -17,7 +17,9 @@
       <% end %>
       <% if can_review && can?(:manage, Review) %>
         <strong><%= translate('items.my_review') %>:</strong>
-        <%= link_to translate('items.new_review'), new_item_review_path(item) %>
+        <div id="new-review">
+          <%= link_to translate('items.new_review'), new_item_review_path(item), remote: true %>
+        </div>
       <% end %>
     </div>
 
