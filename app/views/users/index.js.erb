@@ -1,0 +1,2 @@
+$('#all-users').remove()
+$('#users-container').html("<%= j render partial: 'all_users', locals: { users: @users } %>")

@@ -1,0 +1,10 @@
+<div id='users-container'>
+  <div class="container" id="all-users">
+    <div class="row">
+      <%= render partial:'users/user', collection: users %>
+    </div>
+    <ul class="pagination justify-content-center">
+      <%= paginate users, theme: 'twitter-bootstrap-4', remote: true %>
+    </ul>
+  </div>
+</div>
