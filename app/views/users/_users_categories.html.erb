@@ -1,0 +1,17 @@
+<ul class="mt-4 nav justify-content-center">
+  <li class="nav-item">
+    <%= link_to translate('persons.all_users'), users_path, class: 'nav-link', remote: true %>
+  </li>
+  <li class="nav-item">
+    <%= link_to translate('persons.admins'), users_path(role: 'admin'), class: 'nav-link', remote: true %>
+  </li>
+  <li class="nav-item">
+    <%= link_to translate('persons.correspondents'), users_path(role: 'correspondent'), class: 'nav-link', remote: true %>
+  </li>
+  <li class="nav-item">
+    <%= link_to translate('persons.redactors'), users_path(role: 'redactor'), class: 'nav-link', remote: true %>
+  </li>
+  <li class="nav-item">
+    <%= link_to translate('persons.users'), users_path(role: 'user'), class: 'nav-link', remote: true %>
+  </li>
+</ul>
