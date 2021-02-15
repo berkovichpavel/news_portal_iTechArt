@@ -42,27 +42,6 @@ class Item < ApplicationRecord
     end
   end
 
-  # def self.search(query)
-  #   __elasticsearch__.search(
-  #     {
-  #       query: {
-  #         multi_match: {
-  #           query: query,
-  #           fields: %w[title short_description]
-  #         }
-  #       },
-  #       highlight: {
-  #         pre_tags: ['<em>'],
-  #         post_tags: ['</em>'],
-  #         fields: {
-  #           title: {},
-  #           text: {}
-  #         }
-  #       }
-  #     }
-  #   )
-  # end
-
   def self.text_search(query)
     if query.present?
       where("title @@ :q or short_description @@ :q", q: query)

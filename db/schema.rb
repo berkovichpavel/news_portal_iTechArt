@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_23_093537) do
+ActiveRecord::Schema.define(version: 2021_02_15_115118) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -99,6 +99,8 @@ ActiveRecord::Schema.define(version: 2021_01_23_093537) do
     t.boolean "rss", default: false
     t.string "main_img"
     t.index ["author_id"], name: "index_items_on_author_id"
+    t.index ["short_description"], name: "index_items_on_short_description"
+    t.index ["title"], name: "index_items_on_title"
   end
 
   create_table "reviews", force: :cascade do |t|
