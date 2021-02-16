@@ -30,11 +30,10 @@ gem 'jquery-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
-
+gem 'factory_bot_rails'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'database_cleaner'
-  gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 4.0.0.beta3'
   gem 'dotenv-rails'
 end
