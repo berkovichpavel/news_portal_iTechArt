@@ -201,16 +201,9 @@ GEM
     omniauth (1.9.1)
       hashie (>= 3.4.6)
       rack (>= 1.6.2, < 3)
-    omniauth-facebook (8.0.0)
-      omniauth-oauth2 (~> 1.2)
     omniauth-github (1.4.0)
       omniauth (~> 1.5)
       omniauth-oauth2 (>= 1.4.0, < 2.0)
-    omniauth-google-oauth2 (0.8.1)
-      jwt (>= 2.0)
-      oauth2 (~> 1.1)
-      omniauth (>= 1.1.1)
-      omniauth-oauth2 (>= 1.6)
     omniauth-oauth2 (1.7.1)
       oauth2 (~> 1.4)
       omniauth (>= 1.9, < 3)
@@ -357,8 +350,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    texticle (2.0.2)
-      activerecord (>= 3.0.0)
     thor (1.1.0)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -425,9 +416,7 @@ DEPENDENCIES
   mini_magick
   nokogiri (~> 1.11, >= 1.11.1)
   omniauth (~> 1.9.1)
-  omniauth-facebook
   omniauth-github
-  omniauth-google-oauth2
   omniauth-rails_csrf_protection
   pg (>= 0.18, < 2.0)
   pry-rails
@@ -448,7 +437,6 @@ DEPENDENCIES
   social-buttons (~> 0.3)
   spring
   spring-watcher-listen (~> 2.0.0)
-  texticle
   turbolinks (~> 5)
   tzinfo-data
   useragent

@@ -88,7 +88,3 @@ gem 'factory_bot'
 gem 'omniauth', '~> 1.9.1'
 gem 'omniauth-github'
 gem 'omniauth-rails_csrf_protection'
-# gem 'elasticsearch'
-# gem 'elasticsearch-model'
-# gem 'elasticsearch-rails'
-
