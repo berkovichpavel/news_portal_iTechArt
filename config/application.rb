@@ -16,7 +16,7 @@ module NewsPortal
     config.active_job.queue_adapter = :sidekiq
     config.action_mailer.asset_host = 'http://localhost:3000/mailer'
     config.autoload_paths += %W[#{config.root}/lib #{config.root}/services #{config.root}/assets/images]
-
+    config.assets.initialize_on_precompile = false
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
